@@ -30,13 +30,13 @@ Creating intelligent, accessible and human-centered experiences.
         <a href="https://github.com/zs-andy/TOMEET-Web"><img alt="Frontend" src="https://img.shields.io/badge/Frontend-C9C5FF?style=flat-square&amp;logo=nextdotjs&amp;logoColor=1C1B1B&amp;labelColor=1C1B1B"></a>
         <a href="https://github.com/toMeetADX/TOMEET_Backend"><img alt="Backend" src="https://img.shields.io/badge/Backend-6B6964?style=flat-square&amp;logo=fastify&amp;logoColor=white&amp;labelColor=1C1B1B"></a>
       </p>
-      <p><code>Next.js</code> <code>TypeScript</code> <code>Fastify</code> <code>Supabase</code></p>
+      <p><code>Next.js</code> <code>Fastify</code> <code>Supabase</code> <code>Photon Spectrum</code> <code>Agent Memory V2</code> <code>Injective Web3</code></p>
     </td>
     <td width="50%" valign="top">
       <h3><a href="https://github.com/zs-andy/Atmos_Rokid">Atmos Rokid</a></h3>
       <p>Real-time environmental awareness for visually impaired users, built for Rokid Glasses.</p>
       <p><img alt="Spatial Computing" src="https://img.shields.io/badge/Spatial%20Computing-C4E2FB?style=flat-square&amp;labelColor=1C1B1B"></p>
-      <p><code>Kotlin</code> <code>YOLO</code> <code>FastVLM</code></p>
+      <p><code>Kotlin</code> <code>Swift</code> <code>Rokid Glasses</code> <code>YOLO12 · Core ML</code> <code>FastVLM · MLX</code></p>
     </td>
   </tr>
   <tr>
@@ -44,13 +44,13 @@ Creating intelligent, accessible and human-centered experiences.
       <h3><a href="https://github.com/zs-andy/DeadLineTodo">DeadLineTodo</a></h3>
       <p>A deadline-first task manager for iOS, available on the App Store.</p>
       <p><img alt="iOS Product" src="https://img.shields.io/badge/iOS%20Product-F6D990?style=flat-square&amp;logo=apple&amp;logoColor=1C1B1B&amp;labelColor=1C1B1B"></p>
-      <p><code>Swift</code> <code>SwiftUI</code></p>
+      <p><code>Swift</code> <code>SwiftUI</code> <code>SwiftData</code> <code>StoreKit 2</code> <code>WidgetKit</code> <code>EventKit</code></p>
     </td>
     <td width="50%" valign="top">
       <h3><a href="https://github.com/zs-andy/SoulHealing">SoulHealing</a></h3>
       <p>An experiment combining emotion recognition, multimodal AI and music therapy.</p>
       <p><img alt="Emotion &amp; AI" src="https://img.shields.io/badge/Emotion%20%26%20AI-F7C5ED?style=flat-square&amp;labelColor=1C1B1B"></p>
-      <p><code>SwiftUI</code> <code>LLM</code> <code>FastVLM</code></p>
+      <p><code>SwiftUI</code> <code>AVFoundation</code> <code>FastVLM</code> <code>MLX VLM</code> <code>Core ML Vision</code></p>
     </td>
   </tr>
   <tr>
@@ -59,14 +59,14 @@ Creating intelligent, accessible and human-centered experiences.
       <p>A 26-key spatial keyboard for Apple Vision Pro using fingertip tracking.</p>
       <p><strong>AdventureX track 4th place.</strong></p>
       <p><img alt="visionOS" src="https://img.shields.io/badge/visionOS-C9C5FF?style=flat-square&amp;logo=apple&amp;logoColor=1C1B1B&amp;labelColor=1C1B1B"></p>
-      <p><code>Swift</code> <code>visionOS</code> <code>Computer Vision</code></p>
+      <p><code>Swift</code> <code>visionOS</code> <code>ARKit Hand Tracking</code> <code>RealityKit</code> <code>Plane Detection</code> <code>Spatial Gestures</code></p>
     </td>
     <td width="50%" valign="top">
       <h3><a href="https://github.com/zs-andy/LSDC-Yolo-Approach">RSNA 2024 · YOLO Approach</a></h3>
       <p>An object-detection approach for the Kaggle RSNA 2024 Lumbar Spine Degenerative Classification competition.</p>
       <p><strong>Kaggle Silver Medal.</strong></p>
       <p><img alt="Kaggle Competition" src="https://img.shields.io/badge/Kaggle%20Competition-C4E2FB?style=flat-square&amp;logo=kaggle&amp;logoColor=1C1B1B&amp;labelColor=1C1B1B"></p>
-      <p><code>Python</code> <code>YOLO</code> <code>Jupyter</code></p>
+      <p><code>Python</code> <code>PyTorch</code> <code>YOLOv8 Ensemble</code> <code>3D DICOM</code> <code>MaxViT</code> <code>Multi-scale Inference</code></p>
     </td>
   </tr>
 </table>
