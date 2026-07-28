@@ -35,7 +35,6 @@
     <td width="50%" valign="top">
       <h3><a href="https://github.com/zs-andy/Atmos_Rokid">Atmos Rokid</a></h3>
       <p>基于 Rokid Glasses，为视障用户提供实时环境感知的空间计算应用。</p>
-      <p><strong>AdventureX 赛道第四名。</strong></p>
       <p><img alt="空间计算" src="https://img.shields.io/badge/Spatial%20Computing-C4E2FB?style=flat-square&amp;labelColor=1C1B1B"></p>
       <p><code>Kotlin</code> <code>YOLO</code> <code>FastVLM</code></p>
     </td>
@@ -58,10 +57,17 @@
     <td width="50%" valign="top">
       <h3><a href="https://github.com/zs-andy/VisionKeyboard">VisionKeyboard</a></h3>
       <p>基于指尖追踪的 Apple Vision Pro 26 键空间手势输入法。</p>
+      <p><strong>AdventureX 赛道第四名。</strong></p>
       <p><img alt="visionOS" src="https://img.shields.io/badge/visionOS-C9C5FF?style=flat-square&amp;logo=apple&amp;logoColor=1C1B1B&amp;labelColor=1C1B1B"></p>
       <p><code>Swift</code> <code>visionOS</code> <code>Computer Vision</code></p>
     </td>
-    <td width="50%"></td>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/zs-andy/LSDC-Yolo-Approach">RSNA 2024 · YOLO Approach</a></h3>
+      <p>面向 Kaggle RSNA 2024 腰椎退行性病变分类竞赛的目标检测方案。</p>
+      <p><strong>Kaggle 银牌。</strong></p>
+      <p><img alt="Kaggle 竞赛" src="https://img.shields.io/badge/Kaggle%20Competition-C4E2FB?style=flat-square&amp;logo=kaggle&amp;logoColor=1C1B1B&amp;labelColor=1C1B1B"></p>
+      <p><code>Python</code> <code>YOLO</code> <code>Jupyter</code></p>
+    </td>
   </tr>
 </table>
 

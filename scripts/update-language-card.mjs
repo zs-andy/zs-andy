@@ -7,6 +7,7 @@ const repositories = [
   "zs-andy/DeadLineTodo",
   "zs-andy/SoulHealing",
   "zs-andy/VisionKeyboard",
+  "zs-andy/LSDC-Yolo-Approach",
 ];
 
 const colors = {

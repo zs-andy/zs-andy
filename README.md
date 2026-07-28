@@ -35,7 +35,6 @@ Creating intelligent, accessible and human-centered experiences.
     <td width="50%" valign="top">
       <h3><a href="https://github.com/zs-andy/Atmos_Rokid">Atmos Rokid</a></h3>
       <p>Real-time environmental awareness for visually impaired users, built for Rokid Glasses.</p>
-      <p><strong>AdventureX track 4th place.</strong></p>
       <p><img alt="Spatial Computing" src="https://img.shields.io/badge/Spatial%20Computing-C4E2FB?style=flat-square&amp;labelColor=1C1B1B"></p>
       <p><code>Kotlin</code> <code>YOLO</code> <code>FastVLM</code></p>
     </td>
@@ -58,10 +57,17 @@ Creating intelligent, accessible and human-centered experiences.
     <td width="50%" valign="top">
       <h3><a href="https://github.com/zs-andy/VisionKeyboard">VisionKeyboard</a></h3>
       <p>A 26-key spatial keyboard for Apple Vision Pro using fingertip tracking.</p>
+      <p><strong>AdventureX track 4th place.</strong></p>
       <p><img alt="visionOS" src="https://img.shields.io/badge/visionOS-C9C5FF?style=flat-square&amp;logo=apple&amp;logoColor=1C1B1B&amp;labelColor=1C1B1B"></p>
       <p><code>Swift</code> <code>visionOS</code> <code>Computer Vision</code></p>
     </td>
-    <td width="50%"></td>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/zs-andy/LSDC-Yolo-Approach">RSNA 2024 · YOLO Approach</a></h3>
+      <p>An object-detection approach for the Kaggle RSNA 2024 Lumbar Spine Degenerative Classification competition.</p>
+      <p><strong>Kaggle Silver Medal.</strong></p>
+      <p><img alt="Kaggle Competition" src="https://img.shields.io/badge/Kaggle%20Competition-C4E2FB?style=flat-square&amp;logo=kaggle&amp;logoColor=1C1B1B&amp;labelColor=1C1B1B"></p>
+      <p><code>Python</code> <code>YOLO</code> <code>Jupyter</code></p>
+    </td>
   </tr>
 </table>
 
