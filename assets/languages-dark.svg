@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="116" viewBox="0 0 720 116" role="img" aria-label="Language distribution across featured projects">
+  <rect x="0.5" y="0.5" width="719" height="115" rx="12" fill="#1C1B1B" stroke="#343230"/>
+  <text x="24" y="29" fill="#FDFDFC" font-size="14" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif">Featured projects · language mix</text>
+  <defs>
+    <clipPath id="bar-clip"><rect x="24" y="49" width="672" height="14" rx="7"/></clipPath>
+  </defs>
+  <rect x="24" y="49" width="672" height="14" rx="7" fill="#343230"/>
+  <g clip-path="url(#bar-clip)"><rect x="24.00" y="49" width="366.94" height="14" fill="#4A36D2"/><rect x="390.94" y="49" width="121.01" height="14" fill="#D55B2F"/><rect x="511.95" y="49" width="113.28" height="14" fill="#2B73D2"/><rect x="625.23" y="49" width="70.77" height="14" fill="#B8B8B2"/></g>
+  <g transform="translate(24.00 91)">
+        <circle cx="5" cy="-4" r="4" fill="#4A36D2"/>
+        <text x="15" y="0" fill="#B8B8B2" font-size="12" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">TypeScript 54.6%</text>
+      </g>
+<g transform="translate(192.00 91)">
+        <circle cx="5" cy="-4" r="4" fill="#D55B2F"/>
+        <text x="15" y="0" fill="#B8B8B2" font-size="12" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">Swift 18.0%</text>
+      </g>
+<g transform="translate(360.00 91)">
+        <circle cx="5" cy="-4" r="4" fill="#2B73D2"/>
+        <text x="15" y="0" fill="#B8B8B2" font-size="12" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">PL/pgSQL 16.9%</text>
+      </g>
+<g transform="translate(528.00 91)">
+        <circle cx="5" cy="-4" r="4" fill="#B8B8B2"/>
+        <text x="15" y="0" fill="#B8B8B2" font-size="12" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">Other 10.5%</text>
+      </g>
+</svg>

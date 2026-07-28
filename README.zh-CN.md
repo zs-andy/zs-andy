@@ -93,58 +93,31 @@
 <picture>
   <source
     media="(prefers-color-scheme: dark)"
-    srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=zs-andy&layout=compact&langs_count=6&exclude_repo=GiftRecieve&hide_border=true&bg_color=1C1B1B&title_color=C9C5FF&text_color=B8B8B2&custom_title=Languages"
+    srcset="./assets/languages-zh-CN-dark.svg"
   />
   <source
     media="(prefers-color-scheme: light)"
-    srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=zs-andy&layout=compact&langs_count=6&exclude_repo=GiftRecieve&hide_border=true&bg_color=FDFDFC&title_color=4A36D2&text_color=6B6964&custom_title=Languages"
+    srcset="./assets/languages-zh-CN-light.svg"
   />
   <img
-    height="190"
-    alt="常用语言统计"
-    src="https://github-readme-stats.vercel.app/api/top-langs/?username=zs-andy&layout=compact&langs_count=6&exclude_repo=GiftRecieve&hide_border=true&bg_color=FDFDFC&title_color=4A36D2&text_color=6B6964&custom_title=Languages"
+    width="100%"
+    alt="展示项目的语言分布"
+    src="./assets/languages-zh-CN-light.svg"
   />
 </picture>
 
 <br/>
 
-<picture>
-  <source
-    media="(prefers-color-scheme: dark)"
-    srcset="https://skillicons.dev/icons?i=swift,kotlin,python,typescript,react,nextjs,pytorch,opencv,supabase,git&theme=dark"
-  />
-  <source
-    media="(prefers-color-scheme: light)"
-    srcset="https://skillicons.dev/icons?i=swift,kotlin,python,typescript,react,nextjs,pytorch,opencv,supabase,git&theme=light"
-  />
-  <img
-    alt="技术栈"
-    src="https://skillicons.dev/icons?i=swift,kotlin,python,typescript,react,nextjs,pytorch,opencv,supabase,git&theme=light"
-  />
-</picture>
-
-</div>
-
-## 最近在听
-
-<div align="center">
-
-<a href="https://open.spotify.com/user/31mix2lsown7l4ycqak56qbeq6yy">
-  <picture>
-    <source
-      media="(prefers-color-scheme: dark)"
-      srcset="https://spotify-github-profile.kittinanx.com/api/view?uid=31mix2lsown7l4ycqak56qbeq6yy&cover_image=true&theme=compact&show_offline=true&background_color=1c1b1b&interchange=false&bar_color=c9c5ff&bar_color_cover=false&border_radius=8"
-    />
-    <source
-      media="(prefers-color-scheme: light)"
-      srcset="https://spotify-github-profile.kittinanx.com/api/view?uid=31mix2lsown7l4ycqak56qbeq6yy&cover_image=true&theme=compact&show_offline=true&background_color=fdfdfc&interchange=false&bar_color=4a36d2&bar_color_cover=false&border_radius=8"
-    />
-    <img
-      alt="Spotify 最近播放"
-      src="https://spotify-github-profile.kittinanx.com/api/view?uid=31mix2lsown7l4ycqak56qbeq6yy&cover_image=true&theme=compact&show_offline=true&background_color=fdfdfc&interchange=false&bar_color=4a36d2&bar_color_cover=false&border_radius=8"
-    />
-  </picture>
-</a>
+<img height="40" src="https://skillicons.dev/icons?i=swift" alt="Swift" title="Swift" />
+<img height="40" src="https://skillicons.dev/icons?i=kotlin" alt="Kotlin" title="Kotlin" />
+<img height="40" src="https://skillicons.dev/icons?i=python" alt="Python" title="Python" />
+<img height="40" src="https://skillicons.dev/icons?i=typescript" alt="TypeScript" title="TypeScript" />
+<img height="40" src="https://skillicons.dev/icons?i=react" alt="React" title="React" />
+<img height="40" src="https://skillicons.dev/icons?i=nextjs" alt="Next.js" title="Next.js" />
+<img height="40" src="https://skillicons.dev/icons?i=pytorch" alt="PyTorch" title="PyTorch" />
+<img height="40" src="https://skillicons.dev/icons?i=opencv" alt="OpenCV" title="OpenCV" />
+<img height="40" src="https://skillicons.dev/icons?i=supabase" alt="Supabase" title="Supabase" />
+<img height="40" src="https://skillicons.dev/icons?i=git" alt="Git" title="Git" />
 
 </div>
 
