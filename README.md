@@ -4,22 +4,6 @@
   <a href="./README.zh-CN.md">简体中文</a>
 </p>
 
-<picture>
-  <source
-    media="(prefers-color-scheme: dark)"
-    srcset="https://capsule-render.vercel.app/api?type=transparent&height=150&section=header&text=4Fe_Andy&fontSize=42&fontColor=C9C5FF&fontAlignY=40&desc=Apps%20%C2%B7%20Spatial%20Computing%20%C2%B7%20Computer%20Vision&descAlignY=65&descSize=14"
-  />
-  <source
-    media="(prefers-color-scheme: light)"
-    srcset="https://capsule-render.vercel.app/api?type=transparent&height=150&section=header&text=4Fe_Andy&fontSize=42&fontColor=4A36D2&fontAlignY=40&desc=Apps%20%C2%B7%20Spatial%20Computing%20%C2%B7%20Computer%20Vision&descAlignY=65&descSize=14"
-  />
-  <img
-    width="100%"
-    alt="4Fe Andy"
-    src="https://capsule-render.vercel.app/api?type=transparent&height=150&section=header&text=4Fe_Andy&fontSize=42&fontColor=4A36D2&fontAlignY=40&desc=Apps%20%C2%B7%20Spatial%20Computing%20%C2%B7%20Computer%20Vision&descAlignY=65&descSize=14"
-  />
-</picture>
-
 <div align="center">
 
 ###  AI · Spatial Computing · Apple Platforms · Full-stack Engineering
@@ -35,56 +19,51 @@ Creating intelligent, accessible and human-centered experiences.
 
 ## Projects
 
-### [TOMEET](https://github.com/zs-andy/TOMEET-Web)
-
-A conversational social Agent that learns about users through ongoing dialogue and helps turn that understanding into real-world connections.
-
-Product direction, interface design, frontend and backend engineering. **AdventureX track 1st place.**
-
-[![Frontend](https://img.shields.io/badge/Frontend-TOMEET--Web-C9C5FF?style=flat-square&logo=nextdotjs&logoColor=1C1B1B&labelColor=1C1B1B)](https://github.com/zs-andy/TOMEET-Web)
-[![Backend](https://img.shields.io/badge/Backend-TOMEET__Backend-6B6964?style=flat-square&logo=fastify&logoColor=white&labelColor=1C1B1B)](https://github.com/toMeetADX/TOMEET_Backend)
-
-`Next.js` `TypeScript` `Fastify` `Supabase` `LLM` `Injective`
-
----
-
-### [Atmos Rokid](https://github.com/zs-andy/Atmos_Rokid)
-
-Real-time environmental awareness for visually impaired users, built for Rokid Glasses. **AdventureX track 4th place.**
-
-![Spatial Computing](https://img.shields.io/badge/Spatial%20Computing-C4E2FB?style=flat-square&logoColor=1C1B1B&labelColor=1C1B1B)
-
-`Kotlin` `YOLO` `FastVLM`
-
----
-
-### [DeadLineTodo](https://github.com/zs-andy/DeadLineTodo)
-
-A deadline-first task manager for iOS, available on the App Store.
-
-![iOS Product](https://img.shields.io/badge/iOS%20Product-F6D990?style=flat-square&logo=apple&logoColor=1C1B1B&labelColor=1C1B1B)
-
-`Swift` `SwiftUI`
-
----
-
-### [SoulHealing](https://github.com/zs-andy/SoulHealing)
-
-An experiment combining emotion recognition, multimodal AI and music therapy.
-
-![Emotion & AI](https://img.shields.io/badge/Emotion%20%26%20AI-F7C5ED?style=flat-square&logoColor=1C1B1B&labelColor=1C1B1B)
-
-`SwiftUI` `LLM` `FastVLM`
-
----
-
-### [VisionKeyboard](https://github.com/zs-andy/VisionKeyboard)
-
-A 26-key spatial keyboard for Apple Vision Pro using fingertip tracking.
-
-![visionOS](https://img.shields.io/badge/visionOS-C9C5FF?style=flat-square&logo=apple&logoColor=1C1B1B&labelColor=1C1B1B)
-
-`Swift` `visionOS` `Computer Vision`
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/zs-andy/TOMEET-Web">TOMEET</a></h3>
+      <p>A conversational social Agent that turns ongoing dialogue into real-world connections.</p>
+      <p><sub>Product direction · Interface design · Frontend &amp; backend engineering</sub></p>
+      <p><strong>AdventureX track 1st place.</strong></p>
+      <p>
+        <a href="https://github.com/zs-andy/TOMEET-Web"><img alt="Frontend" src="https://img.shields.io/badge/Frontend-C9C5FF?style=flat-square&amp;logo=nextdotjs&amp;logoColor=1C1B1B&amp;labelColor=1C1B1B"></a>
+        <a href="https://github.com/toMeetADX/TOMEET_Backend"><img alt="Backend" src="https://img.shields.io/badge/Backend-6B6964?style=flat-square&amp;logo=fastify&amp;logoColor=white&amp;labelColor=1C1B1B"></a>
+      </p>
+      <p><code>Next.js</code> <code>TypeScript</code> <code>Fastify</code> <code>Supabase</code></p>
+    </td>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/zs-andy/Atmos_Rokid">Atmos Rokid</a></h3>
+      <p>Real-time environmental awareness for visually impaired users, built for Rokid Glasses.</p>
+      <p><strong>AdventureX track 4th place.</strong></p>
+      <p><img alt="Spatial Computing" src="https://img.shields.io/badge/Spatial%20Computing-C4E2FB?style=flat-square&amp;labelColor=1C1B1B"></p>
+      <p><code>Kotlin</code> <code>YOLO</code> <code>FastVLM</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/zs-andy/DeadLineTodo">DeadLineTodo</a></h3>
+      <p>A deadline-first task manager for iOS, available on the App Store.</p>
+      <p><img alt="iOS Product" src="https://img.shields.io/badge/iOS%20Product-F6D990?style=flat-square&amp;logo=apple&amp;logoColor=1C1B1B&amp;labelColor=1C1B1B"></p>
+      <p><code>Swift</code> <code>SwiftUI</code></p>
+    </td>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/zs-andy/SoulHealing">SoulHealing</a></h3>
+      <p>An experiment combining emotion recognition, multimodal AI and music therapy.</p>
+      <p><img alt="Emotion &amp; AI" src="https://img.shields.io/badge/Emotion%20%26%20AI-F7C5ED?style=flat-square&amp;labelColor=1C1B1B"></p>
+      <p><code>SwiftUI</code> <code>LLM</code> <code>FastVLM</code></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/zs-andy/VisionKeyboard">VisionKeyboard</a></h3>
+      <p>A 26-key spatial keyboard for Apple Vision Pro using fingertip tracking.</p>
+      <p><img alt="visionOS" src="https://img.shields.io/badge/visionOS-C9C5FF?style=flat-square&amp;logo=apple&amp;logoColor=1C1B1B&amp;labelColor=1C1B1B"></p>
+      <p><code>Swift</code> <code>visionOS</code> <code>Computer Vision</code></p>
+    </td>
+    <td width="50%"></td>
+  </tr>
+</table>
 
 ## Stack
 
