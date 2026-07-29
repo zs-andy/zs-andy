@@ -10,10 +10,7 @@
 
 构建智能、无障碍且以人为本的产品与交互体验。
 
-[![个人网站](https://img.shields.io/badge/Website-1C1B1B?style=flat-square&logo=safari&logoColor=white)](https://4fe-andy.github.io/)
-[![Instagram](https://img.shields.io/badge/Instagram-1C1B1B?style=flat-square&logo=instagram&logoColor=white)](https://www.instagram.com/4fe_andy/)
-[![YouTube](https://img.shields.io/badge/YouTube-1C1B1B?style=flat-square&logo=youtube&logoColor=white)](https://www.youtube.com/@4FeAndy)
-[![Spotify](https://img.shields.io/badge/Spotify-3E6B15?style=flat-square&logo=spotify&logoColor=white)](https://open.spotify.com/user/31mix2lsown7l4ycqak56qbeq6yy)
+<p><a href="https://4fe-andy.github.io/"><img alt="个人网站" src="https://img.shields.io/badge/Website-1C1B1B?style=flat-square&amp;logo=safari&amp;logoColor=white"></a> <a href="https://www.instagram.com/4fe_andy/"><img alt="Instagram" src="https://img.shields.io/badge/Instagram-1C1B1B?style=flat-square&amp;logo=instagram&amp;logoColor=white"></a> <a href="https://www.youtube.com/@4FeAndy"><img alt="YouTube" src="https://img.shields.io/badge/YouTube-1C1B1B?style=flat-square&amp;logo=youtube&amp;logoColor=white"></a> <a href="https://open.spotify.com/user/31mix2lsown7l4ycqak56qbeq6yy"><img alt="Spotify" src="https://img.shields.io/badge/Spotify-3E6B15?style=flat-square&amp;logo=spotify&amp;logoColor=white"></a></p>
 
 </div>
 
@@ -26,10 +23,7 @@
       <p>一个通过持续对话理解用户，并帮助用户建立真实社交连接的智能 Agent。</p>
       <p><sub>产品方向 · 界面设计 · 前后端工程开发</sub></p>
       <p><strong>AdventureX 赛道第一名。</strong></p>
-      <p>
-        <a href="https://github.com/zs-andy/TOMEET-Web"><img alt="前端" src="https://img.shields.io/badge/Frontend-C9C5FF?style=flat-square&amp;logo=nextdotjs&amp;logoColor=1C1B1B&amp;labelColor=1C1B1B"></a>
-        <a href="https://github.com/toMeetADX/TOMEET_Backend"><img alt="后端" src="https://img.shields.io/badge/Backend-6B6964?style=flat-square&amp;logo=fastify&amp;logoColor=white&amp;labelColor=1C1B1B"></a>
-      </p>
+      <p><a href="https://github.com/zs-andy/TOMEET-Web"><img alt="前端" src="https://img.shields.io/badge/Frontend-C9C5FF?style=flat-square&amp;logo=nextdotjs&amp;logoColor=1C1B1B&amp;labelColor=1C1B1B"></a> <a href="https://github.com/toMeetADX/TOMEET_Backend"><img alt="后端" src="https://img.shields.io/badge/Backend-6B6964?style=flat-square&amp;logo=fastify&amp;logoColor=white&amp;labelColor=1C1B1B"></a></p>
       <p><code>Next.js</code> <code>Fastify</code> <code>Supabase</code> <code>Photon Spectrum</code> <code>Agent Memory V2</code> <code>Injective Web3</code></p>
     </td>
     <td width="50%" valign="top">
@@ -93,16 +87,7 @@
 
 <br/>
 
-<img height="40" src="https://skillicons.dev/icons?i=swift" alt="Swift" title="Swift" />
-<img height="40" src="https://skillicons.dev/icons?i=kotlin" alt="Kotlin" title="Kotlin" />
-<img height="40" src="https://skillicons.dev/icons?i=python" alt="Python" title="Python" />
-<img height="40" src="https://skillicons.dev/icons?i=typescript" alt="TypeScript" title="TypeScript" />
-<img height="40" src="https://skillicons.dev/icons?i=react" alt="React" title="React" />
-<img height="40" src="https://skillicons.dev/icons?i=nextjs" alt="Next.js" title="Next.js" />
-<img height="40" src="https://skillicons.dev/icons?i=pytorch" alt="PyTorch" title="PyTorch" />
-<img height="40" src="https://skillicons.dev/icons?i=opencv" alt="OpenCV" title="OpenCV" />
-<img height="40" src="https://skillicons.dev/icons?i=supabase" alt="Supabase" title="Supabase" />
-<img height="40" src="https://skillicons.dev/icons?i=git" alt="Git" title="Git" />
+<p><img height="40" src="https://skillicons.dev/icons?i=swift" alt="Swift" title="Swift"> <img height="40" src="https://skillicons.dev/icons?i=kotlin" alt="Kotlin" title="Kotlin"> <img height="40" src="https://skillicons.dev/icons?i=python" alt="Python" title="Python"> <img height="40" src="https://skillicons.dev/icons?i=typescript" alt="TypeScript" title="TypeScript"> <img height="40" src="https://skillicons.dev/icons?i=react" alt="React" title="React"> <img height="40" src="https://skillicons.dev/icons?i=nextjs" alt="Next.js" title="Next.js"> <img height="40" src="https://skillicons.dev/icons?i=pytorch" alt="PyTorch" title="PyTorch"> <img height="40" src="https://skillicons.dev/icons?i=opencv" alt="OpenCV" title="OpenCV"> <img height="40" src="https://skillicons.dev/icons?i=supabase" alt="Supabase" title="Supabase"> <img height="40" src="https://skillicons.dev/icons?i=git" alt="Git" title="Git"></p>
 
 </div>
 
