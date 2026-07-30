@@ -10,7 +10,7 @@
 
 构建智能、无障碍且以人为本的产品与交互体验。
 
-<p><a href="https://4fe-andy.github.io/">个人网站</a> · <a href="https://www.instagram.com/4fe_andy/">Instagram</a> · <a href="https://www.youtube.com/@4FeAndy">YouTube</a> · <a href="https://open.spotify.com/user/31mix2lsown7l4ycqak56qbeq6yy">Spotify</a></p>
+<p><a href="https://4fe-andy.github.io/"><kbd>个人网站 ↗</kbd></a>&ensp;<a href="https://www.instagram.com/4fe_andy/"><kbd>Instagram ↗</kbd></a>&ensp;<a href="https://www.youtube.com/@4FeAndy"><kbd>YouTube ↗</kbd></a>&ensp;<a href="https://open.spotify.com/user/31mix2lsown7l4ycqak56qbeq6yy"><kbd>Spotify ↗</kbd></a></p>
 
 </div>
 
@@ -23,7 +23,7 @@
       <p>一个通过持续对话理解用户，并帮助用户建立真实社交连接的智能 Agent。</p>
       <p><sub>产品方向 · 界面设计 · 前后端工程开发</sub></p>
       <p><strong>AdventureX 赛道第一名。</strong></p>
-      <p><a href="https://github.com/zs-andy/TOMEET-Web">前端</a> · <a href="https://github.com/toMeetADX/TOMEET_Backend">后端</a></p>
+      <p><a href="https://github.com/zs-andy/TOMEET-Web"><kbd>前端 ↗</kbd></a>&ensp;<a href="https://github.com/toMeetADX/TOMEET_Backend"><kbd>后端 ↗</kbd></a></p>
       <p><code>Next.js</code> <code>Fastify</code> <code>Supabase</code> <code>Photon Spectrum</code> <code>Agent Memory V2</code> <code>Injective Web3</code></p>
     </td>
     <td width="50%" valign="top">

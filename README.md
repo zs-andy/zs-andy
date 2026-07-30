@@ -10,7 +10,7 @@
 
 Creating intelligent, accessible and human-centered experiences.
 
-<p><a href="https://4fe-andy.github.io/">Website</a> · <a href="https://www.instagram.com/4fe_andy/">Instagram</a> · <a href="https://www.youtube.com/@4FeAndy">YouTube</a> · <a href="https://open.spotify.com/user/31mix2lsown7l4ycqak56qbeq6yy">Spotify</a></p>
+<p><a href="https://4fe-andy.github.io/"><kbd>Website ↗</kbd></a>&ensp;<a href="https://www.instagram.com/4fe_andy/"><kbd>Instagram ↗</kbd></a>&ensp;<a href="https://www.youtube.com/@4FeAndy"><kbd>YouTube ↗</kbd></a>&ensp;<a href="https://open.spotify.com/user/31mix2lsown7l4ycqak56qbeq6yy"><kbd>Spotify ↗</kbd></a></p>
 
 </div>
 
@@ -23,7 +23,7 @@ Creating intelligent, accessible and human-centered experiences.
       <p>A conversational social Agent that turns ongoing dialogue into real-world connections.</p>
       <p><sub>Product direction · Interface design · Frontend &amp; backend engineering</sub></p>
       <p><strong>AdventureX track 1st place.</strong></p>
-      <p><a href="https://github.com/zs-andy/TOMEET-Web">Frontend</a> · <a href="https://github.com/toMeetADX/TOMEET_Backend">Backend</a></p>
+      <p><a href="https://github.com/zs-andy/TOMEET-Web"><kbd>Frontend ↗</kbd></a>&ensp;<a href="https://github.com/toMeetADX/TOMEET_Backend"><kbd>Backend ↗</kbd></a></p>
       <p><code>Next.js</code> <code>Fastify</code> <code>Supabase</code> <code>Photon Spectrum</code> <code>Agent Memory V2</code> <code>Injective Web3</code></p>
     </td>
     <td width="50%" valign="top">
