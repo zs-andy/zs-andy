@@ -10,7 +10,14 @@
 
 Creating intelligent, accessible and human-centered experiences.
 
-<p><a href="https://4fe-andy.github.io/"><kbd>Website ↗</kbd></a>&ensp;<a href="https://www.instagram.com/4fe_andy/"><kbd>Instagram ↗</kbd></a>&ensp;<a href="https://www.youtube.com/@4FeAndy"><kbd>YouTube ↗</kbd></a>&ensp;<a href="https://open.spotify.com/user/31mix2lsown7l4ycqak56qbeq6yy"><kbd>Spotify ↗</kbd></a></p>
+<table align="center">
+  <tr>
+    <td align="center"><a href="https://4fe-andy.github.io/"><img alt="Website" src="https://img.shields.io/badge/Website-C4E2FB?style=flat-square&amp;logo=safari&amp;logoColor=white&amp;labelColor=1C1B1B"></a></td>
+    <td align="center"><a href="https://www.instagram.com/4fe_andy/"><img alt="Instagram" src="https://img.shields.io/badge/Instagram-F7C5ED?style=flat-square&amp;logo=instagram&amp;logoColor=white&amp;labelColor=1C1B1B"></a></td>
+    <td align="center"><a href="https://www.youtube.com/@4FeAndy"><img alt="YouTube" src="https://img.shields.io/badge/YouTube-F6D990?style=flat-square&amp;logo=youtube&amp;logoColor=white&amp;labelColor=1C1B1B"></a></td>
+    <td align="center"><a href="https://open.spotify.com/user/31mix2lsown7l4ycqak56qbeq6yy"><img alt="Spotify" src="https://img.shields.io/badge/Spotify-B9D99A?style=flat-square&amp;logo=spotify&amp;logoColor=white&amp;labelColor=1C1B1B"></a></td>
+  </tr>
+</table>
 
 </div>
 
