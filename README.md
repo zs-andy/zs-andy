@@ -10,14 +10,7 @@
 
 Creating intelligent, accessible and human-centered experiences.
 
-<table align="center">
-  <tr>
-    <td align="center"><a href="https://4fe-andy.github.io/"><img alt="Website" src="https://img.shields.io/badge/Website-C4E2FB?style=flat-square&amp;logo=safari&amp;logoColor=white&amp;labelColor=1C1B1B"></a></td>
-    <td align="center"><a href="https://www.instagram.com/4fe_andy/"><img alt="Instagram" src="https://img.shields.io/badge/Instagram-F7C5ED?style=flat-square&amp;logo=instagram&amp;logoColor=white&amp;labelColor=1C1B1B"></a></td>
-    <td align="center"><a href="https://www.youtube.com/@4FeAndy"><img alt="YouTube" src="https://img.shields.io/badge/YouTube-F6D990?style=flat-square&amp;logo=youtube&amp;logoColor=white&amp;labelColor=1C1B1B"></a></td>
-    <td align="center"><a href="https://open.spotify.com/user/31mix2lsown7l4ycqak56qbeq6yy"><img alt="Spotify" src="https://img.shields.io/badge/Spotify-B9D99A?style=flat-square&amp;logo=spotify&amp;logoColor=white&amp;labelColor=1C1B1B"></a></td>
-  </tr>
-</table>
+<p><img alt="Website, Instagram, YouTube and Spotify" src="./assets/social-links.svg"></p>
 
 </div>
 
@@ -28,6 +21,7 @@ Creating intelligent, accessible and human-centered experiences.
     <td width="50%" valign="top">
       <h3><a href="https://github.com/zs-andy/TOMEET-Web">TOMEET</a></h3>
       <p>A conversational social Agent that turns ongoing dialogue into real-world connections.</p>
+      <p><img alt="Agent" src="https://img.shields.io/badge/Agent-B9D99A?style=flat-square&amp;labelColor=1C1B1B"></p>
       <p><sub>Product direction · Interface design · Frontend &amp; backend engineering</sub></p>
       <p><strong>AdventureX track 1st place.</strong></p>
       <p><a href="https://github.com/zs-andy/TOMEET-Web"><kbd>Frontend ↗</kbd></a>&ensp;<a href="https://github.com/toMeetADX/TOMEET_Backend"><kbd>Backend ↗</kbd></a></p>

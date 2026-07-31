@@ -10,14 +10,7 @@
 
 构建智能、无障碍且以人为本的产品与交互体验。
 
-<table align="center">
-  <tr>
-    <td align="center"><a href="https://4fe-andy.github.io/"><img alt="个人网站" src="https://img.shields.io/badge/Website-C4E2FB?style=flat-square&amp;logo=safari&amp;logoColor=white&amp;labelColor=1C1B1B"></a></td>
-    <td align="center"><a href="https://www.instagram.com/4fe_andy/"><img alt="Instagram" src="https://img.shields.io/badge/Instagram-F7C5ED?style=flat-square&amp;logo=instagram&amp;logoColor=white&amp;labelColor=1C1B1B"></a></td>
-    <td align="center"><a href="https://www.youtube.com/@4FeAndy"><img alt="YouTube" src="https://img.shields.io/badge/YouTube-F6D990?style=flat-square&amp;logo=youtube&amp;logoColor=white&amp;labelColor=1C1B1B"></a></td>
-    <td align="center"><a href="https://open.spotify.com/user/31mix2lsown7l4ycqak56qbeq6yy"><img alt="Spotify" src="https://img.shields.io/badge/Spotify-B9D99A?style=flat-square&amp;logo=spotify&amp;logoColor=white&amp;labelColor=1C1B1B"></a></td>
-  </tr>
-</table>
+<p><img alt="个人网站、Instagram、YouTube 和 Spotify" src="./assets/social-links.svg"></p>
 
 </div>
 
@@ -28,6 +21,7 @@
     <td width="50%" valign="top">
       <h3><a href="https://github.com/zs-andy/TOMEET-Web">TOMEET</a></h3>
       <p>一个通过持续对话理解用户，并帮助用户建立真实社交连接的智能 Agent。</p>
+      <p><img alt="Agent" src="https://img.shields.io/badge/Agent-B9D99A?style=flat-square&amp;labelColor=1C1B1B"></p>
       <p><sub>产品方向 · 界面设计 · 前后端工程开发</sub></p>
       <p><strong>AdventureX 赛道第一名。</strong></p>
       <p><a href="https://github.com/zs-andy/TOMEET-Web"><kbd>前端 ↗</kbd></a>&ensp;<a href="https://github.com/toMeetADX/TOMEET_Backend"><kbd>后端 ↗</kbd></a></p>
