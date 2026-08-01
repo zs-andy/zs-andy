@@ -6,7 +6,7 @@
 
 <div align="center">
 
-###  AI · Spatial Computing · Product · Design · Full-stack Engineering
+###  AI · Spatial Computing · Product Management · Design · Full-stack Engineering
 
 Creating intelligent and accessible experiences across Apple platforms and the web.
 
