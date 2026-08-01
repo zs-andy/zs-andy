@@ -6,9 +6,9 @@
 
 <div align="center">
 
-###  AI · Spatial Computing · Apple Platforms · Full-stack Engineering
+###  AI · Spatial Computing · Product · Design · Full-stack Engineering
 
-Creating intelligent, accessible and human-centered experiences.
+Creating intelligent and accessible experiences across Apple platforms and the web.
 
 <p><img alt="Website, Instagram, YouTube and Spotify" src="./assets/social-links.svg"></p>
 

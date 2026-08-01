@@ -6,9 +6,9 @@
 
 <div align="center">
 
-###  人工智能 · 空间计算 · Apple 平台 · 全栈工程
+###  人工智能 · 空间计算 · 产品 · 设计 · 全栈工程
 
-构建智能、无障碍且以人为本的产品与交互体验。
+构建面向 Apple 平台与 Web 的智能、无障碍产品体验。
 
 <p><img alt="个人网站、Instagram、YouTube 和 Spotify" src="./assets/social-links.svg"></p>
 
