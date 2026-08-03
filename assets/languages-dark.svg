@@ -5,21 +5,21 @@
     <clipPath id="bar-clip"><rect x="24" y="49" width="672" height="14" rx="7"/></clipPath>
   </defs>
   <rect x="24" y="49" width="672" height="14" rx="7" fill="#343230"/>
-  <g clip-path="url(#bar-clip)"><rect x="24.00" y="49" width="359.28" height="14" fill="#4A36D2"/><rect x="383.28" y="49" width="118.49" height="14" fill="#D55B2F"/><rect x="501.76" y="49" width="110.91" height="14" fill="#2B73D2"/><rect x="612.68" y="49" width="83.32" height="14" fill="#B8B8B2"/></g>
+  <g clip-path="url(#bar-clip)"><rect x="24.00" y="49" width="355.84" height="14" fill="#4A36D2"/><rect x="379.84" y="49" width="119.69" height="14" fill="#D55B2F"/><rect x="499.53" y="49" width="112.04" height="14" fill="#2B73D2"/><rect x="611.57" y="49" width="84.43" height="14" fill="#B8B8B2"/></g>
   <g transform="translate(24.00 91)">
         <circle cx="5" cy="-4" r="4" fill="#4A36D2"/>
-        <text x="15" y="0" fill="#B8B8B2" font-size="12" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">TypeScript 53.5%</text>
+        <text x="15" y="0" fill="#B8B8B2" font-size="12" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">TypeScript 53.0%</text>
       </g>
 <g transform="translate(192.00 91)">
         <circle cx="5" cy="-4" r="4" fill="#D55B2F"/>
-        <text x="15" y="0" fill="#B8B8B2" font-size="12" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">Swift 17.6%</text>
+        <text x="15" y="0" fill="#B8B8B2" font-size="12" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">Swift 17.8%</text>
       </g>
 <g transform="translate(360.00 91)">
         <circle cx="5" cy="-4" r="4" fill="#2B73D2"/>
-        <text x="15" y="0" fill="#B8B8B2" font-size="12" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">PL/pgSQL 16.5%</text>
+        <text x="15" y="0" fill="#B8B8B2" font-size="12" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">PL/pgSQL 16.7%</text>
       </g>
 <g transform="translate(528.00 91)">
         <circle cx="5" cy="-4" r="4" fill="#B8B8B2"/>
-        <text x="15" y="0" fill="#B8B8B2" font-size="12" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">Other 12.4%</text>
+        <text x="15" y="0" fill="#B8B8B2" font-size="12" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">Other 12.6%</text>
       </g>
 </svg>
