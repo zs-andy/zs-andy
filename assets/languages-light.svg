@@ -5,10 +5,10 @@
     <clipPath id="bar-clip"><rect x="24" y="49" width="672" height="14" rx="7"/></clipPath>
   </defs>
   <rect x="24" y="49" width="672" height="14" rx="7" fill="#EFEEEA"/>
-  <g clip-path="url(#bar-clip)"><rect x="24.00" y="49" width="356.44" height="14" fill="#4A36D2"/><rect x="380.44" y="49" width="119.06" height="14" fill="#D55B2F"/><rect x="499.50" y="49" width="111.45" height="14" fill="#2B73D2"/><rect x="610.96" y="49" width="85.04" height="14" fill="#B8B8B2"/></g>
+  <g clip-path="url(#bar-clip)"><rect x="24.00" y="49" width="357.59" height="14" fill="#4A36D2"/><rect x="381.59" y="49" width="118.63" height="14" fill="#D55B2F"/><rect x="500.22" y="49" width="111.05" height="14" fill="#2B73D2"/><rect x="611.27" y="49" width="84.73" height="14" fill="#B8B8B2"/></g>
   <g transform="translate(24.00 91)">
         <circle cx="5" cy="-4" r="4" fill="#4A36D2"/>
-        <text x="15" y="0" fill="#6B6964" font-size="12" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">TypeScript 53.0%</text>
+        <text x="15" y="0" fill="#6B6964" font-size="12" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">TypeScript 53.2%</text>
       </g>
 <g transform="translate(192.00 91)">
         <circle cx="5" cy="-4" r="4" fill="#D55B2F"/>
@@ -16,10 +16,10 @@
       </g>
 <g transform="translate(360.00 91)">
         <circle cx="5" cy="-4" r="4" fill="#2B73D2"/>
-        <text x="15" y="0" fill="#6B6964" font-size="12" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">PL/pgSQL 16.6%</text>
+        <text x="15" y="0" fill="#6B6964" font-size="12" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">PL/pgSQL 16.5%</text>
       </g>
 <g transform="translate(528.00 91)">
         <circle cx="5" cy="-4" r="4" fill="#B8B8B2"/>
-        <text x="15" y="0" fill="#6B6964" font-size="12" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">Other 12.7%</text>
+        <text x="15" y="0" fill="#6B6964" font-size="12" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">Other 12.6%</text>
       </g>
 </svg>
