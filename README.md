@@ -8,7 +8,7 @@
 
 ###  AI · Spatial Computing · Product Management · Design · Full-stack Engineering
 
-Creating intelligent and accessible experiences across Apple platforms and the web.
+Creating intelligent and accessible experiences across Apple platforms, the web, and beyond.
 
 <p><img alt="Website, Instagram, YouTube and Spotify" src="./assets/social-links.svg"></p>
 
