@@ -1,25 +1,52 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="116" viewBox="0 0 720 116" role="img" aria-label="Language distribution across featured projects">
-  <rect x="0.5" y="0.5" width="719" height="115" rx="12" fill="#1C1B1B" stroke="#343230"/>
-  <text x="24" y="29" fill="#FDFDFC" font-size="14" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif">展示项目 · 语言分布</text>
-  <defs>
-    <clipPath id="bar-clip"><rect x="24" y="49" width="672" height="14" rx="7"/></clipPath>
-  </defs>
-  <rect x="24" y="49" width="672" height="14" rx="7" fill="#343230"/>
-  <g clip-path="url(#bar-clip)"><rect x="24.00" y="49" width="357.59" height="14" fill="#4A36D2"/><rect x="381.59" y="49" width="118.63" height="14" fill="#D55B2F"/><rect x="500.22" y="49" width="111.05" height="14" fill="#2B73D2"/><rect x="611.27" y="49" width="84.73" height="14" fill="#B8B8B2"/></g>
-  <g transform="translate(24.00 91)">
-        <circle cx="5" cy="-4" r="4" fill="#4A36D2"/>
-        <text x="15" y="0" fill="#B8B8B2" font-size="12" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">TypeScript 53.2%</text>
-      </g>
-<g transform="translate(192.00 91)">
-        <circle cx="5" cy="-4" r="4" fill="#D55B2F"/>
-        <text x="15" y="0" fill="#B8B8B2" font-size="12" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">Swift 17.7%</text>
-      </g>
-<g transform="translate(360.00 91)">
-        <circle cx="5" cy="-4" r="4" fill="#2B73D2"/>
-        <text x="15" y="0" fill="#B8B8B2" font-size="12" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">PL/pgSQL 16.5%</text>
-      </g>
-<g transform="translate(528.00 91)">
-        <circle cx="5" cy="-4" r="4" fill="#B8B8B2"/>
-        <text x="15" y="0" fill="#B8B8B2" font-size="12" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">其他 12.6%</text>
-      </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="410" viewBox="0 0 760 410" role="img" aria-labelledby="title description">
+  <title id="title">代码的语言构成</title>
+  <desc id="description">TypeScript 53.2%; Swift 17.7%; PL/pgSQL 16.5%; JavaScript 3.6%; CSS 3.5%; 其他 5.5%. 7 个仓库. 更新于 2026-09-21.</desc>
+  <rect x="0.5" y="0.5" width="759" height="409" rx="16" fill="#0D1117" stroke="#30363D" />
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Noto Sans CJK SC', sans-serif">
+    <text x="32" y="46" font-size="25" font-weight="600" fill="#F0F6FC">代码的语言构成</text>
+    <text x="32" y="72" font-size="14" fill="#9198A1">展示项目 / GitHub 代码字节占比</text>
+    <circle cx="160" cy="217" r="78" fill="none" stroke="#212830" stroke-width="22" />
+    <circle cx="160" cy="217" r="78" fill="none" stroke="#3178C6" stroke-width="22" stroke-dasharray="255.791 234.298" stroke-dashoffset="-2.500" transform="rotate(-90 160 217)" />
+<circle cx="160" cy="217" r="78" fill="none" stroke="#F07842" stroke-width="22" stroke-dasharray="81.515 408.574" stroke-dashoffset="-263.291" transform="rotate(-90 160 217)" />
+<circle cx="160" cy="217" r="78" fill="none" stroke="#8271D1" stroke-width="22" stroke-dasharray="75.987 414.102" stroke-dashoffset="-349.805" transform="rotate(-90 160 217)" />
+<circle cx="160" cy="217" r="78" fill="none" stroke="#C79D36" stroke-width="22" stroke-dasharray="13.324 476.765" stroke-dashoffset="-430.396" transform="rotate(-90 160 217)" />
+<circle cx="160" cy="217" r="78" fill="none" stroke="#399EAA" stroke-width="22" stroke-dasharray="13.207 476.881" stroke-dashoffset="-447.909" transform="rotate(-90 160 217)" />
+<circle cx="160" cy="217" r="78" fill="none" stroke="#929CAF" stroke-width="22" stroke-dasharray="21.887 468.202" stroke-dashoffset="-465.702" transform="rotate(-90 160 217)" />
+    <text x="160" y="223" text-anchor="middle" font-size="44" font-weight="600" fill="#F0F6FC">10</text>
+    <text x="160" y="249" text-anchor="middle" font-size="14" fill="#9198A1">种语言</text>
+    <circle cx="326" cy="116" r="4" fill="#3178C6" />
+<text x="338" y="121" font-size="15" fill="#F0F6FC">TypeScript</text>
+<text x="728" y="121" text-anchor="end" font-size="15" font-variant-numeric="tabular-nums" fill="#9198A1">53.2%</text>
+<rect x="322" y="131" width="406" height="4" rx="2" fill="#212830" />
+<rect x="322" y="131" width="216.045" height="4" rx="2" fill="#3178C6" />
+<circle cx="326" cy="154" r="4" fill="#F07842" />
+<text x="338" y="159" font-size="15" fill="#F0F6FC">Swift</text>
+<text x="728" y="159" text-anchor="end" font-size="15" font-variant-numeric="tabular-nums" fill="#9198A1">17.7%</text>
+<rect x="322" y="169" width="406" height="4" rx="2" fill="#212830" />
+<rect x="322" y="169" width="71.671" height="4" rx="2" fill="#F07842" />
+<circle cx="326" cy="192" r="4" fill="#8271D1" />
+<text x="338" y="197" font-size="15" fill="#F0F6FC">PL/pgSQL</text>
+<text x="728" y="197" text-anchor="end" font-size="15" font-variant-numeric="tabular-nums" fill="#9198A1">16.5%</text>
+<rect x="322" y="207" width="406" height="4" rx="2" fill="#212830" />
+<rect x="322" y="207" width="67.091" height="4" rx="2" fill="#8271D1" />
+<circle cx="326" cy="230" r="4" fill="#C79D36" />
+<text x="338" y="235" font-size="15" fill="#F0F6FC">JavaScript</text>
+<text x="728" y="235" text-anchor="end" font-size="15" font-variant-numeric="tabular-nums" fill="#9198A1">3.6%</text>
+<rect x="322" y="245" width="406" height="4" rx="2" fill="#212830" />
+<rect x="322" y="245" width="14.523" height="4" rx="2" fill="#C79D36" />
+<circle cx="326" cy="268" r="4" fill="#399EAA" />
+<text x="338" y="273" font-size="15" fill="#F0F6FC">CSS</text>
+<text x="728" y="273" text-anchor="end" font-size="15" font-variant-numeric="tabular-nums" fill="#9198A1">3.5%</text>
+<rect x="322" y="283" width="406" height="4" rx="2" fill="#212830" />
+<rect x="322" y="283" width="14.396" height="4" rx="2" fill="#399EAA" />
+<circle cx="326" cy="306" r="4" fill="#929CAF" />
+<text x="338" y="311" font-size="15" fill="#F0F6FC">其他</text>
+<text x="728" y="311" text-anchor="end" font-size="15" font-variant-numeric="tabular-nums" fill="#9198A1">5.5%</text>
+<rect x="322" y="321" width="406" height="4" rx="2" fill="#212830" />
+<rect x="322" y="321" width="22.273" height="4" rx="2" fill="#929CAF" />
+
+    <path d="M32 348H728" fill="none" stroke="#30363D" />
+    <text x="32" y="380" font-size="13" fill="#9198A1">7 个仓库</text>
+    <text x="728" y="380" text-anchor="end" font-size="13" fill="#9198A1">更新于 2026-09-21</text>
+  </g>
 </svg>

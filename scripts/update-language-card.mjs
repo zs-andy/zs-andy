@@ -1,7 +1,9 @@
 import { mkdir, writeFile } from "node:fs/promises";
+import { resolve } from "node:path";
+import { fileURLToPath } from "node:url";
 
-const repositories = [
-  "zs-andy/TOMEET-Web",
+export const repositories = [
+  "tomeet-chat/TOMEET-Web",
   "toMeetADX/TOMEET_Backend",
   "zs-andy/Atmos_Rokid",
   "zs-andy/DeadLineTodo",
@@ -11,137 +13,194 @@ const repositories = [
 ];
 
 const colors = {
-  TypeScript: "#4A36D2",
-  Swift: "#D55B2F",
-  PLpgSQL: "#2B73D2",
-  JavaScript: "#D93DB7",
-  CSS: "#8D79F6",
-  Kotlin: "#F09A59",
-  Other: "#B8B8B2",
+  TypeScript: "#3178C6", Swift: "#F07842", PLpgSQL: "#8271D1",
+  JavaScript: "#C79D36", CSS: "#399EAA", Kotlin: "#BA68C8", Other: "#929CAF",
 };
-
-const locales = {
+export const locales = {
   en: {
-    suffix: "",
-    title: "Featured projects · language mix",
+    suffix: "", title: "Language composition",
+    subtitle: "Featured projects / GitHub code bytes",
+    languages: "languages", repos: "repositories", updated: "Updated",
+    empty: "No language data available",
     labels: { PLpgSQL: "PL/pgSQL", Other: "Other" },
   },
   zhCN: {
-    suffix: "-zh-CN",
-    title: "展示项目 · 语言分布",
+    suffix: "-zh-CN", title: "代码的语言构成",
+    subtitle: "展示项目 / GitHub 代码字节占比",
+    languages: "种语言", repos: "个仓库", updated: "更新于",
+    empty: "暂无语言数据",
     labels: { PLpgSQL: "PL/pgSQL", Other: "其他" },
   },
 };
-
-const headers = {
-  Accept: "application/vnd.github+json",
-  "X-GitHub-Api-Version": "2022-11-28",
-};
-
-if (process.env.GITHUB_TOKEN) {
-  headers.Authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
-}
-
-const totals = new Map();
-
-for (const repository of repositories) {
-  const response = await fetch(`https://api.github.com/repos/${repository}/languages`, {
-    headers,
-  });
-
-  if (!response.ok) {
-    throw new Error(`GitHub API returned ${response.status} for ${repository}`);
-  }
-
-  const languages = await response.json();
-  for (const [language, bytes] of Object.entries(languages)) {
-    totals.set(language, (totals.get(language) ?? 0) + bytes);
-  }
-}
-
-const sorted = [...totals.entries()].sort((a, b) => b[1] - a[1]);
-const primary = sorted.slice(0, 3);
-const otherBytes = sorted.slice(3).reduce((sum, [, bytes]) => sum + bytes, 0);
-const entries = otherBytes > 0 ? [...primary, ["Other", otherBytes]] : primary;
-const totalBytes = entries.reduce((sum, [, bytes]) => sum + bytes, 0);
-
-const themes = {
+export const themes = {
   light: {
-    background: "#FDFDFC",
-    border: "#E8E7E3",
-    title: "#1C1B1B",
-    text: "#6B6964",
-    track: "#EFEEEA",
+    background: "#FFFFFF", border: "#D1D9E0", title: "#1F2328",
+    muted: "#656D76", track: "#EFF2F5",
   },
   dark: {
-    background: "#1C1B1B",
-    border: "#343230",
-    title: "#FDFDFC",
-    text: "#B8B8B2",
-    track: "#343230",
+    background: "#0D1117", border: "#30363D", title: "#F0F6FC",
+    muted: "#9198A1", track: "#212830",
   },
 };
+export const escapeXml = (value) => String(value)
+  .replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;")
+  .replaceAll('"', "&quot;").replaceAll("'", "&apos;");
 
-const escapeXml = (value) =>
-  value.replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;");
+// Keep unrounded bytes as the source of truth. Only display percentages are rounded.
+export function summarize(sources, updatedAt = new Date().toISOString().slice(0, 10)) {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(updatedAt)) throw new Error("Expected an ISO date.");
+  const totals = new Map();
+  for (const { repository, languages } of sources) {
+    if (!languages || typeof languages !== "object" || Array.isArray(languages)) {
+      throw new Error("Invalid language response for " + repository);
+    }
+    for (const [language, bytes] of Object.entries(languages)) {
+      if (!Number.isSafeInteger(bytes) || bytes < 0) {
+        throw new Error("Invalid byte count for " + repository + ": " + language);
+      }
+      if (bytes > 0) totals.set(language, (totals.get(language) ?? 0) + bytes);
+    }
+  }
+  const sorted = [...totals.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+  const totalBytes = sorted.reduce((sum, [, bytes]) => sum + bytes, 0);
+  if (!Number.isSafeInteger(totalBytes)) throw new Error("Language byte total exceeds safe range.");
+  const primary = sorted.slice(0, 5);
+  const otherBytes = sorted.slice(5).reduce((sum, [, bytes]) => sum + bytes, 0);
+  const entries = (otherBytes > 0 ? [...primary, ["Other", otherBytes]] : primary)
+    .map(([language, bytes]) => ({ language, bytes, share: bytes / totalBytes }));
 
-function render(theme, locale) {
-  const width = 720;
-  const height = 116;
-  const barX = 24;
-  const barY = 49;
-  const barWidth = width - barX * 2;
-  const barHeight = 14;
-  let currentX = barX;
-
-  const segments = entries
-    .map(([language, bytes], index) => {
-      const remaining = barX + barWidth - currentX;
-      const segmentWidth =
-        index === entries.length - 1 ? remaining : (bytes / totalBytes) * barWidth;
-      const segment = `<rect x="${currentX.toFixed(2)}" y="${barY}" width="${segmentWidth.toFixed(2)}" height="${barHeight}" fill="${colors[language] ?? colors.Other}"/>`;
-      currentX += segmentWidth;
-      return segment;
-    })
-    .join("");
-
-  const labelGap = barWidth / entries.length;
-  const labels = entries
-    .map(([language, bytes], index) => {
-      const x = barX + index * labelGap;
-      const percentage = ((bytes / totalBytes) * 100).toFixed(1);
-      const color = colors[language] ?? colors.Other;
-      const label = locale.labels[language] ?? language;
-      return `<g transform="translate(${x.toFixed(2)} 91)">
-        <circle cx="5" cy="-4" r="4" fill="${color}"/>
-        <text x="15" y="0" fill="${theme.text}" font-size="12" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">${escapeXml(label)} ${percentage}%</text>
-      </g>`;
-    })
-    .join("\n");
-
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img" aria-label="Language distribution across featured projects">
-  <rect x="0.5" y="0.5" width="${width - 1}" height="${height - 1}" rx="12" fill="${theme.background}" stroke="${theme.border}"/>
-  <text x="24" y="29" fill="${theme.title}" font-size="14" font-weight="600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif">${locale.title}</text>
-  <defs>
-    <clipPath id="bar-clip"><rect x="${barX}" y="${barY}" width="${barWidth}" height="${barHeight}" rx="7"/></clipPath>
-  </defs>
-  <rect x="${barX}" y="${barY}" width="${barWidth}" height="${barHeight}" rx="7" fill="${theme.track}"/>
-  <g clip-path="url(#bar-clip)">${segments}</g>
-  ${labels}
-</svg>
-`;
+  // Largest remainder allocation ensures displayed values add up to exactly 100.0%.
+  const tenths = entries.map(({ share }) => Math.floor(share * 1000));
+  const remainderOrder = entries.map(({ share }, index) => ({
+    index, remainder: share * 1000 - tenths[index],
+  })).sort((a, b) => b.remainder - a.remainder || a.index - b.index);
+  const leftover = entries.length ? 1000 - tenths.reduce((sum, n) => sum + n, 0) : 0;
+  for (let i = 0; i < leftover; i++) tenths[remainderOrder[i].index]++;
+  return {
+    updatedAt, repositoryCount: sources.length, languageCount: sorted.length,
+    totalBytes, entries: entries.map((entry, index) => ({
+      ...entry, percentage: (tenths[index] / 10).toFixed(1),
+    })),
+    languages: Object.fromEntries(sorted),
+  };
 }
 
-await mkdir(new URL("../assets/", import.meta.url), { recursive: true });
-await Promise.all(
-  Object.values(locales).flatMap((locale) =>
-    Object.entries(themes).map(([name, theme]) =>
-      writeFile(
-        new URL(`../assets/languages${locale.suffix}-${name}.svg`, import.meta.url),
-        render(theme, locale),
-      ),
-    ),
-  ),
-);
+export function renderCard(data, theme, locale, mobile = false) {
+  const width = mobile ? 420 : 760;
+  const height = mobile ? 574 : 410;
+  const padding = mobile ? 24 : 32;
+  const cx = mobile ? 210 : 160;
+  const cy = mobile ? 180 : 217;
+  const radius = 78;
+  const circumference = 2 * Math.PI * radius;
+  const ringWidth = 22;
+  let offset = 0;
+  const ring = data.entries.map(({ language, share }) => {
+    const length = share * circumference;
+    // Gaps stay smaller than even a tiny segment; no negative SVG dash lengths.
+    const gap = data.entries.length > 1 ? Math.min(5, length * 0.24) : 0;
+    const markup = '<circle cx="' + cx + '" cy="' + cy + '" r="' + radius +
+      '" fill="none" stroke="' + (colors[language] ?? colors.Other) +
+      '" stroke-width="' + ringWidth + '" stroke-dasharray="' +
+      (length - gap).toFixed(3) + " " + (circumference - length + gap).toFixed(3) +
+      '" stroke-dashoffset="' + (-offset - gap / 2).toFixed(3) +
+      '" transform="rotate(-90 ' + cx + " " + cy + ')" />';
+    offset += length;
+    return markup;
+  }).join("\n");
 
-console.log(`Updated language cards from ${repositories.length} featured repositories.`);
+  const rowsX = mobile ? padding : 322;
+  const rowsWidth = width - padding - rowsX;
+  const rowsY = mobile ? 301 : 121;
+  const rowGap = mobile ? 36 : 38;
+  const rows = data.entries.map(({ language, share, percentage }, index) => {
+    const y = rowsY + index * rowGap;
+    const color = colors[language] ?? colors.Other;
+    const label = locale.labels[language] ?? language;
+    return '<circle cx="' + (rowsX + 4) + '" cy="' + (y - 5) +
+      '" r="4" fill="' + color + '" />\n' +
+      '<text x="' + (rowsX + 16) + '" y="' + y + '" font-size="15" fill="' +
+      theme.title + '">' + escapeXml(label) + '</text>\n' +
+      '<text x="' + (width - padding) + '" y="' + y +
+      '" text-anchor="end" font-size="15" font-variant-numeric="tabular-nums" fill="' +
+      theme.muted + '">' + percentage + '%</text>\n' +
+      '<rect x="' + rowsX + '" y="' + (y + 10) + '" width="' + rowsWidth +
+      '" height="4" rx="2" fill="' + theme.track + '" />\n' +
+      '<rect x="' + rowsX + '" y="' + (y + 10) + '" width="' +
+      (rowsWidth * share).toFixed(3) + '" height="4" rx="2" fill="' + color + '" />';
+  }).join("\n");
+
+  const description = data.entries.length
+    ? data.entries.map(({ language, percentage }) => (locale.labels[language] ?? language) + " " + percentage + "%").join("; ")
+    : locale.empty;
+  const footerY = height - 30;
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img" aria-labelledby="title description">
+  <title id="title">${escapeXml(locale.title)}</title>
+  <desc id="description">${escapeXml(description)}. ${data.repositoryCount} ${locale.repos}. ${locale.updated} ${data.updatedAt}.</desc>
+  <rect x="0.5" y="0.5" width="${width - 1}" height="${height - 1}" rx="16" fill="${theme.background}" stroke="${theme.border}" />
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Noto Sans CJK SC', sans-serif">
+    <text x="${padding}" y="46" font-size="${mobile ? 23 : 25}" font-weight="600" fill="${theme.title}">${locale.title}</text>
+    <text x="${padding}" y="72" font-size="14" fill="${theme.muted}">${locale.subtitle}</text>
+    <circle cx="${cx}" cy="${cy}" r="${radius}" fill="none" stroke="${theme.track}" stroke-width="${ringWidth}" />
+    ${ring}
+    <text x="${cx}" y="${cy + 6}" text-anchor="middle" font-size="44" font-weight="600" fill="${theme.title}">${data.languageCount}</text>
+    <text x="${cx}" y="${cy + 32}" text-anchor="middle" font-size="14" fill="${theme.muted}">${locale.languages}</text>
+    ${rows}
+    ${!data.entries.length ? '<text x="' + rowsX + '" y="' + rowsY + '" font-size="16" fill="' + theme.muted + '">' + locale.empty + '</text>' : ""}
+    <path d="M${padding} ${height - 62}H${width - padding}" fill="none" stroke="${theme.border}" />
+    <text x="${padding}" y="${footerY}" font-size="13" fill="${theme.muted}">${data.repositoryCount} ${locale.repos}</text>
+    <text x="${width - padding}" y="${footerY}" text-anchor="end" font-size="13" fill="${theme.muted}">${locale.updated} ${data.updatedAt}</text>
+  </g>
+</svg>
+`.replace(/[\t ]+$/gm, "");
+}
+
+export async function collectLanguages(fetcher = fetch, token = process.env.GITHUB_TOKEN) {
+  const headers = {
+    Accept: "application/vnd.github+json",
+    "X-GitHub-Api-Version": "2022-11-28",
+  };
+  if (token) headers.Authorization = "Bearer " + token;
+  // Finish every request before touching generated assets: an API failure preserves the previous snapshot.
+  return Promise.all(repositories.map(async (repository) => {
+    const response = await fetcher("https://api.github.com/repos/" + repository + "/languages", {
+      headers, signal: AbortSignal.timeout(20000),
+    });
+    if (!response.ok) throw new Error("GitHub API returned " + response.status + " for " + repository);
+    return { repository, languages: await response.json() };
+  }));
+}
+
+export async function main() {
+  const sources = await collectLanguages();
+  const data = summarize(sources);
+  if (data.totalBytes === 0) throw new Error("Empty API snapshot; keeping existing cards.");
+  const assets = new URL("../assets/", import.meta.url);
+  await mkdir(assets, { recursive: true });
+  const snapshot = {
+    updatedAt: data.updatedAt,
+    methodology: "Share of GitHub Linguist code bytes in the seven featured public repositories; not proficiency or account-wide activity.",
+    repositoryCount: data.repositoryCount,
+    languageCount: data.languageCount,
+    totalBytes: data.totalBytes,
+    languages: data.languages,
+    repositories: sources,
+  };
+  const files = [["language-data.json", JSON.stringify(snapshot, null, 2) + "\n"]];
+  for (const locale of Object.values(locales)) {
+    for (const [name, theme] of Object.entries(themes)) {
+      for (const mobile of [false, true]) {
+        files.push([
+          "languages" + locale.suffix + (mobile ? "-mobile" : "") + "-" + name + ".svg",
+          renderCard(data, theme, locale, mobile),
+        ]);
+      }
+    }
+  }
+  await Promise.all(files.map(([name, content]) => writeFile(new URL(name, assets), content)));
+  console.log("Updated eight cards and source data from " + sources.length + " repositories.");
+}
+
+if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+  main().catch((error) => { console.error(error.message); process.exitCode = 1; });
+}
