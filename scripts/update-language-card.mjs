@@ -18,6 +18,9 @@ const colors = {
 };
 const languageColor = (language) => colors[language] ?? "#929CAF";
 const primaryLanguageCount = 10;
+// GitHub caches README images by URL. Bump this when the visual contract changes so
+// a newly generated chart cannot be replaced by a stale image at the old path.
+export const assetPrefix = "contribution-languages-v2-inline";
 export const locales = {
   en: {
     suffix: "", title: "Languages",
@@ -198,7 +201,7 @@ export async function main() {
     for (const [name, theme] of Object.entries(themes)) {
       for (const mobile of [false, true]) {
         files.push([
-          "contribution-languages-inline" + locale.suffix + (mobile ? "-mobile" : "") + "-" + name + ".svg",
+          assetPrefix + locale.suffix + (mobile ? "-mobile" : "") + "-" + name + ".svg",
           renderCard(data, theme, locale, mobile),
         ]);
       }

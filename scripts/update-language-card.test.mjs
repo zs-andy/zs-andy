@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { readFile, access } from "node:fs/promises";
 import test from "node:test";
-import { escapeXml, locales, publicSnapshot, renderCard, summarize, themes } from "./update-language-card.mjs";
+import { assetPrefix, escapeXml, locales, publicSnapshot, renderCard, summarize, themes } from "./update-language-card.mjs";
 import { collectLanguages } from "./contribution-repositories.mjs";
 
 const repositories = [
@@ -152,6 +152,7 @@ test("both READMEs preserve projects and link text rather than fake social butto
     assert.doesNotMatch(md, /^<br\s*\/>$/m);
     for (const match of md.matchAll(/(?:src|srcset)="(\.\/[^\"]+)"/g)) {
       await access(new URL("../" + match[1], import.meta.url));
+      assert.match(match[1], new RegExp("^\\./assets/" + assetPrefix.replaceAll("-", "\\-") + ""));
     }
     for (const match of md.matchAll(/href="#([^\"]+)"/g)) {
       const headings = [...md.matchAll(/^## (.+)$/gm)].map((heading) => heading[1].toLowerCase());

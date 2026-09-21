@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="275" viewBox="0 0 760 275" role="img" aria-labelledby="title description">
+  <title id="title">语言概览</title>
+  <desc id="description">包含我的提交的仓库语言分布. TypeScript 42.9%; Swift 31.5%; JavaScript 6.4%; Jupyter Notebook 3.7%; HTML 3.5%; PL/pgSQL 3.0%; CSS 2.9%; Python 2.9%; Kotlin 1.9%; Go 1.0%; Shell 0.2%; PowerShell 0.1%; Makefile 0.0%; Ruby 0.0%; Dockerfile 0.0%; C 0.0%; Solidity 0.0%; Objective-C 0.0%; Batchfile 0.0%. 29 个仓库. 更新于 2026-09-21.</desc>
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Noto Sans CJK SC', sans-serif">
+    <circle cx="130" cy="100" r="70" fill="none" stroke="#212830" stroke-width="18" />
+    <circle cx="130" cy="100" r="70" fill="none" stroke="#3178C6" stroke-width="18" stroke-dasharray="183.445 256.378" stroke-dashoffset="-2.500" transform="rotate(-90 130 100)" />
+<circle cx="130" cy="100" r="70" fill="none" stroke="#F07842" stroke-width="18" stroke-dasharray="133.418 306.405" stroke-dashoffset="-190.945" transform="rotate(-90 130 100)" />
+<circle cx="130" cy="100" r="70" fill="none" stroke="#C79D36" stroke-width="18" stroke-dasharray="23.259 416.564" stroke-dashoffset="-329.363" transform="rotate(-90 130 100)" />
+<circle cx="130" cy="100" r="70" fill="none" stroke="#D89036" stroke-width="18" stroke-dasharray="12.380 427.443" stroke-dashoffset="-357.077" transform="rotate(-90 130 100)" />
+<circle cx="130" cy="100" r="70" fill="none" stroke="#DE6848" stroke-width="18" stroke-dasharray="11.689 428.134" stroke-dashoffset="-373.257" transform="rotate(-90 130 100)" />
+<circle cx="130" cy="100" r="70" fill="none" stroke="#8271D1" stroke-width="18" stroke-dasharray="9.805 430.018" stroke-dashoffset="-388.340" transform="rotate(-90 130 100)" />
+<circle cx="130" cy="100" r="70" fill="none" stroke="#399EAA" stroke-width="18" stroke-dasharray="9.768 430.055" stroke-dashoffset="-401.235" transform="rotate(-90 130 100)" />
+<circle cx="130" cy="100" r="70" fill="none" stroke="#4C87B9" stroke-width="18" stroke-dasharray="9.742 430.081" stroke-dashoffset="-414.083" transform="rotate(-90 130 100)" />
+<circle cx="130" cy="100" r="70" fill="none" stroke="#BA68C8" stroke-width="18" stroke-dasharray="6.414 433.409" stroke-dashoffset="-426.376" transform="rotate(-90 130 100)" />
+<circle cx="130" cy="100" r="70" fill="none" stroke="#00ADD8" stroke-width="18" stroke-dasharray="3.252 436.571" stroke-dashoffset="-434.316" transform="rotate(-90 130 100)" />
+<circle cx="130" cy="100" r="70" fill="none" stroke="#78A657" stroke-width="18" stroke-dasharray="0.593 439.230" stroke-dashoffset="-438.175" transform="rotate(-90 130 100)" />
+<circle cx="130" cy="100" r="70" fill="none" stroke="#6287CD" stroke-width="18" stroke-dasharray="0.377 439.446" stroke-dashoffset="-438.921" transform="rotate(-90 130 100)" />
+<circle cx="130" cy="100" r="70" fill="none" stroke="#7D9156" stroke-width="18" stroke-dasharray="0.091 439.732" stroke-dashoffset="-439.372" transform="rotate(-90 130 100)" />
+<circle cx="130" cy="100" r="70" fill="none" stroke="#BC6262" stroke-width="18" stroke-dasharray="0.076 439.747" stroke-dashoffset="-439.489" transform="rotate(-90 130 100)" />
+<circle cx="130" cy="100" r="70" fill="none" stroke="#538CB7" stroke-width="18" stroke-dasharray="0.076 439.747" stroke-dashoffset="-439.589" transform="rotate(-90 130 100)" />
+<circle cx="130" cy="100" r="70" fill="none" stroke="#8990A1" stroke-width="18" stroke-dasharray="0.063 439.760" stroke-dashoffset="-439.686" transform="rotate(-90 130 100)" />
+<circle cx="130" cy="100" r="70" fill="none" stroke="#8C82AB" stroke-width="18" stroke-dasharray="0.030 439.793" stroke-dashoffset="-439.764" transform="rotate(-90 130 100)" />
+<circle cx="130" cy="100" r="70" fill="none" stroke="#519AAA" stroke-width="18" stroke-dasharray="0.013 439.810" stroke-dashoffset="-439.800" transform="rotate(-90 130 100)" />
+<circle cx="130" cy="100" r="70" fill="none" stroke="#91A65F" stroke-width="18" stroke-dasharray="0.006 439.817" stroke-dashoffset="-439.816" transform="rotate(-90 130 100)" />
+    <text x="130" y="105" text-anchor="middle" font-size="36" font-weight="600" fill="#F0F6FC">19</text>
+    <text x="130" y="128" text-anchor="middle" font-size="14" fill="#9198A1">种语言</text>
+    <g data-language="TypeScript">
+<circle cx="264" cy="19" r="4" fill="#3178C6" />
+<text x="276" y="24" font-size="15" fill="#F0F6FC">TypeScript</text>
+<text x="492" y="24" text-anchor="end" font-size="15" font-variant-numeric="tabular-nums" fill="#9198A1">42.9%</text>
+<rect x="260" y="34" width="232" height="4" rx="2" fill="#212830" />
+<rect x="260" y="34" width="99.402" height="4" rx="2" fill="#3178C6" />
+</g>
+<g data-language="Swift">
+<circle cx="264" cy="53" r="4" fill="#F07842" />
+<text x="276" y="58" font-size="15" fill="#F0F6FC">Swift</text>
+<text x="492" y="58" text-anchor="end" font-size="15" font-variant-numeric="tabular-nums" fill="#9198A1">31.5%</text>
+<rect x="260" y="68" width="232" height="4" rx="2" fill="#212830" />
+<rect x="260" y="68" width="73.013" height="4" rx="2" fill="#F07842" />
+</g>
+<g data-language="JavaScript">
+<circle cx="264" cy="87" r="4" fill="#C79D36" />
+<text x="276" y="92" font-size="15" fill="#F0F6FC">JavaScript</text>
+<text x="492" y="92" text-anchor="end" font-size="15" font-variant-numeric="tabular-nums" fill="#9198A1">6.4%</text>
+<rect x="260" y="102" width="232" height="4" rx="2" fill="#212830" />
+<rect x="260" y="102" width="14.906" height="4" rx="2" fill="#C79D36" />
+</g>
+<g data-language="Jupyter Notebook">
+<circle cx="264" cy="121" r="4" fill="#D89036" />
+<text x="276" y="126" font-size="15" fill="#F0F6FC">Jupyter Notebook</text>
+<text x="492" y="126" text-anchor="end" font-size="15" font-variant-numeric="tabular-nums" fill="#9198A1">3.7%</text>
+<rect x="260" y="136" width="232" height="4" rx="2" fill="#212830" />
+<rect x="260" y="136" width="8.593" height="4" rx="2" fill="#D89036" />
+</g>
+<g data-language="HTML">
+<circle cx="264" cy="155" r="4" fill="#DE6848" />
+<text x="276" y="160" font-size="15" fill="#F0F6FC">HTML</text>
+<text x="492" y="160" text-anchor="end" font-size="15" font-variant-numeric="tabular-nums" fill="#9198A1">3.5%</text>
+<rect x="260" y="170" width="232" height="4" rx="2" fill="#212830" />
+<rect x="260" y="170" width="8.113" height="4" rx="2" fill="#DE6848" />
+</g>
+<g data-language="PLpgSQL">
+<circle cx="524" cy="19" r="4" fill="#8271D1" />
+<text x="536" y="24" font-size="15" fill="#F0F6FC">PL/pgSQL</text>
+<text x="752" y="24" text-anchor="end" font-size="15" font-variant-numeric="tabular-nums" fill="#9198A1">3.0%</text>
+<rect x="520" y="34" width="232" height="4" rx="2" fill="#212830" />
+<rect x="520" y="34" width="6.805" height="4" rx="2" fill="#8271D1" />
+</g>
+<g data-language="CSS">
+<circle cx="524" cy="53" r="4" fill="#399EAA" />
+<text x="536" y="58" font-size="15" fill="#F0F6FC">CSS</text>
+<text x="752" y="58" text-anchor="end" font-size="15" font-variant-numeric="tabular-nums" fill="#9198A1">2.9%</text>
+<rect x="520" y="68" width="232" height="4" rx="2" fill="#212830" />
+<rect x="520" y="68" width="6.779" height="4" rx="2" fill="#399EAA" />
+</g>
+<g data-language="Python">
+<circle cx="524" cy="87" r="4" fill="#4C87B9" />
+<text x="536" y="92" font-size="15" fill="#F0F6FC">Python</text>
+<text x="752" y="92" text-anchor="end" font-size="15" font-variant-numeric="tabular-nums" fill="#9198A1">2.9%</text>
+<rect x="520" y="102" width="232" height="4" rx="2" fill="#212830" />
+<rect x="520" y="102" width="6.761" height="4" rx="2" fill="#4C87B9" />
+</g>
+<g data-language="Kotlin">
+<circle cx="524" cy="121" r="4" fill="#BA68C8" />
+<text x="536" y="126" font-size="15" fill="#F0F6FC">Kotlin</text>
+<text x="752" y="126" text-anchor="end" font-size="15" font-variant-numeric="tabular-nums" fill="#9198A1">1.9%</text>
+<rect x="520" y="136" width="232" height="4" rx="2" fill="#212830" />
+<rect x="520" y="136" width="4.452" height="4" rx="2" fill="#BA68C8" />
+</g>
+<g data-language="Go">
+<circle cx="524" cy="155" r="4" fill="#00ADD8" />
+<text x="536" y="160" font-size="15" fill="#F0F6FC">Go</text>
+<text x="752" y="160" text-anchor="end" font-size="15" font-variant-numeric="tabular-nums" fill="#9198A1">1.0%</text>
+<rect x="520" y="170" width="232" height="4" rx="2" fill="#212830" />
+<rect x="520" y="170" width="2.257" height="4" rx="2" fill="#00ADD8" />
+</g>
+    <g data-language="Shell">
+<title>Shell 0.2%</title>
+<circle cx="11" cy="203" r="3" fill="#78A657" />
+<text x="22" y="207" font-size="13" fill="#9198A1">Shell</text>
+</g>
+<g data-language="PowerShell">
+<title>PowerShell 0.1%</title>
+<circle cx="88.6" cy="203" r="3" fill="#6287CD" />
+<text x="99.6" y="207" font-size="13" fill="#9198A1">PowerShell</text>
+</g>
+<g data-language="Makefile">
+<title>Makefile 0.0%</title>
+<circle cx="207.8" cy="203" r="3" fill="#7D9156" />
+<text x="218.8" y="207" font-size="13" fill="#9198A1">Makefile</text>
+</g>
+<g data-language="Ruby">
+<title>Ruby 0.0%</title>
+<circle cx="310.36" cy="203" r="3" fill="#BC6262" />
+<text x="321.36" y="207" font-size="13" fill="#9198A1">Ruby</text>
+</g>
+<g data-language="Dockerfile">
+<title>Dockerfile 0.0%</title>
+<circle cx="379.64" cy="203" r="3" fill="#538CB7" />
+<text x="390.64" y="207" font-size="13" fill="#9198A1">Dockerfile</text>
+</g>
+<g data-language="C">
+<title>C 0.0%</title>
+<circle cx="498.84" cy="203" r="3" fill="#8990A1" />
+<text x="509.84" y="207" font-size="13" fill="#9198A1">C</text>
+</g>
+<g data-language="Solidity">
+<title>Solidity 0.0%</title>
+<circle cx="543.16" cy="203" r="3" fill="#8C82AB" />
+<text x="554.16" y="207" font-size="13" fill="#9198A1">Solidity</text>
+</g>
+<g data-language="Objective-C">
+<title>Objective-C 0.0%</title>
+<circle cx="645.72" cy="203" r="3" fill="#519AAA" />
+<text x="656.72" y="207" font-size="13" fill="#9198A1">Objective-C</text>
+</g>
+<g data-language="Batchfile">
+<title>Batchfile 0.0%</title>
+<circle cx="11" cy="227" r="3" fill="#91A65F" />
+<text x="22" y="231" font-size="13" fill="#9198A1">Batchfile</text>
+</g>
+
+    <text x="8" y="261" font-size="13" fill="#9198A1">29 个仓库</text>
+    <text x="752" y="261" text-anchor="end" font-size="13" fill="#9198A1">更新于 2026-09-21</text>
+  </g>
+</svg>

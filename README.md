@@ -55,10 +55,10 @@ An object-detection approach for the Kaggle RSNA 2024 Lumbar Spine Degenerative 
 ## Stats
 
 <picture>
-  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="./assets/contribution-languages-inline-mobile-dark.svg" />
-  <source media="(max-width: 600px)" srcset="./assets/contribution-languages-inline-mobile-light.svg" />
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/contribution-languages-inline-dark.svg" />
-  <img width="100%" alt="Language composition of repositories with my commits, including authorized private repositories. Aggregate data below." src="./assets/contribution-languages-inline-light.svg" />
+  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="./assets/contribution-languages-v2-inline-mobile-dark.svg" />
+  <source media="(max-width: 600px)" srcset="./assets/contribution-languages-v2-inline-mobile-light.svg" />
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/contribution-languages-v2-inline-dark.svg" />
+  <img width="100%" alt="Language composition of repositories with my commits, including authorized private repositories. Aggregate data below." src="./assets/contribution-languages-v2-inline-light.svg" />
 </picture>
 
 <sub>Repositories with my commits · public + authorized private · language mix.</sub>

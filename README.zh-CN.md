@@ -55,10 +55,10 @@
 ## 统计
 
 <picture>
-  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="./assets/contribution-languages-inline-zh-CN-mobile-dark.svg" />
-  <source media="(max-width: 600px)" srcset="./assets/contribution-languages-inline-zh-CN-mobile-light.svg" />
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/contribution-languages-inline-zh-CN-dark.svg" />
-  <img width="100%" alt="包含本人提交的公开及获授权私有仓库的语言分布；仅公开汇总数据。" src="./assets/contribution-languages-inline-zh-CN-light.svg" />
+  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="./assets/contribution-languages-v2-inline-zh-CN-mobile-dark.svg" />
+  <source media="(max-width: 600px)" srcset="./assets/contribution-languages-v2-inline-zh-CN-mobile-light.svg" />
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/contribution-languages-v2-inline-zh-CN-dark.svg" />
+  <img width="100%" alt="包含本人提交的公开及获授权私有仓库的语言分布；仅公开汇总数据。" src="./assets/contribution-languages-v2-inline-zh-CN-light.svg" />
 </picture>
 
 <sub>包含本人提交的仓库 · 公开＋获授权的私有仓库 · 语言分布概览。</sub>
