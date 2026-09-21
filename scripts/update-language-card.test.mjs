@@ -48,9 +48,13 @@ test("all eight card variants are self-contained and accessible", () => {
         const svg = renderCard(sample, theme, locale, mobile);
         assert.match(svg, /role="img" aria-labelledby="title description"/);
         assert.ok(svg.includes(locale.title));
-        assert.ok(svg.includes(mobile ? 'viewBox="0 0 420 574"' : 'viewBox="0 0 760 410"'));
+        assert.ok(svg.includes(mobile ? 'viewBox="0 0 420 380"' : 'viewBox="0 0 760 248"'));
         assert.match(svg, /2026-09-21/);
         assert.doesNotMatch(svg, /<script|foreignObject|<image|NaN|Infinity|undefined/);
+        assert.doesNotMatch(svg, /rx="16"|<path/);
+        // Only thin data bars remain: no background panel, frame or duplicate visual title.
+        for (const rect of svg.matchAll(/<rect\b[^>]+>/g)) assert.match(rect[0], /height="4"/);
+        assert.equal((svg.match(new RegExp(locale.title, "g")) ?? []).length, 1);
         for (const match of svg.matchAll(/stroke-dasharray="([\d.]+) ([\d.]+)"/g)) {
           assert.ok(Number(match[1]) > 0);
           assert.ok(Number(match[2]) >= 0);
@@ -92,6 +96,7 @@ test("both READMEs preserve projects and link text rather than fake social butto
     ]) assert.ok(md.includes('href="' + url + '"'), url);
     assert.equal((md.match(/^### /gm) ?? []).length, 6);
     assert.doesNotMatch(md, /social-links\.svg|shields\.io|capsule-render|<table/);
+    assert.doesNotMatch(md, /^<br\s*\/>$/m);
     for (const match of md.matchAll(/(?:src|srcset)="(\.\/[^\"]+)"/g)) {
       await access(new URL("../" + match[1], import.meta.url));
     }

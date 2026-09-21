@@ -2,9 +2,7 @@
 
 # 4Fe_Andy
 
-AI · Spatial Computing · Product Management · Design · Full-stack Engineering
-
-Creating intelligent and accessible experiences across Apple platforms, the web, and beyond.
+AI · Spatial Computing · Product Management · Design · Full-stack Engineering<br />Creating intelligent and accessible experiences across Apple platforms, the web, and beyond.
 
 <p>
   <a href="https://4fe-andy.github.io/">Website ↗</a> &nbsp;·&nbsp;
@@ -12,8 +10,6 @@ Creating intelligent and accessible experiences across Apple platforms, the web,
   <a href="https://www.youtube.com/@4FeAndy">YouTube ↗</a> &nbsp;·&nbsp;
   <a href="https://open.spotify.com/user/31mix2lsown7l4ycqak56qbeq6yy">Spotify ↗</a>
 </p>
-
-<br />
 
 <p>
   <a href="#projects">Projects</a> &nbsp;/&nbsp;
@@ -26,85 +22,43 @@ Creating intelligent and accessible experiences across Apple platforms, the web,
 
 ## Projects
 
-### [TOMEET ↗](https://github.com/tomeet-chat/TOMEET-Web)
+### [TOMEET ↗](https://github.com/tomeet-chat/TOMEET-Web) <sub>· AGENT &nbsp; / &nbsp; AdventureX track 1st place</sub>
 
-<sub>AGENT &nbsp; / &nbsp; AdventureX track 1st place</sub>
-
-A conversational social Agent that turns ongoing dialogue into real-world connections.
-
-Product direction · Interface design · Frontend & backend engineering
-
-`Next.js` `Fastify` `Supabase` `Photon Spectrum` `Agent Memory V2` `Injective Web3`
+A conversational social Agent that turns ongoing dialogue into real-world connections.<br /><sub>Product direction · Interface design · Frontend & backend engineering</sub><br />`Next.js` `Fastify` `Supabase` `Photon Spectrum` `Agent Memory V2` `Injective Web3`
 
 [Frontend ↗](https://github.com/tomeet-chat/TOMEET-Web) &nbsp;·&nbsp; [Backend ↗](https://github.com/toMeetADX/TOMEET_Backend)
 
-<br />
+### [Atmos Rokid ↗](https://github.com/zs-andy/Atmos_Rokid) <sub>· SPATIAL COMPUTING</sub>
 
-### [Atmos Rokid ↗](https://github.com/zs-andy/Atmos_Rokid)
+Real-time environmental awareness for visually impaired users, built for Rokid Glasses.<br />`Kotlin` `Swift` `Rokid Glasses` `YOLO12 · Core ML` `FastVLM · MLX`
 
-<sub>SPATIAL COMPUTING</sub>
+### [DeadLineTodo ↗](https://github.com/zs-andy/DeadLineTodo) <sub>· iOS PRODUCT &nbsp; / &nbsp; Available on the App Store</sub>
 
-Real-time environmental awareness for visually impaired users, built for Rokid Glasses.
+A deadline-first task manager for iOS, available on the App Store.<br />`Swift` `SwiftUI` `SwiftData` `StoreKit 2` `WidgetKit` `EventKit`
 
-`Kotlin` `Swift` `Rokid Glasses` `YOLO12 · Core ML` `FastVLM · MLX`
+### [SoulHealing ↗](https://github.com/zs-andy/SoulHealing) <sub>· EMOTION & AI</sub>
 
-<br />
+An experiment combining emotion recognition, multimodal AI and music therapy.<br />`SwiftUI` `AVFoundation` `FastVLM` `MLX VLM` `Core ML Vision`
 
-### [DeadLineTodo ↗](https://github.com/zs-andy/DeadLineTodo)
+### [VisionKeyboard ↗](https://github.com/zs-andy/VisionKeyboard) <sub>· visionOS &nbsp; / &nbsp; AdventureX track 4th place</sub>
 
-<sub>iOS PRODUCT &nbsp; / &nbsp; Available on the App Store</sub>
+A 26-key spatial keyboard for Apple Vision Pro using fingertip tracking.<br />`Swift` `visionOS` `ARKit Hand Tracking` `RealityKit` `Plane Detection` `Spatial Gestures`
 
-A deadline-first task manager for iOS, available on the App Store.
+### [RSNA 2024 · YOLO Approach ↗](https://github.com/zs-andy/LSDC-Yolo-Approach) <sub>· KAGGLE COMPETITION &nbsp; / &nbsp; Silver Medal</sub>
 
-`Swift` `SwiftUI` `SwiftData` `StoreKit 2` `WidgetKit` `EventKit`
-
-<br />
-
-### [SoulHealing ↗](https://github.com/zs-andy/SoulHealing)
-
-<sub>EMOTION & AI</sub>
-
-An experiment combining emotion recognition, multimodal AI and music therapy.
-
-`SwiftUI` `AVFoundation` `FastVLM` `MLX VLM` `Core ML Vision`
-
-<br />
-
-### [VisionKeyboard ↗](https://github.com/zs-andy/VisionKeyboard)
-
-<sub>visionOS &nbsp; / &nbsp; AdventureX track 4th place</sub>
-
-A 26-key spatial keyboard for Apple Vision Pro using fingertip tracking.
-
-`Swift` `visionOS` `ARKit Hand Tracking` `RealityKit` `Plane Detection` `Spatial Gestures`
-
-<br />
-
-### [RSNA 2024 · YOLO Approach ↗](https://github.com/zs-andy/LSDC-Yolo-Approach)
-
-<sub>KAGGLE COMPETITION &nbsp; / &nbsp; Silver Medal</sub>
-
-An object-detection approach for the Kaggle RSNA 2024 Lumbar Spine Degenerative Classification competition.
-
-`Python` `PyTorch` `YOLOv8 Ensemble` `3D DICOM` `MaxViT` `Multi-scale Inference`
-
-<br />
+An object-detection approach for the Kaggle RSNA 2024 Lumbar Spine Degenerative Classification competition.<br />`Python` `PyTorch` `YOLOv8 Ensemble` `3D DICOM` `MaxViT` `Multi-scale Inference`
 
 ## Stack
 
-**Languages** &nbsp; Swift · Kotlin · Python · TypeScript<br />
-**Web & data** &nbsp; React · Next.js · Supabase<br />
-**Vision & tools** &nbsp; PyTorch · OpenCV · Git
-
-<br />
+**Languages** &nbsp; Swift · Kotlin · Python · TypeScript<br />**Web & data** &nbsp; React · Next.js · Supabase<br />**Vision & tools** &nbsp; PyTorch · OpenCV · Git
 
 ## Stats
 
 <picture>
-  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="./assets/language-composition-mobile-dark.svg" />
-  <source media="(max-width: 600px)" srcset="./assets/language-composition-mobile-light.svg" />
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/language-composition-dark.svg" />
-  <img width="100%" alt="Language distribution across seven featured repositories. Full figures and methodology are available below." src="./assets/language-composition-light.svg" />
+  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="./assets/language-composition-inline-mobile-dark.svg" />
+  <source media="(max-width: 600px)" srcset="./assets/language-composition-inline-mobile-light.svg" />
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/language-composition-inline-dark.svg" />
+  <img width="100%" alt="Language distribution across seven featured repositories. Full figures and methodology are available below." src="./assets/language-composition-inline-light.svg" />
 </picture>
 
 <sub>Code composition, not a proficiency score. Generated weekly from GitHub's language API.</sub>
@@ -117,8 +71,6 @@ Six projects, seven public repositories (TOMEET includes frontend and backend). 
 [Current data & full language breakdown](./assets/language-data.json) · [Generator](./scripts/update-language-card.mjs) · [Update status](https://github.com/zs-andy/zs-andy/actions/workflows/update-language-card.yml)
 
 </details>
-
-<br />
 
 <p align="center">
   <sub><a href="https://github.com/zs-andy?tab=repositories">All repositories ↗</a> &nbsp;·&nbsp; <a href="https://4fe-andy.github.io/">Elsewhere on the web ↗</a></sub>

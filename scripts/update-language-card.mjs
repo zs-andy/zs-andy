@@ -34,11 +34,11 @@ export const locales = {
 };
 export const themes = {
   light: {
-    background: "#FFFFFF", border: "#D1D9E0", title: "#1F2328",
+    title: "#1F2328",
     muted: "#656D76", track: "#EFF2F5",
   },
   dark: {
-    background: "#0D1117", border: "#30363D", title: "#F0F6FC",
+    title: "#F0F6FC",
     muted: "#9198A1", track: "#212830",
   },
 };
@@ -87,13 +87,13 @@ export function summarize(sources, updatedAt = new Date().toISOString().slice(0,
 
 export function renderCard(data, theme, locale, mobile = false) {
   const width = mobile ? 420 : 760;
-  const height = mobile ? 574 : 410;
-  const padding = mobile ? 24 : 32;
-  const cx = mobile ? 210 : 160;
-  const cy = mobile ? 180 : 217;
-  const radius = 78;
+  const height = mobile ? 380 : 248;
+  const padding = 8;
+  const cx = mobile ? 210 : 130;
+  const cy = mobile ? 74 : 108;
+  const radius = mobile ? 58 : 70;
   const circumference = 2 * Math.PI * radius;
-  const ringWidth = 22;
+  const ringWidth = 18;
   let offset = 0;
   const ring = data.entries.map(({ language, share }) => {
     const length = share * circumference;
@@ -109,10 +109,10 @@ export function renderCard(data, theme, locale, mobile = false) {
     return markup;
   }).join("\n");
 
-  const rowsX = mobile ? padding : 322;
+  const rowsX = mobile ? padding : 280;
   const rowsWidth = width - padding - rowsX;
-  const rowsY = mobile ? 301 : 121;
-  const rowGap = mobile ? 36 : 38;
+  const rowsY = mobile ? 168 : 24;
+  const rowGap = 30;
   const rows = data.entries.map(({ language, share, percentage }, index) => {
     const y = rowsY + index * rowGap;
     const color = colors[language] ?? colors.Other;
@@ -133,21 +133,17 @@ export function renderCard(data, theme, locale, mobile = false) {
   const description = data.entries.length
     ? data.entries.map(({ language, percentage }) => (locale.labels[language] ?? language) + " " + percentage + "%").join("; ")
     : locale.empty;
-  const footerY = height - 30;
+  const footerY = height - 14;
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img" aria-labelledby="title description">
   <title id="title">${escapeXml(locale.title)}</title>
-  <desc id="description">${escapeXml(description)}. ${data.repositoryCount} ${locale.repos}. ${locale.updated} ${data.updatedAt}.</desc>
-  <rect x="0.5" y="0.5" width="${width - 1}" height="${height - 1}" rx="16" fill="${theme.background}" stroke="${theme.border}" />
+  <desc id="description">${escapeXml(locale.subtitle)}. ${escapeXml(description)}. ${data.repositoryCount} ${locale.repos}. ${locale.updated} ${data.updatedAt}.</desc>
   <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Noto Sans CJK SC', sans-serif">
-    <text x="${padding}" y="46" font-size="${mobile ? 23 : 25}" font-weight="600" fill="${theme.title}">${locale.title}</text>
-    <text x="${padding}" y="72" font-size="14" fill="${theme.muted}">${locale.subtitle}</text>
     <circle cx="${cx}" cy="${cy}" r="${radius}" fill="none" stroke="${theme.track}" stroke-width="${ringWidth}" />
     ${ring}
-    <text x="${cx}" y="${cy + 6}" text-anchor="middle" font-size="44" font-weight="600" fill="${theme.title}">${data.languageCount}</text>
-    <text x="${cx}" y="${cy + 32}" text-anchor="middle" font-size="14" fill="${theme.muted}">${locale.languages}</text>
+    <text x="${cx}" y="${cy + 5}" text-anchor="middle" font-size="36" font-weight="600" fill="${theme.title}">${data.languageCount}</text>
+    <text x="${cx}" y="${cy + 28}" text-anchor="middle" font-size="14" fill="${theme.muted}">${locale.languages}</text>
     ${rows}
     ${!data.entries.length ? '<text x="' + rowsX + '" y="' + rowsY + '" font-size="16" fill="' + theme.muted + '">' + locale.empty + '</text>' : ""}
-    <path d="M${padding} ${height - 62}H${width - padding}" fill="none" stroke="${theme.border}" />
     <text x="${padding}" y="${footerY}" font-size="13" fill="${theme.muted}">${data.repositoryCount} ${locale.repos}</text>
     <text x="${width - padding}" y="${footerY}" text-anchor="end" font-size="13" fill="${theme.muted}">${locale.updated} ${data.updatedAt}</text>
   </g>
@@ -191,7 +187,7 @@ export async function main() {
     for (const [name, theme] of Object.entries(themes)) {
       for (const mobile of [false, true]) {
         files.push([
-          "language-composition" + locale.suffix + (mobile ? "-mobile" : "") + "-" + name + ".svg",
+          "language-composition-inline" + locale.suffix + (mobile ? "-mobile" : "") + "-" + name + ".svg",
           renderCard(data, theme, locale, mobile),
         ]);
       }
