@@ -55,18 +55,22 @@
 ## 统计
 
 <picture>
-  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="./assets/language-composition-inline-zh-CN-mobile-dark.svg" />
-  <source media="(max-width: 600px)" srcset="./assets/language-composition-inline-zh-CN-mobile-light.svg" />
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/language-composition-inline-zh-CN-dark.svg" />
-  <img width="100%" alt="七个展示仓库的语言分布，完整数据与统计方法见下方。" src="./assets/language-composition-inline-zh-CN-light.svg" />
+  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="./assets/contribution-languages-inline-zh-CN-mobile-dark.svg" />
+  <source media="(max-width: 600px)" srcset="./assets/contribution-languages-inline-zh-CN-mobile-light.svg" />
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/contribution-languages-inline-zh-CN-dark.svg" />
+  <img width="100%" alt="包含本人提交的公开及获授权私有仓库的语言分布；仅公开汇总数据。" src="./assets/contribution-languages-inline-zh-CN-light.svg" />
 </picture>
 
-<sub>展示代码构成，不代表熟练程度。每周通过 GitHub 语言 API 自动更新。</sub>
+<sub>包含本人提交的仓库 · 公开＋获授权的私有仓库 · 按整个仓库的语言构成汇总。</sub>
 
 <details>
 <summary>数据与统计方法</summary>
 
-统计范围为六个项目、七个公开仓库（TOMEET 包含前端和后端）。百分比按 GitHub 返回的代码字节数汇总，不代表提交次数、投入时间或该账号全部仓库。单独展示占比最高的五种语言，其余合并为「其他」。Notebook 文件保留 GitHub 的「Jupyter Notebook」分类。
+纳入 GitHub 将提交作者或提交者归属于 **zs-andy** 的仓库，不限于本人名下。先通过全站提交搜索发现，再补查本人拥有、以协作者身份访问或通过组织成员资格访问的仓库的现有分支。公开、获授权的私有、归档及 Fork 仓库均可纳入，每个仓库只计一次。覆盖范围受凭证权限、GitHub 索引和提交身份关联限制；已删除或无法访问的历史无法纳入。
+
+百分比汇总各仓库当前的 GitHub Linguist 代码字节数，**不是我个人编写的代码行数**，也不代表投入时间或熟练程度。单独展示占比最高的五种语言，其余合并为「其他」。Notebook 保留 GitHub 的「Jupyter Notebook」分类。Fork 仓库单独计入，与上游共享的代码可能重复出现。
+
+公开内容仅包含语言汇总值和仓库总数，不含仓库标识、提交记录及逐仓库明细。已安排每周更新；需要配置访问凭证，否则保留上次快照。[更新配置说明](./docs/profile-stats.md)。
 
 [当前数据与完整语言明细](./assets/language-data.json) · [生成脚本](./scripts/update-language-card.mjs) · [更新状态](https://github.com/zs-andy/zs-andy/actions/workflows/update-language-card.yml)
 

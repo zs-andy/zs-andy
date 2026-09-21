@@ -20,7 +20,7 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
         with:
@@ -30,18 +30,33 @@ jobs:
           node-version: 22
       - name: Test generator and README contracts
         run: node --test scripts/*.test.mjs
+      - name: Check contribution-statistics authorization
+        id: authorization
+        env:
+          PROFILE_STATS_TOKEN: ${{ secrets.PROFILE_STATS_TOKEN }}
+        run: |
+          if [ -n "$PROFILE_STATS_TOKEN" ]; then
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::Statistics refresh is paused: configure PROFILE_STATS_TOKEN. The previous snapshot is preserved."
+            echo "Statistics refresh skipped: PROFILE_STATS_TOKEN is not configured. See docs/profile-stats.md." >> "$GITHUB_STEP_SUMMARY"
+          fi
       - name: Generate cards
+        if: steps.authorization.outputs.ready == 'true'
         run: node scripts/update-language-card.mjs
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PROFILE_STATS_TOKEN: ${{ secrets.PROFILE_STATS_TOKEN }}
+          GITHUB_USERNAME: zs-andy
       - name: Commit updated cards
+        if: steps.authorization.outputs.ready == 'true'
         run: |
           if git diff --quiet -- assets; then
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/language-composition-*.svg assets/language-data.json
+          git add assets/contribution-languages-*.svg assets/language-data.json
           git commit -m "Update language composition"
           git pull --rebase origin main
           git push origin HEAD:main

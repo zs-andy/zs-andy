@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="380" viewBox="0 0 420 380" role="img" aria-labelledby="title description">
+  <title id="title">Language composition</title>
+  <desc id="description">Repositories with my commits / GitHub code bytes. TypeScript 74.4%; PL/pgSQL 7.4%; Swift 5.5%; JavaScript 3.6%; CSS 2.6%; Other 6.5%. 29 repositories. Updated 2026-09-21.</desc>
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Noto Sans CJK SC', sans-serif">
+    <circle cx="210" cy="74" r="58" fill="none" stroke="#EFF2F5" stroke-width="18" />
+    <circle cx="210" cy="74" r="58" fill="none" stroke="#3178C6" stroke-width="18" stroke-dasharray="266.098 98.327" stroke-dashoffset="-2.500" transform="rotate(-90 210 74)" />
+<circle cx="210" cy="74" r="58" fill="none" stroke="#8271D1" stroke-width="18" stroke-dasharray="21.921 342.504" stroke-dashoffset="-273.598" transform="rotate(-90 210 74)" />
+<circle cx="210" cy="74" r="58" fill="none" stroke="#F07842" stroke-width="18" stroke-dasharray="15.338 349.086" stroke-dashoffset="-300.441" transform="rotate(-90 210 74)" />
+<circle cx="210" cy="74" r="58" fill="none" stroke="#C79D36" stroke-width="18" stroke-dasharray="9.930 354.495" stroke-dashoffset="-319.769" transform="rotate(-90 210 74)" />
+<circle cx="210" cy="74" r="58" fill="none" stroke="#399EAA" stroke-width="18" stroke-dasharray="7.206 357.219" stroke-dashoffset="-332.404" transform="rotate(-90 210 74)" />
+<circle cx="210" cy="74" r="58" fill="none" stroke="#929CAF" stroke-width="18" stroke-dasharray="18.677 345.748" stroke-dashoffset="-343.248" transform="rotate(-90 210 74)" />
+    <text x="210" y="79" text-anchor="middle" font-size="36" font-weight="600" fill="#1F2328">19</text>
+    <text x="210" y="102" text-anchor="middle" font-size="14" fill="#656D76">languages</text>
+    <circle cx="12" cy="163" r="4" fill="#3178C6" />
+<text x="24" y="168" font-size="15" fill="#1F2328">TypeScript</text>
+<text x="412" y="168" text-anchor="end" font-size="15" font-variant-numeric="tabular-nums" fill="#656D76">74.4%</text>
+<rect x="8" y="178" width="404" height="4" rx="2" fill="#EFF2F5" />
+<rect x="8" y="178" width="300.538" height="4" rx="2" fill="#3178C6" />
+<circle cx="12" cy="193" r="4" fill="#8271D1" />
+<text x="24" y="198" font-size="15" fill="#1F2328">PL/pgSQL</text>
+<text x="412" y="198" text-anchor="end" font-size="15" font-variant-numeric="tabular-nums" fill="#656D76">7.4%</text>
+<rect x="8" y="208" width="404" height="4" rx="2" fill="#EFF2F5" />
+<rect x="8" y="208" width="29.845" height="4" rx="2" fill="#8271D1" />
+<circle cx="12" cy="223" r="4" fill="#F07842" />
+<text x="24" y="228" font-size="15" fill="#1F2328">Swift</text>
+<text x="412" y="228" text-anchor="end" font-size="15" font-variant-numeric="tabular-nums" fill="#656D76">5.5%</text>
+<rect x="8" y="238" width="404" height="4" rx="2" fill="#EFF2F5" />
+<rect x="8" y="238" width="22.374" height="4" rx="2" fill="#F07842" />
+<circle cx="12" cy="253" r="4" fill="#C79D36" />
+<text x="24" y="258" font-size="15" fill="#1F2328">JavaScript</text>
+<text x="412" y="258" text-anchor="end" font-size="15" font-variant-numeric="tabular-nums" fill="#656D76">3.6%</text>
+<rect x="8" y="268" width="404" height="4" rx="2" fill="#EFF2F5" />
+<rect x="8" y="268" width="14.484" height="4" rx="2" fill="#C79D36" />
+<circle cx="12" cy="283" r="4" fill="#399EAA" />
+<text x="24" y="288" font-size="15" fill="#1F2328">CSS</text>
+<text x="412" y="288" text-anchor="end" font-size="15" font-variant-numeric="tabular-nums" fill="#656D76">2.6%</text>
+<rect x="8" y="298" width="404" height="4" rx="2" fill="#EFF2F5" />
+<rect x="8" y="298" width="10.511" height="4" rx="2" fill="#399EAA" />
+<circle cx="12" cy="313" r="4" fill="#929CAF" />
+<text x="24" y="318" font-size="15" fill="#1F2328">Other</text>
+<text x="412" y="318" text-anchor="end" font-size="15" font-variant-numeric="tabular-nums" fill="#656D76">6.5%</text>
+<rect x="8" y="328" width="404" height="4" rx="2" fill="#EFF2F5" />
+<rect x="8" y="328" width="26.248" height="4" rx="2" fill="#929CAF" />
+
+    <text x="8" y="366" font-size="13" fill="#656D76">29 repositories</text>
+    <text x="412" y="366" text-anchor="end" font-size="13" fill="#656D76">Updated 2026-09-21</text>
+  </g>
+</svg>

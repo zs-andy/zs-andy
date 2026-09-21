@@ -1,7 +1,13 @@
 import assert from "node:assert/strict";
 import { readFile, access } from "node:fs/promises";
 import test from "node:test";
-import { collectLanguages, escapeXml, locales, renderCard, repositories, summarize, themes } from "./update-language-card.mjs";
+import { escapeXml, locales, publicSnapshot, renderCard, summarize, themes } from "./update-language-card.mjs";
+import { collectLanguages } from "./contribution-repositories.mjs";
+
+const repositories = [
+  "tomeet-chat/TOMEET-Web", "toMeetADX/TOMEET_Backend", "zs-andy/Atmos_Rokid",
+  "zs-andy/DeadLineTodo", "zs-andy/SoulHealing", "zs-andy/VisionKeyboard", "zs-andy/LSDC-Yolo-Approach",
+];
 
 const source = (languages) => ({ repository: "example/repo", languages });
 const sample = summarize([
@@ -78,12 +84,20 @@ test("API requests use a timeout and accept the repository token", async () => {
     assert.equal(options.headers.Authorization, "Bearer test-only-token");
     assert.ok(options.signal instanceof AbortSignal);
     return { ok: true, json: async () => ({ Swift: 10 }) };
-  }, "test-only-token");
+  }, "test-only-token", repositories);
   assert.equal(result.length, repositories.length);
+  assert.ok(result.every((source) => !Object.hasOwn(source, "repository")));
 });
 
 test("API failure aborts collection; no partial snapshot is returned", async () => {
-  await assert.rejects(collectLanguages(async () => ({ ok: false, status: 403 }), ""), /403/);
+  await assert.rejects(collectLanguages(async () => ({ ok: false, status: 403 }), "test-only-token", repositories), /403/);
+});
+
+test("public snapshots omit private repository names, links and raw responses", () => {
+  const output = publicSnapshot({ ...sample, repositories: [{ repository: "private-org/top-secret", url: "secret-url" }], token: "secret-token" });
+  assert.deepEqual(Object.keys(output).sort(), ["languageCount", "languages", "methodology", "repositoryCount", "totalBytes", "updatedAt"]);
+  assert.doesNotMatch(JSON.stringify(output), /top-secret|private-org|secret-url|secret-token/);
+  assert.equal(output.repositoryCount, 2);
 });
 
 test("both READMEs preserve projects and link text rather than fake social buttons", async () => {

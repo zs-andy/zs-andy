@@ -1,74 +1,28 @@
 {
   "updatedAt": "2026-09-21",
-  "methodology": "Share of GitHub Linguist code bytes in the seven featured public repositories; not proficiency or account-wide activity.",
-  "repositoryCount": 7,
-  "languageCount": 10,
-  "totalBytes": 2351644,
+  "methodology": "Whole-repository GitHub Linguist bytes, not personal lines of code. Repositories must have attributable author/committer records. Global commit search is supplemented with branch checks in token-visible owned, collaborator and organization-member repositories. Deleted or inaccessible repositories and unlinked commit identities cannot be included. Repository identifiers and per-repository data are omitted.",
+  "repositoryCount": 29,
+  "languageCount": 19,
+  "totalBytes": 12084483,
   "languages": {
-    "TypeScript": 1251380,
-    "Swift": 415133,
-    "PLpgSQL": 388608,
-    "JavaScript": 84123,
-    "CSS": 83387,
-    "Kotlin": 53375,
+    "TypeScript": 8989730,
+    "PLpgSQL": 892717,
+    "Swift": 669245,
+    "JavaScript": 433248,
+    "CSS": 314400,
+    "Python": 235415,
+    "Go": 223881,
+    "HTML": 156499,
+    "Kotlin": 57946,
     "Jupyter Notebook": 49154,
-    "HTML": 22417,
+    "Shell": 34271,
+    "PowerShell": 8192,
+    "Makefile": 6242,
+    "Dockerfile": 4380,
+    "Ruby": 4071,
     "Solidity": 3727,
-    "C": 340
-  },
-  "repositories": [
-    {
-      "repository": "tomeet-chat/TOMEET-Web",
-      "languages": {
-        "TypeScript": 157141,
-        "CSS": 83387,
-        "PLpgSQL": 42879,
-        "JavaScript": 1658,
-        "HTML": 908
-      }
-    },
-    {
-      "repository": "toMeetADX/TOMEET_Backend",
-      "languages": {
-        "TypeScript": 1094239,
-        "PLpgSQL": 345729,
-        "JavaScript": 82465,
-        "HTML": 21509,
-        "Solidity": 3727
-      }
-    },
-    {
-      "repository": "zs-andy/Atmos_Rokid",
-      "languages": {
-        "Kotlin": 53375,
-        "Swift": 50975,
-        "C": 170
-      }
-    },
-    {
-      "repository": "zs-andy/DeadLineTodo",
-      "languages": {
-        "Swift": 291004
-      }
-    },
-    {
-      "repository": "zs-andy/SoulHealing",
-      "languages": {
-        "Swift": 49344,
-        "C": 170
-      }
-    },
-    {
-      "repository": "zs-andy/VisionKeyboard",
-      "languages": {
-        "Swift": 23810
-      }
-    },
-    {
-      "repository": "zs-andy/LSDC-Yolo-Approach",
-      "languages": {
-        "Jupyter Notebook": 49154
-      }
-    }
-  ]
+    "Objective-C": 896,
+    "C": 340,
+    "Batchfile": 129
+  }
 }

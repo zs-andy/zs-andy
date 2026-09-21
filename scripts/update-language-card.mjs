@@ -1,16 +1,12 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-
-export const repositories = [
-  "tomeet-chat/TOMEET-Web",
-  "toMeetADX/TOMEET_Backend",
-  "zs-andy/Atmos_Rokid",
-  "zs-andy/DeadLineTodo",
-  "zs-andy/SoulHealing",
-  "zs-andy/VisionKeyboard",
-  "zs-andy/LSDC-Yolo-Approach",
-];
+import {
+  collectLanguages,
+  defaultUsername,
+  discoverRepositories,
+  profileToken,
+} from "./contribution-repositories.mjs";
 
 const colors = {
   TypeScript: "#3178C6", Swift: "#F07842", PLpgSQL: "#8271D1",
@@ -19,28 +15,22 @@ const colors = {
 export const locales = {
   en: {
     suffix: "", title: "Language composition",
-    subtitle: "Featured projects / GitHub code bytes",
+    subtitle: "Repositories with my commits / GitHub code bytes",
     languages: "languages", repos: "repositories", updated: "Updated",
     empty: "No language data available",
     labels: { PLpgSQL: "PL/pgSQL", Other: "Other" },
   },
   zhCN: {
     suffix: "-zh-CN", title: "代码的语言构成",
-    subtitle: "展示项目 / GitHub 代码字节占比",
+    subtitle: "包含我的提交 / GitHub 代码字节占比",
     languages: "种语言", repos: "个仓库", updated: "更新于",
     empty: "暂无语言数据",
     labels: { PLpgSQL: "PL/pgSQL", Other: "其他" },
   },
 };
 export const themes = {
-  light: {
-    title: "#1F2328",
-    muted: "#656D76", track: "#EFF2F5",
-  },
-  dark: {
-    title: "#F0F6FC",
-    muted: "#9198A1", track: "#212830",
-  },
+  light: { title: "#1F2328", muted: "#656D76", track: "#EFF2F5" },
+  dark: { title: "#F0F6FC", muted: "#9198A1", track: "#212830" },
 };
 export const escapeXml = (value) => String(value)
   .replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;")
@@ -50,14 +40,12 @@ export const escapeXml = (value) => String(value)
 export function summarize(sources, updatedAt = new Date().toISOString().slice(0, 10)) {
   if (!/^\d{4}-\d{2}-\d{2}$/.test(updatedAt)) throw new Error("Expected an ISO date.");
   const totals = new Map();
-  for (const { repository, languages } of sources) {
+  for (const { languages } of sources) {
     if (!languages || typeof languages !== "object" || Array.isArray(languages)) {
-      throw new Error("Invalid language response for " + repository);
+      throw new Error("Invalid language response.");
     }
     for (const [language, bytes] of Object.entries(languages)) {
-      if (!Number.isSafeInteger(bytes) || bytes < 0) {
-        throw new Error("Invalid byte count for " + repository + ": " + language);
-      }
+      if (!Number.isSafeInteger(bytes) || bytes < 0) throw new Error("Invalid byte count.");
       if (bytes > 0) totals.set(language, (totals.get(language) ?? 0) + bytes);
     }
   }
@@ -69,7 +57,6 @@ export function summarize(sources, updatedAt = new Date().toISOString().slice(0,
   const entries = (otherBytes > 0 ? [...primary, ["Other", otherBytes]] : primary)
     .map(([language, bytes]) => ({ language, bytes, share: bytes / totalBytes }));
 
-  // Largest remainder allocation ensures displayed values add up to exactly 100.0%.
   const tenths = entries.map(({ share }) => Math.floor(share * 1000));
   const remainderOrder = entries.map(({ share }, index) => ({
     index, remainder: share * 1000 - tenths[index],
@@ -77,10 +64,8 @@ export function summarize(sources, updatedAt = new Date().toISOString().slice(0,
   const leftover = entries.length ? 1000 - tenths.reduce((sum, n) => sum + n, 0) : 0;
   for (let i = 0; i < leftover; i++) tenths[remainderOrder[i].index]++;
   return {
-    updatedAt, repositoryCount: sources.length, languageCount: sorted.length,
-    totalBytes, entries: entries.map((entry, index) => ({
-      ...entry, percentage: (tenths[index] / 10).toFixed(1),
-    })),
+    updatedAt, repositoryCount: sources.length, languageCount: sorted.length, totalBytes,
+    entries: entries.map((entry, index) => ({ ...entry, percentage: (tenths[index] / 10).toFixed(1) })),
     languages: Object.fromEntries(sorted),
   };
 }
@@ -97,7 +82,6 @@ export function renderCard(data, theme, locale, mobile = false) {
   let offset = 0;
   const ring = data.entries.map(({ language, share }) => {
     const length = share * circumference;
-    // Gaps stay smaller than even a tiny segment; no negative SVG dash lengths.
     const gap = data.entries.length > 1 ? Math.min(5, length * 0.24) : 0;
     const markup = '<circle cx="' + cx + '" cy="' + cy + '" r="' + radius +
       '" fill="none" stroke="' + (colors[language] ?? colors.Other) +
@@ -151,50 +135,44 @@ export function renderCard(data, theme, locale, mobile = false) {
 `.replace(/[\t ]+$/gm, "");
 }
 
-export async function collectLanguages(fetcher = fetch, token = process.env.GITHUB_TOKEN) {
-  const headers = {
-    Accept: "application/vnd.github+json",
-    "X-GitHub-Api-Version": "2022-11-28",
-  };
-  if (token) headers.Authorization = "Bearer " + token;
-  // Finish every request before touching generated assets: an API failure preserves the previous snapshot.
-  return Promise.all(repositories.map(async (repository) => {
-    const response = await fetcher("https://api.github.com/repos/" + repository + "/languages", {
-      headers, signal: AbortSignal.timeout(20000),
-    });
-    if (!response.ok) throw new Error("GitHub API returned " + response.status + " for " + repository);
-    return { repository, languages: await response.json() };
-  }));
-}
-
 export async function main() {
-  const sources = await collectLanguages();
+  const token = profileToken();
+  const username = process.env.GITHUB_USERNAME || defaultUsername;
+  const repositories = await discoverRepositories(fetch, token, username, ({ phase, checked, total, matched }) => {
+    if (phase === "branches" && checked === total) console.log("Discovered " + matched + " contribution repositories.");
+  });
+  const sources = await collectLanguages(fetch, token, repositories);
   const data = summarize(sources);
   if (data.totalBytes === 0) throw new Error("Empty API snapshot; keeping existing cards.");
+
   const assets = new URL("../assets/", import.meta.url);
   await mkdir(assets, { recursive: true });
-  const snapshot = {
-    updatedAt: data.updatedAt,
-    methodology: "Share of GitHub Linguist code bytes in the seven featured public repositories; not proficiency or account-wide activity.",
-    repositoryCount: data.repositoryCount,
-    languageCount: data.languageCount,
-    totalBytes: data.totalBytes,
-    languages: data.languages,
-    repositories: sources,
-  };
+  const snapshot = publicSnapshot(data);
   const files = [["language-data.json", JSON.stringify(snapshot, null, 2) + "\n"]];
   for (const locale of Object.values(locales)) {
     for (const [name, theme] of Object.entries(themes)) {
       for (const mobile of [false, true]) {
         files.push([
-          "language-composition-inline" + locale.suffix + (mobile ? "-mobile" : "") + "-" + name + ".svg",
+          "contribution-languages-inline" + locale.suffix + (mobile ? "-mobile" : "") + "-" + name + ".svg",
           renderCard(data, theme, locale, mobile),
         ]);
       }
     }
   }
   await Promise.all(files.map(([name, content]) => writeFile(new URL(name, assets), content)));
-  console.log("Updated eight cards and source data from " + sources.length + " repositories.");
+  console.log("Updated language composition from " + data.repositoryCount + " repositories.");
+}
+
+// Whitelist aggregate fields. Never spread discovery results into a public artifact.
+export function publicSnapshot(data) {
+  return {
+    updatedAt: data.updatedAt,
+    methodology: "Whole-repository GitHub Linguist bytes, not personal lines of code. Repositories must have attributable author/committer records. Global commit search is supplemented with branch checks in token-visible owned, collaborator and organization-member repositories. Deleted or inaccessible repositories and unlinked commit identities cannot be included. Repository identifiers and per-repository data are omitted.",
+    repositoryCount: data.repositoryCount,
+    languageCount: data.languageCount,
+    totalBytes: data.totalBytes,
+    languages: data.languages,
+  };
 }
 
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {

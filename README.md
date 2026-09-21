@@ -55,18 +55,22 @@ An object-detection approach for the Kaggle RSNA 2024 Lumbar Spine Degenerative 
 ## Stats
 
 <picture>
-  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="./assets/language-composition-inline-mobile-dark.svg" />
-  <source media="(max-width: 600px)" srcset="./assets/language-composition-inline-mobile-light.svg" />
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/language-composition-inline-dark.svg" />
-  <img width="100%" alt="Language distribution across seven featured repositories. Full figures and methodology are available below." src="./assets/language-composition-inline-light.svg" />
+  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="./assets/contribution-languages-inline-mobile-dark.svg" />
+  <source media="(max-width: 600px)" srcset="./assets/contribution-languages-inline-mobile-light.svg" />
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/contribution-languages-inline-dark.svg" />
+  <img width="100%" alt="Language composition of repositories with my commits, including authorized private repositories. Aggregate data below." src="./assets/contribution-languages-inline-light.svg" />
 </picture>
 
-<sub>Code composition, not a proficiency score. Generated weekly from GitHub's language API.</sub>
+<sub>Repositories with my commits · public + authorized private · repository-wide language mix.</sub>
 
 <details>
 <summary>Data & methodology</summary>
 
-Six projects, seven public repositories (TOMEET includes frontend and backend). Percentages represent each language's share of the combined GitHub-reported code bytes, not commits, time spent, or all repositories on this account. The five largest languages are shown separately; the rest are grouped as Other. Notebook files retain GitHub's “Jupyter Notebook” classification.
+Includes repositories where GitHub attributes a commit to **zs-andy** as author or committer—not just repositories I own. Global commit search is supplemented with current-branch checks for repositories accessible through ownership, collaboration or organization membership. Public, authorized private, archived and fork repositories are eligible; each repository is counted once. Coverage is limited by token permissions, GitHub indexing and linked commit identities; deleted or inaccessible history cannot be included.
+
+Percentages describe the included repositories' current GitHub Linguist code bytes, **not the lines I personally wrote**, time spent or proficiency. The five largest languages are shown separately; the rest are Other. Notebook files retain GitHub's “Jupyter Notebook” classification. Forks are counted separately and may share code with their upstream repositories.
+
+Only aggregate language totals and repository counts are published—no repository identifiers, commit records or per-repository details. A weekly refresh is scheduled; it requires a configured access credential and otherwise preserves the last snapshot. [Refresh setup](./docs/profile-stats.md).
 
 [Current data & full language breakdown](./assets/language-data.json) · [Generator](./scripts/update-language-card.mjs) · [Update status](https://github.com/zs-andy/zs-andy/actions/workflows/update-language-card.yml)
 
