@@ -101,10 +101,10 @@ An object-detection approach for the Kaggle RSNA 2024 Lumbar Spine Degenerative 
 ## Stats
 
 <picture>
-  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="./assets/languages-mobile-dark.svg" />
-  <source media="(max-width: 600px)" srcset="./assets/languages-mobile-light.svg" />
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/languages-dark.svg" />
-  <img width="100%" alt="Language distribution across seven featured repositories. Full figures and methodology are available below." src="./assets/languages-light.svg" />
+  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="./assets/language-composition-mobile-dark.svg" />
+  <source media="(max-width: 600px)" srcset="./assets/language-composition-mobile-light.svg" />
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/language-composition-dark.svg" />
+  <img width="100%" alt="Language distribution across seven featured repositories. Full figures and methodology are available below." src="./assets/language-composition-light.svg" />
 </picture>
 
 <sub>Code composition, not a proficiency score. Generated weekly from GitHub's language API.</sub>

@@ -191,7 +191,7 @@ export async function main() {
     for (const [name, theme] of Object.entries(themes)) {
       for (const mobile of [false, true]) {
         files.push([
-          "languages" + locale.suffix + (mobile ? "-mobile" : "") + "-" + name + ".svg",
+          "language-composition" + locale.suffix + (mobile ? "-mobile" : "") + "-" + name + ".svg",
           renderCard(data, theme, locale, mobile),
         ]);
       }

@@ -101,10 +101,10 @@
 ## 统计
 
 <picture>
-  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="./assets/languages-zh-CN-mobile-dark.svg" />
-  <source media="(max-width: 600px)" srcset="./assets/languages-zh-CN-mobile-light.svg" />
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/languages-zh-CN-dark.svg" />
-  <img width="100%" alt="七个展示仓库的语言分布，完整数据与统计方法见下方。" src="./assets/languages-zh-CN-light.svg" />
+  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="./assets/language-composition-zh-CN-mobile-dark.svg" />
+  <source media="(max-width: 600px)" srcset="./assets/language-composition-zh-CN-mobile-light.svg" />
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/language-composition-zh-CN-dark.svg" />
+  <img width="100%" alt="七个展示仓库的语言分布，完整数据与统计方法见下方。" src="./assets/language-composition-zh-CN-light.svg" />
 </picture>
 
 <sub>展示代码构成，不代表熟练程度。每周通过 GitHub 语言 API 自动更新。</sub>
