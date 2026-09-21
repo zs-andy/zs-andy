@@ -2,6 +2,10 @@
 
 The chart includes repositories with at least one commit attributed by GitHub to `zs-andy` as author or committer. This includes repositories owned by other people and organizations, and private repositories that the credential can read. It does not estimate personal lines of code: GitHub Linguist supplies the current language mix of each entire repository.
 
+The displayed percentages use repository-normalized weighting. For every repository with nonzero language data, the generator first converts its language byte counts into within-repository proportions; it then averages those proportions across repositories. This gives each qualifying repository equal weight instead of allowing one unusually large repository to dominate. The raw byte totals are retained separately in the aggregate snapshot for auditability.
+
+For a language `L`, its share is `sum(bytes(L, repository) / allLanguageBytes(repository)) / N`, where `N` is the number of repositories with nonzero language data. Empty language responses remain in `repositoryCount` but not in `weightedRepositoryCount` (`N`). `languageShares` contains the unrounded normalized shares; `languages` and `totalBytes` contain raw byte totals. All languages use the same calculation. The ten largest shares have individual bars; the remaining languages are named in the compact key and retain their shares in the full data. Display percentages are rounded to one decimal with a largest-remainder allocation so the complete set sums to 100%.
+
 ## Automatic updates
 
 1. Prepare a dedicated user access credential for the profile owner, covering the relevant personal and organization repositories. Commit/branch checks need **Contents: read**; language discovery needs repository metadata access. Organization approval or SSO authorization may also be required.
@@ -28,7 +32,7 @@ This script cannot bypass permissions, organization restrictions, expired creden
 
 ## Privacy
 
-Only aggregate byte totals, language names, total repository/language counts and the snapshot date are committed. Private repository names, URLs, commit records, visibility breakdowns and per-repository language figures are kept out of generated files and logs. API errors are sanitized and public snapshots use an explicit field allowlist. API calls only target `api.github.com`; credentials are passed only to the generation step.
+Only aggregate byte totals, normalized language shares, language names, total repository/language counts and the snapshot date are committed. Private repository names, URLs, commit records, visibility breakdowns and per-repository language figures are kept out of generated files and logs. API errors are sanitized and public snapshots use an explicit field allowlist. API calls only target `api.github.com`; credentials are passed only to the generation step.
 
 An API failure preserves the previous snapshot. The workflow runs only on `main` pushes affecting scripts/workflow, manual dispatch and the weekly schedule—not on untrusted pull requests.
 
@@ -38,4 +42,4 @@ An API failure preserves the previous snapshot. The workflow runs only on `main`
 node --test scripts/*.test.mjs
 ```
 
-Tests cover private branch-only contributions, untouched-repository exclusion, pagination, search partitioning, missing authorization, sanitized errors, aggregate-only output and all eight borderless chart variants.
+Tests cover private branch-only contributions, untouched-repository exclusion, pagination, search partitioning, missing authorization, sanitized errors, aggregate-only output, equal repository weighting, empty-repository denominators, byte-size invariance and all eight borderless chart variants.

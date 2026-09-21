@@ -61,14 +61,14 @@ An object-detection approach for the Kaggle RSNA 2024 Lumbar Spine Degenerative 
   <img width="100%" alt="Language composition of repositories with my commits, including authorized private repositories. Aggregate data below." src="./assets/contribution-languages-inline-light.svg" />
 </picture>
 
-<sub>Repositories with my commits · public + authorized private · repository-wide language mix.</sub>
+<sub>Repositories with my commits · public + authorized private · language mix.</sub>
 
 <details>
 <summary>Data & methodology</summary>
 
 Includes repositories where GitHub attributes a commit to **zs-andy** as author or committer—not just repositories I own. Global commit search is supplemented with current-branch checks for repositories accessible through ownership, collaboration or organization membership. Public, authorized private, archived and fork repositories are eligible; each repository is counted once. Coverage is limited by token permissions, GitHub indexing and linked commit identities; deleted or inaccessible history cannot be included.
 
-Percentages describe the included repositories' current GitHub Linguist code bytes, **not the lines I personally wrote**, time spent or proficiency. The five largest languages are shown separately; the rest are Other. Notebook files retain GitHub's “Jupyter Notebook” classification. Forks are counted separately and may share code with their upstream repositories.
+The chart uses a repository-normalized language mix: each included repository with language data contributes equally after its own GitHub Linguist proportions are calculated. This keeps one unusually large repository from overwhelming the overview. It is **not the lines I personally wrote**, time spent or proficiency. All detected languages remain available in the chart; the ten largest get bars and the smaller ones appear in the compact key. Notebook files retain GitHub's “Jupyter Notebook” classification. Forks are counted separately and may share code with their upstream repositories.
 
 Only aggregate language totals and repository counts are published—no repository identifiers, commit records or per-repository details. A weekly refresh is scheduled; it requires a configured access credential and otherwise preserves the last snapshot. [Refresh setup](./docs/profile-stats.md).
 

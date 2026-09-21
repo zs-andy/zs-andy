@@ -1,14 +1,15 @@
 {
   "updatedAt": "2026-09-21",
-  "methodology": "Whole-repository GitHub Linguist bytes, not personal lines of code. Repositories must have attributable author/committer records. Global commit search is supplemented with branch checks in token-visible owned, collaborator and organization-member repositories. Deleted or inaccessible repositories and unlinked commit identities cannot be included. Repository identifiers and per-repository data are omitted.",
+  "methodology": "Language shares are the arithmetic mean of each nonempty repository's GitHub Linguist byte proportions. Each repository with language data has equal weight; empty language responses are excluded from that denominator. Raw aggregate bytes are retained separately in languages and totalBytes. Neither metric measures personal lines of code. Repositories must have attributable author/committer records. Global commit search is supplemented with branch checks in token-visible owned, collaborator and organization-member repositories. Deleted or inaccessible repositories and unlinked commit identities cannot be included. Repository identifiers and per-repository data are omitted.",
   "repositoryCount": 29,
+  "weightedRepositoryCount": 27,
   "languageCount": 19,
-  "totalBytes": 12084483,
+  "totalBytes": 12099738,
   "languages": {
     "TypeScript": 8989730,
     "PLpgSQL": 892717,
     "Swift": 669245,
-    "JavaScript": 433248,
+    "JavaScript": 448503,
     "CSS": 314400,
     "Python": 235415,
     "Go": 223881,
@@ -24,5 +25,26 @@
     "Objective-C": 896,
     "C": 340,
     "Batchfile": 129
+  },
+  "languageShares": {
+    "TypeScript": 0.42845691879658826,
+    "Swift": 0.31471292193329414,
+    "JavaScript": 0.0642508095096911,
+    "Jupyter Notebook": 0.037037037037037035,
+    "HTML": 0.03496780826043652,
+    "PLpgSQL": 0.02933182131764581,
+    "CSS": 0.02922158995786554,
+    "Python": 0.029143828629797728,
+    "Kotlin": 0.019188654049497853,
+    "Go": 0.009728290427019115,
+    "Shell": 0.0017736869403095798,
+    "PowerShell": 0.0011285672582414547,
+    "Makefile": 0.0002712333286230333,
+    "Ruby": 0.00022695448462423196,
+    "Dockerfile": 0.00022658026246819406,
+    "C": 0.00018740204997391013,
+    "Solidity": 0.00008919028360523925,
+    "Objective-C": 0.0000389338453133992,
+    "Batchfile": 0.000017771627967913532
   }
 }
