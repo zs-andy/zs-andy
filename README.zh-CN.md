@@ -1,14 +1,10 @@
 <div align="left">
 
-# 4Fe_Andy
-
-人工智能 · 空间计算 · 产品管理 · 设计 · 全栈工程<br />构建面向 Apple 平台与 Web 的智能、无障碍产品体验。
+PolyU 大一 · 摄影 · 贝斯手<br />正在学习产品、设计和 Agent 开发，也在 Apple 平台与 Web 上构建智能体验。<br />最喜欢的美剧是《人生切割术》，乐队是 My Little Airport。<br />欢迎找我玩！
 
 <p>
-  <a href="https://4fe-andy.github.io/">个人网站 ↗</a> &nbsp;·&nbsp;
-  <a href="https://www.instagram.com/4fe_andy/">Instagram ↗</a> &nbsp;·&nbsp;
-  <a href="https://www.youtube.com/@4FeAndy">YouTube ↗</a> &nbsp;·&nbsp;
-  <a href="https://open.spotify.com/user/31mix2lsown7l4ycqak56qbeq6yy">Spotify ↗</a>
+  <a href="https://open.spotify.com/user/31mix2lsown7l4ycqak56qbeq6yy"><img src="https://cdn.simpleicons.org/spotify/6B7280" alt="" width="14" height="14" /> Spotify ↗</a> &nbsp;·&nbsp;
+  <a href="https://www.linkedin.com/in/siyi-lyu-b496a93b9/"><img src="https://cdn.simpleicons.org/linkedin/6B7280" alt="" width="14" height="14" /> LinkedIn ↗</a>
 </p>
 
 <p>
@@ -77,5 +73,5 @@
 </details>
 
 <p align="center">
-  <sub><a href="https://github.com/zs-andy?tab=repositories">全部仓库 ↗</a> &nbsp;·&nbsp; <a href="https://4fe-andy.github.io/">个人网站 ↗</a></sub>
+  <sub><a href="https://github.com/zs-andy?tab=repositories">全部仓库 ↗</a></sub>
 </p>

@@ -1,14 +1,10 @@
 <div align="left">
 
-# 4Fe_Andy
-
-AI · Spatial Computing · Product Management · Design · Full-stack Engineering<br />Creating intelligent and accessible experiences across Apple platforms, the web, and beyond.
+PolyU freshman · Photographer · Bass player<br />Learning product, design, and agent development while building intelligent experiences across Apple platforms and the web.<br />Favorite show: <em>Severance</em> · Favorite band: <em>my little airport</em><br />Say hi anytime.
 
 <p>
-  <a href="https://4fe-andy.github.io/">Website ↗</a> &nbsp;·&nbsp;
-  <a href="https://www.instagram.com/4fe_andy/">Instagram ↗</a> &nbsp;·&nbsp;
-  <a href="https://www.youtube.com/@4FeAndy">YouTube ↗</a> &nbsp;·&nbsp;
-  <a href="https://open.spotify.com/user/31mix2lsown7l4ycqak56qbeq6yy">Spotify ↗</a>
+  <a href="https://open.spotify.com/user/31mix2lsown7l4ycqak56qbeq6yy"><img src="https://cdn.simpleicons.org/spotify/6B7280" alt="" width="14" height="14" /> Spotify ↗</a> &nbsp;·&nbsp;
+  <a href="https://www.linkedin.com/in/siyi-lyu-b496a93b9/"><img src="https://cdn.simpleicons.org/linkedin/6B7280" alt="" width="14" height="14" /> LinkedIn ↗</a>
 </p>
 
 <p>
@@ -77,5 +73,5 @@ Only aggregate language totals and repository counts are published—no reposito
 </details>
 
 <p align="center">
-  <sub><a href="https://github.com/zs-andy?tab=repositories">All repositories ↗</a> &nbsp;·&nbsp; <a href="https://4fe-andy.github.io/">Elsewhere on the web ↗</a></sub>
+  <sub><a href="https://github.com/zs-andy?tab=repositories">All repositories ↗</a></sub>
 </p>

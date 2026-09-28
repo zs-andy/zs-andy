@@ -144,9 +144,13 @@ test("both READMEs preserve projects and link text rather than fake social butto
     const md = await readFile(new URL("../" + file, import.meta.url), "utf8");
     for (const repository of repositories) assert.ok(md.includes("https://github.com/" + repository), repository);
     for (const url of [
-      "https://4fe-andy.github.io/", "https://www.instagram.com/4fe_andy/",
-      "https://www.youtube.com/@4FeAndy", "https://open.spotify.com/user/31mix2lsown7l4ycqak56qbeq6yy",
+      "https://open.spotify.com/user/31mix2lsown7l4ycqak56qbeq6yy",
+      "https://www.linkedin.com/in/siyi-lyu-b496a93b9/",
     ]) assert.ok(md.includes('href="' + url + '"'), url);
+    assert.doesNotMatch(md, /4fe-andy\.github\.io|youtube\.com|YouTube|Website|个人网站|instagram\.com|Instagram/);
+    assert.doesNotMatch(md, /^# 4Fe_Andy$/m);
+    assert.equal((md.match(/cdn\.simpleicons\.org/g) ?? []).length, 2);
+    assert.match(md, /width="14" height="14"/);
     assert.equal((md.match(/^### /gm) ?? []).length, 6);
     assert.doesNotMatch(md, /social-links\.svg|shields\.io|capsule-render|<table/);
     assert.doesNotMatch(md, /^<br\s*\/>$/m);
