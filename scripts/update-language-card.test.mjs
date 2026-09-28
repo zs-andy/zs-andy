@@ -149,14 +149,19 @@ test("both READMEs preserve projects and link text rather than fake social butto
     ]) assert.ok(md.includes('href="' + url + '"'), url);
     assert.doesNotMatch(md, /4fe-andy\.github\.io|youtube\.com|YouTube|Website|个人网站|instagram\.com|Instagram/);
     assert.doesNotMatch(md, /^# 4Fe_Andy$/m);
-    assert.equal((md.match(/cdn\.simpleicons\.org/g) ?? []).length, 2);
+    assert.equal((md.match(/assets\/icons\//g) ?? []).length, 6);
+    assert.doesNotMatch(md, /cdn\.simpleicons\.org/);
     assert.match(md, /width="14" height="14"/);
     assert.equal((md.match(/^### /gm) ?? []).length, 5);
     assert.doesNotMatch(md, /social-links\.svg|shields\.io|capsule-render|<table/);
     assert.doesNotMatch(md, /^<br\s*\/>$/m);
     for (const match of md.matchAll(/(?:src|srcset)="(\.\/[^\"]+)"/g)) {
       await access(new URL("../" + match[1], import.meta.url));
-      assert.match(match[1], new RegExp("^\\./assets/" + assetPrefix.replaceAll("-", "\\-") + ""));
+      if (match[1].includes("contribution-languages")) {
+        assert.match(match[1], new RegExp("^\\./assets/" + assetPrefix.replaceAll("-", "\\-") + ""));
+      } else {
+        assert.match(match[1], /^\.\/assets\/icons\/(spotify|linkedin|swift|kotlin|python|typescript)\.svg$/);
+      }
     }
     for (const match of md.matchAll(/href="#([^\"]+)"/g)) {
       const headings = [...md.matchAll(/^## (.+)$/gm)].map((heading) => heading[1].toLowerCase());
