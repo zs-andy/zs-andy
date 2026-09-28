@@ -3,8 +3,8 @@
 PolyU 大一 · 摄影 · 贝斯手<br />正在学习产品、设计和 Agent 开发，也在 Apple 平台与 Web 上构建智能体验。<br />最喜欢的美剧是《人生切割术》，乐队是 My Little Airport。<br />欢迎找我玩！
 
 <p>
-  <a href="https://open.spotify.com/user/31mix2lsown7l4ycqak56qbeq6yy"><img src="./assets/icons/spotify.svg" alt="" width="14" height="14" /> Spotify ↗</a> &nbsp;·&nbsp;
-  <a href="https://www.linkedin.com/in/siyi-lyu-b496a93b9/"><img src="./assets/icons/linkedin.svg" alt="" width="14" height="14" /> LinkedIn ↗</a>
+  <a href="https://open.spotify.com/user/31mix2lsown7l4ycqak56qbeq6yy"><img src="./assets/icons/spotify-color.svg" alt="" width="14" height="14" /> Spotify ↗</a> &nbsp;·&nbsp;
+  <a href="https://www.linkedin.com/in/siyi-lyu-b496a93b9/"><img src="./assets/icons/linkedin-color.svg" alt="" width="14" height="14" /> LinkedIn ↗</a>
 </p>
 
 <p>
@@ -42,7 +42,7 @@ PolyU 大一 · 摄影 · 贝斯手<br />正在学习产品、设计和 Agent �
 
 ## 技术栈
 
-**编程语言** &nbsp; <img src="./assets/icons/swift.svg" alt="" width="14" height="14" /> Swift · <img src="./assets/icons/kotlin.svg" alt="" width="14" height="14" /> Kotlin · <img src="./assets/icons/python.svg" alt="" width="14" height="14" /> Python · <img src="./assets/icons/typescript.svg" alt="" width="14" height="14" /> TypeScript<br />**Web 与数据** &nbsp; React · Next.js · Supabase<br />**视觉与工具** &nbsp; PyTorch · OpenCV · Git
+**编程语言** &nbsp; <img src="./assets/icons/swift-color.svg" alt="" width="14" height="14" /> Swift · <img src="./assets/icons/kotlin-color.svg" alt="" width="14" height="14" /> Kotlin · <img src="./assets/icons/python-color.svg" alt="" width="14" height="14" /> Python · <img src="./assets/icons/typescript-color.svg" alt="" width="14" height="14" /> TypeScript<br />**Web 与数据** &nbsp; React · Next.js · Supabase<br />**视觉与工具** &nbsp; PyTorch · OpenCV · Git
 
 ## 统计
 

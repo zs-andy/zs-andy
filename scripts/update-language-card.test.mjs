@@ -139,6 +139,20 @@ test("public snapshots omit private repository names, links and raw responses", 
   assert.match(output.methodology, /equal weight/);
 });
 
+test("local icons preserve brand colors and scalable SVG geometry", async () => {
+  const colors = {
+    spotify: "#1DB954", linkedin: "#0A66C2", swift: "#F05138",
+    kotlin: "#7F52FF", python: "#3776AB", typescript: "#3178C6",
+  };
+  for (const [name, color] of Object.entries(colors)) {
+    const svg = await readFile(new URL(`../assets/icons/${name}-color.svg`, import.meta.url), "utf8");
+    assert.match(svg, /viewBox="0 0 24 24"/);
+    assert.ok(svg.includes(`fill="${color}"`), `${name} brand color`);
+    assert.match(svg, /<path d="[^"]+"/);
+    assert.doesNotMatch(svg, /#6B7280|<script|<image|<foreignObject|(?:href|clip-path)=/);
+  }
+});
+
 test("both READMEs preserve projects and link text rather than fake social buttons", async () => {
   for (const file of ["README.md", "README.zh-CN.md"]) {
     const md = await readFile(new URL("../" + file, import.meta.url), "utf8");
@@ -151,7 +165,7 @@ test("both READMEs preserve projects and link text rather than fake social butto
     assert.doesNotMatch(md, /^# 4Fe_Andy$/m);
     assert.equal((md.match(/assets\/icons\//g) ?? []).length, 6);
     assert.doesNotMatch(md, /cdn\.simpleicons\.org/);
-    assert.match(md, /width="14" height="14"/);
+    assert.equal((md.match(/width="14" height="14"/g) ?? []).length, 6);
     assert.equal((md.match(/^### /gm) ?? []).length, 5);
     assert.doesNotMatch(md, /social-links\.svg|shields\.io|capsule-render|<table/);
     assert.doesNotMatch(md, /^<br\s*\/>$/m);
@@ -160,7 +174,7 @@ test("both READMEs preserve projects and link text rather than fake social butto
       if (match[1].includes("contribution-languages")) {
         assert.match(match[1], new RegExp("^\\./assets/" + assetPrefix.replaceAll("-", "\\-") + ""));
       } else {
-        assert.match(match[1], /^\.\/assets\/icons\/(spotify|linkedin|swift|kotlin|python|typescript)\.svg$/);
+        assert.match(match[1], /^\.\/assets\/icons\/(spotify|linkedin|swift|kotlin|python|typescript)-color\.svg$/);
       }
     }
     for (const match of md.matchAll(/href="#([^\"]+)"/g)) {

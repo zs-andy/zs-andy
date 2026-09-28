@@ -3,8 +3,8 @@
 PolyU freshman · Photographer · Bass player<br />Learning product, design, and agent development while building intelligent experiences across Apple platforms and the web.<br />Favorite show: <em>Severance</em> · Favorite band: <em>my little airport</em><br />Say hi anytime.
 
 <p>
-  <a href="https://open.spotify.com/user/31mix2lsown7l4ycqak56qbeq6yy"><img src="./assets/icons/spotify.svg" alt="" width="14" height="14" /> Spotify ↗</a> &nbsp;·&nbsp;
-  <a href="https://www.linkedin.com/in/siyi-lyu-b496a93b9/"><img src="./assets/icons/linkedin.svg" alt="" width="14" height="14" /> LinkedIn ↗</a>
+  <a href="https://open.spotify.com/user/31mix2lsown7l4ycqak56qbeq6yy"><img src="./assets/icons/spotify-color.svg" alt="" width="14" height="14" /> Spotify ↗</a> &nbsp;·&nbsp;
+  <a href="https://www.linkedin.com/in/siyi-lyu-b496a93b9/"><img src="./assets/icons/linkedin-color.svg" alt="" width="14" height="14" /> LinkedIn ↗</a>
 </p>
 
 <p>
@@ -42,7 +42,7 @@ An object-detection approach for the Kaggle RSNA 2024 Lumbar Spine Degenerative 
 
 ## Stack
 
-**Languages** &nbsp; <img src="./assets/icons/swift.svg" alt="" width="14" height="14" /> Swift · <img src="./assets/icons/kotlin.svg" alt="" width="14" height="14" /> Kotlin · <img src="./assets/icons/python.svg" alt="" width="14" height="14" /> Python · <img src="./assets/icons/typescript.svg" alt="" width="14" height="14" /> TypeScript<br />**Web & data** &nbsp; React · Next.js · Supabase<br />**Vision & tools** &nbsp; PyTorch · OpenCV · Git
+**Languages** &nbsp; <img src="./assets/icons/swift-color.svg" alt="" width="14" height="14" /> Swift · <img src="./assets/icons/kotlin-color.svg" alt="" width="14" height="14" /> Kotlin · <img src="./assets/icons/python-color.svg" alt="" width="14" height="14" /> Python · <img src="./assets/icons/typescript-color.svg" alt="" width="14" height="14" /> TypeScript<br />**Web & data** &nbsp; React · Next.js · Supabase<br />**Vision & tools** &nbsp; PyTorch · OpenCV · Git
 
 ## Stats
 
