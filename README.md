@@ -24,15 +24,11 @@ A conversational social Agent that turns ongoing dialogue into real-world connec
 
 [Frontend ↗](https://github.com/tomeet-chat/TOMEET-Web) &nbsp;·&nbsp; [Backend ↗](https://github.com/toMeetADX/TOMEET_Backend)
 
-### [Atmos Rokid ↗](https://github.com/zs-andy/Atmos_Rokid) <sub>· SPATIAL COMPUTING</sub>
-
-Real-time environmental awareness for visually impaired users, built for Rokid Glasses.<br />`Kotlin` `Swift` `Rokid Glasses` `YOLO12 · Core ML` `FastVLM · MLX`
-
 ### [DeadLineTodo ↗](https://github.com/zs-andy/DeadLineTodo) <sub>· iOS PRODUCT &nbsp; / &nbsp; Available on the App Store</sub>
 
 A deadline-first task manager for iOS, available on the App Store.<br />`Swift` `SwiftUI` `SwiftData` `StoreKit 2` `WidgetKit` `EventKit`
 
-### [SoulHealing ↗](https://github.com/zs-andy/SoulHealing) <sub>· EMOTION & AI</sub>
+### [SoulHealing ↗](https://github.com/zs-andy/SoulHealing) <sub>· EMOTION & AI &nbsp; / &nbsp; Hunan Hackathon track 2nd place</sub>
 
 An experiment combining emotion recognition, multimodal AI and music therapy.<br />`SwiftUI` `AVFoundation` `FastVLM` `MLX VLM` `Core ML Vision`
 

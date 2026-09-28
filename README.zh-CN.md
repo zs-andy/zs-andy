@@ -24,15 +24,11 @@ PolyU 大一 · 摄影 · 贝斯手<br />正在学习产品、设计和 Agent �
 
 [前端 ↗](https://github.com/tomeet-chat/TOMEET-Web) &nbsp;·&nbsp; [后端 ↗](https://github.com/toMeetADX/TOMEET_Backend)
 
-### [Atmos Rokid ↗](https://github.com/zs-andy/Atmos_Rokid) <sub>· 空间计算</sub>
-
-基于 Rokid Glasses，为视障用户提供实时环境感知的空间计算应用。<br />`Kotlin` `Swift` `Rokid Glasses` `YOLO12 · Core ML` `FastVLM · MLX`
-
 ### [DeadLineTodo ↗](https://github.com/zs-andy/DeadLineTodo) <sub>· iOS 产品 &nbsp; / &nbsp; 已上架 App Store</sub>
 
 专注 Deadline 管理、已上架 App Store 的 iOS 待办应用。<br />`Swift` `SwiftUI` `SwiftData` `StoreKit 2` `WidgetKit` `EventKit`
 
-### [SoulHealing ↗](https://github.com/zs-andy/SoulHealing) <sub>· 情绪与 AI</sub>
+### [SoulHealing ↗](https://github.com/zs-andy/SoulHealing) <sub>· 情绪与 AI &nbsp; / &nbsp; 湖南黑客松赛道第二名</sub>
 
 结合情绪识别、多模态 AI 与音乐疗愈的实验性应用。<br />`SwiftUI` `AVFoundation` `FastVLM` `MLX VLM` `Core ML Vision`
 

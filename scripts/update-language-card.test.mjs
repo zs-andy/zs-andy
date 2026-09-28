@@ -5,7 +5,7 @@ import { assetPrefix, escapeXml, locales, publicSnapshot, renderCard, summarize,
 import { collectLanguages } from "./contribution-repositories.mjs";
 
 const repositories = [
-  "tomeet-chat/TOMEET-Web", "toMeetADX/TOMEET_Backend", "zs-andy/Atmos_Rokid",
+  "tomeet-chat/TOMEET-Web", "toMeetADX/TOMEET_Backend",
   "zs-andy/DeadLineTodo", "zs-andy/SoulHealing", "zs-andy/VisionKeyboard", "zs-andy/LSDC-Yolo-Approach",
 ];
 
@@ -151,7 +151,7 @@ test("both READMEs preserve projects and link text rather than fake social butto
     assert.doesNotMatch(md, /^# 4Fe_Andy$/m);
     assert.equal((md.match(/cdn\.simpleicons\.org/g) ?? []).length, 2);
     assert.match(md, /width="14" height="14"/);
-    assert.equal((md.match(/^### /gm) ?? []).length, 6);
+    assert.equal((md.match(/^### /gm) ?? []).length, 5);
     assert.doesNotMatch(md, /social-links\.svg|shields\.io|capsule-render|<table/);
     assert.doesNotMatch(md, /^<br\s*\/>$/m);
     for (const match of md.matchAll(/(?:src|srcset)="(\.\/[^\"]+)"/g)) {
