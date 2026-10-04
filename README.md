@@ -1,6 +1,6 @@
 <div align="left">
 
-PolyU freshman · Photographer · Bass player<br />Learning product, design, and agent development while building intelligent experiences across Apple platforms and the web.<br />Favorite show: <em>Severance</em> · Favorite band: <em>my little airport</em><br />Say hi anytime.
+PolyU freshman · Co-Founder of HappeNow · Photographer · Bass player<br />Learning product, design, and agent development while building intelligent experiences across Apple platforms and the web.<br />Favorite show: <em>Severance</em> · Favorite band: <em>my little airport</em><br />Say hi anytime.
 
 <p>
   <a href="https://open.spotify.com/user/31mix2lsown7l4ycqak56qbeq6yy"><img src="./assets/icons/spotify-color.svg" alt="" width="14" height="14" /> Spotify ↗</a> &nbsp;·&nbsp;

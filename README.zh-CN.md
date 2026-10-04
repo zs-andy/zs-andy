@@ -1,6 +1,6 @@
 <div align="left">
 
-PolyU 大一 · 摄影 · 贝斯手<br />正在学习产品、设计和 Agent 开发，也在 Apple 平台与 Web 上构建智能体验。<br />最喜欢的美剧是《人生切割术》，乐队是 My Little Airport。<br />欢迎找我玩！
+PolyU 大一 · HappeNow 联合创始人 · 摄影 · 贝斯手<br />正在学习产品、设计和 Agent 开发，也在 Apple 平台与 Web 上构建智能体验。<br />最喜欢的美剧是《人生切割术》，乐队是 My Little Airport。<br />欢迎找我玩！
 
 <p>
   <a href="https://open.spotify.com/user/31mix2lsown7l4ycqak56qbeq6yy"><img src="./assets/icons/spotify-color.svg" alt="" width="14" height="14" /> Spotify ↗</a> &nbsp;·&nbsp;
