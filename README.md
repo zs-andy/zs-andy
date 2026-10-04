@@ -4,7 +4,8 @@ PolyU freshman · Photographer · Bass player<br />Learning product, design, and
 
 <p>
   <a href="https://open.spotify.com/user/31mix2lsown7l4ycqak56qbeq6yy"><img src="./assets/icons/spotify-color.svg" alt="" width="14" height="14" /> Spotify ↗</a> &nbsp;·&nbsp;
-  <a href="https://www.linkedin.com/in/siyi-lyu-b496a93b9/"><img src="./assets/icons/linkedin-color.svg" alt="" width="14" height="14" /> LinkedIn ↗</a>
+  <a href="https://www.linkedin.com/in/siyi-lyu-b496a93b9/"><img src="./assets/icons/linkedin-color.svg" alt="" width="14" height="14" /> LinkedIn ↗</a> &nbsp;·&nbsp;
+  <a href="https://x.com/4Fe119a"><img src="./assets/icons/x.svg" alt="" width="14" height="14" /> X ↗</a>
 </p>
 
 <p>
