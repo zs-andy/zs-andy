@@ -9,37 +9,12 @@ PolyU freshman · Photographer · Bass player · Co-Founder<br />Learning produc
 </p>
 
 <p>
-  <a href="#projects">Projects</a> &nbsp;/&nbsp;
   <a href="#stack">Stack</a> &nbsp;/&nbsp;
   <a href="#stats">Stats</a> &nbsp;/&nbsp;
   <a href="./README.zh-CN.md">简体中文</a>
 </p>
 
 </div>
-
-## Projects
-
-### [TOMEET ↗](https://github.com/tomeet-chat/TOMEET-Web) <sub>· AGENT &nbsp; / &nbsp; AdventureX track 1st place</sub>
-
-A conversational social Agent that turns ongoing dialogue into real-world connections.<br /><sub>Product direction · Interface design · Frontend & backend engineering</sub><br />`Next.js` `Fastify` `Supabase` `Photon Spectrum` `Agent Memory V2` `Injective Web3`
-
-[Frontend ↗](https://github.com/tomeet-chat/TOMEET-Web) &nbsp;·&nbsp; [Backend ↗](https://github.com/toMeetADX/TOMEET_Backend)
-
-### [DeadLineTodo ↗](https://github.com/zs-andy/DeadLineTodo) <sub>· iOS PRODUCT &nbsp; / &nbsp; Available on the App Store</sub>
-
-A deadline-first task manager for iOS, available on the App Store.<br />`Swift` `SwiftUI` `SwiftData` `StoreKit 2` `WidgetKit` `EventKit`
-
-### [SoulHealing ↗](https://github.com/zs-andy/SoulHealing) <sub>· EMOTION & AI &nbsp; / &nbsp; Hunan Hackathon track 2nd place</sub>
-
-An experiment combining emotion recognition, multimodal AI and music therapy.<br />`SwiftUI` `AVFoundation` `FastVLM` `MLX VLM` `Core ML Vision`
-
-### [VisionKeyboard ↗](https://github.com/zs-andy/VisionKeyboard) <sub>· visionOS &nbsp; / &nbsp; AdventureX track 4th place</sub>
-
-A 26-key spatial keyboard for Apple Vision Pro using fingertip tracking.<br />`Swift` `visionOS` `ARKit Hand Tracking` `RealityKit` `Plane Detection` `Spatial Gestures`
-
-### [RSNA 2024 · YOLO Approach ↗](https://github.com/zs-andy/LSDC-Yolo-Approach) <sub>· KAGGLE COMPETITION &nbsp; / &nbsp; Silver Medal</sub>
-
-An object-detection approach for the Kaggle RSNA 2024 Lumbar Spine Degenerative Classification competition.<br />`Python` `PyTorch` `YOLOv8 Ensemble` `3D DICOM` `MaxViT` `Multi-scale Inference`
 
 ## Stack
 

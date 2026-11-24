@@ -9,37 +9,12 @@ PolyU 大一 · 摄影 · 贝斯手 · 联合创始人<br />正在学习产品�
 </p>
 
 <p>
-  <a href="#项目">项目</a> &nbsp;/&nbsp;
   <a href="#技术栈">技术栈</a> &nbsp;/&nbsp;
   <a href="#统计">统计</a> &nbsp;/&nbsp;
   <a href="./README.md">English</a>
 </p>
 
 </div>
-
-## 项目
-
-### [TOMEET ↗](https://github.com/tomeet-chat/TOMEET-Web) <sub>· AGENT &nbsp; / &nbsp; AdventureX 赛道第一名</sub>
-
-一个通过持续对话理解用户，并帮助用户建立真实社交连接的智能 Agent。<br /><sub>产品方向 · 界面设计 · 前后端工程开发</sub><br />`Next.js` `Fastify` `Supabase` `Photon Spectrum` `Agent Memory V2` `Injective Web3`
-
-[前端 ↗](https://github.com/tomeet-chat/TOMEET-Web) &nbsp;·&nbsp; [后端 ↗](https://github.com/toMeetADX/TOMEET_Backend)
-
-### [DeadLineTodo ↗](https://github.com/zs-andy/DeadLineTodo) <sub>· iOS 产品 &nbsp; / &nbsp; 已上架 App Store</sub>
-
-专注 Deadline 管理、已上架 App Store 的 iOS 待办应用。<br />`Swift` `SwiftUI` `SwiftData` `StoreKit 2` `WidgetKit` `EventKit`
-
-### [SoulHealing ↗](https://github.com/zs-andy/SoulHealing) <sub>· 情绪与 AI &nbsp; / &nbsp; 湖南黑客松赛道第二名</sub>
-
-结合情绪识别、多模态 AI 与音乐疗愈的实验性应用。<br />`SwiftUI` `AVFoundation` `FastVLM` `MLX VLM` `Core ML Vision`
-
-### [VisionKeyboard ↗](https://github.com/zs-andy/VisionKeyboard) <sub>· visionOS &nbsp; / &nbsp; AdventureX 赛道第四名</sub>
-
-基于指尖追踪的 Apple Vision Pro 26 键空间手势输入法。<br />`Swift` `visionOS` `ARKit Hand Tracking` `RealityKit` `Plane Detection` `Spatial Gestures`
-
-### [RSNA 2024 · YOLO Approach ↗](https://github.com/zs-andy/LSDC-Yolo-Approach) <sub>· KAGGLE 竞赛 &nbsp; / &nbsp; 银牌</sub>
-
-面向 Kaggle RSNA 2024 腰椎退行性病变分类竞赛的目标检测方案。<br />`Python` `PyTorch` `YOLOv8 Ensemble` `3D DICOM` `MaxViT` `Multi-scale Inference`
 
 ## 技术栈
 
