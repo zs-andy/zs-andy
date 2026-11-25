@@ -16,11 +16,18 @@ export function repositoryName(value) {
 // This module also runs in a public Actions log.
 export function githubClient(fetcher = fetch, token = profileToken(), pause = delay) {
   if (!token) throw new Error("PROFILE_STATS_TOKEN is required; the previous snapshot is unchanged.");
+  let lastSearchAt = 0;
   return async (path, params = {}, { emptyOn409 = false } = {}) => {
     const url = new URL(path, "https://api.github.com");
     if (url.origin !== "https://api.github.com") throw new Error("Only the GitHub API origin is allowed.");
     for (const [key, value] of Object.entries(params)) url.searchParams.set(key, String(value));
-    for (let attempt = 0; attempt < 3; attempt++) {
+    const isSearch = url.pathname.startsWith("/search/");
+    for (let attempt = 0; attempt < 4; attempt++) {
+      if (isSearch && lastSearchAt > 0) {
+        const elapsed = Date.now() - lastSearchAt;
+        if (elapsed < 6500) await pause(6500 - elapsed);
+      }
+      if (isSearch) lastSearchAt = Date.now();
       let response;
       try {
         response = await fetcher(url.href, {
@@ -41,13 +48,15 @@ export function githubClient(fetcher = fetch, token = profileToken(), pause = de
       }
       if (emptyOn409 && response.status === 409) return [];
       const rateLimited = response.status === 429 || (response.status === 403 && (
-        header("x-ratelimit-remaining") === "0" || header("retry-after")
+        header("x-ratelimit-remaining") === "0" || header("retry-after") || isSearch
       ));
-      if (rateLimited && attempt < 2) {
-        const waitSeconds = Number(header("retry-after")) || Math.max(
-          1, Number(header("x-ratelimit-reset")) - Math.floor(Date.now() / 1000) + 1,
+      if (rateLimited && attempt < 3) {
+        const waitSeconds = Number(header("retry-after")) || (
+          header("x-ratelimit-remaining") === "0"
+            ? Math.max(1, Number(header("x-ratelimit-reset")) - Math.floor(Date.now() / 1000) + 1)
+            : 30 * (attempt + 1)
         ) || 2;
-        if (waitSeconds > 60) throw new Error("GitHub rate limit exceeded; retry the update later.");
+        if (waitSeconds > 95) throw new Error("GitHub rate limit exceeded; retry the update later.");
         await pause(waitSeconds * 1000);
         continue;
       }
@@ -126,7 +135,7 @@ async function listPages(api, path, params = {}, options = {}) {
 
 export async function discoverRepositories(fetcher = fetch, token = profileToken(), username = defaultUsername, progress = () => {}) {
   if (!/^[A-Za-z0-9-]+$/.test(username)) throw new Error("Invalid GitHub username.");
-  const api = githubClient(fetcher, token);
+  const api = githubClient(fetcher, token, fetcher === fetch ? delay : async () => {});
   const viewer = await api("/user");
   if (viewer?.login?.toLowerCase() !== username.toLowerCase()) {
     throw new Error("PROFILE_STATS_TOKEN must belong to the profile owner.");
@@ -155,11 +164,22 @@ export async function discoverRepositories(fetcher = fetch, token = profileToken
         found.set(key, name);
       } else {
         const branches = await listPages(api, "/repos/" + name + "/branches", {}, { emptyOn409: true });
+        const others = [];
         for (const branch of branches) {
           if (typeof branch.name !== "string") throw new Error("Invalid GitHub branch response.");
-          if (branch.name === repo.default_branch) continue;
-          if (await hasCommit(branch.name)) { found.set(key, name); break; }
+          if (branch.name !== repo.default_branch) others.push(branch.name);
         }
+        let branchCursor = 0;
+        let matchedBranch = false;
+        await Promise.all(Array.from({ length: Math.min(6, others.length) }, async () => {
+          while (!matchedBranch && branchCursor < others.length) {
+            const branchName = others[branchCursor++];
+            if (await hasCommit(branchName)) {
+              matchedBranch = true;
+              found.set(key, name);
+            }
+          }
+        }));
       }
     }
     checked++;

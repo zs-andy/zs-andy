@@ -8,42 +8,129 @@ import {
   profileToken,
 } from "./contribution-repositories.mjs";
 
-const colors = {
-  TypeScript: "#3178C6", Swift: "#F07842", PLpgSQL: "#8271D1",
-  JavaScript: "#C79D36", CSS: "#399EAA", Kotlin: "#BA68C8",
-  Python: "#4C87B9", Go: "#00ADD8", HTML: "#DE6848",
-  "Jupyter Notebook": "#D89036", Shell: "#78A657", PowerShell: "#6287CD",
-  Makefile: "#7D9156", Dockerfile: "#538CB7", Ruby: "#BC6262",
-  Solidity: "#8C82AB", "Objective-C": "#519AAA", C: "#8990A1", Batchfile: "#91A65F",
-};
-const languageColor = (language) => colors[language] ?? "#929CAF";
 const primaryLanguageCount = 10;
 // GitHub caches README images by URL. Bump this when the visual contract changes so
 // a newly generated chart cannot be replaced by a stale image at the old path.
-export const assetPrefix = "contribution-languages-v2-inline";
+export const assetPrefix = "contribution-languages-v3-inline";
+
 export const locales = {
   en: {
-    suffix: "", title: "Languages",
+    suffix: "",
+    title: "Languages",
     subtitle: "Language mix across repositories with my commits",
-    languages: "languages", repos: "repositories", updated: "Updated",
+    languages: "languages",
+    repos: "repositories",
+    updated: "Updated",
     empty: "No language data available",
     labels: { PLpgSQL: "PL/pgSQL" },
   },
   zhCN: {
-    suffix: "-zh-CN", title: "语言概览",
+    suffix: "-zh-CN",
+    title: "语言概览",
     subtitle: "包含我的提交的仓库语言分布",
-    languages: "种语言", repos: "个仓库", updated: "更新于",
+    languages: "种语言",
+    repos: "个仓库",
+    updated: "更新于",
     empty: "暂无语言数据",
     labels: { PLpgSQL: "PL/pgSQL" },
   },
 };
+
 export const themes = {
-  light: { title: "#1F2328", muted: "#656D76", track: "#EFF2F5" },
-  dark: { title: "#F0F6FC", muted: "#9198A1", track: "#212830" },
+  light: {
+    title: "#1F2328",
+    muted: "#59636E",
+    subtle: "#818B98",
+    track: "#ECEFF3",
+    divider: "#EAECEF",
+    palette: {
+      TypeScript: "#2563EB",
+      Swift: "#EA580C",
+      JavaScript: "#CA8A04",
+      Python: "#0284C7",
+      Kotlin: "#7C3AED",
+      "C++": "#DB2777",
+      C: "#64748B",
+      "Jupyter Notebook": "#D97706",
+      HTML: "#E11D48",
+      CSS: "#0D9488",
+      PLpgSQL: "#4F46E5",
+      Go: "#0891B2",
+      Shell: "#16A34A",
+      PowerShell: "#3B82F6",
+      Makefile: "#65A30D",
+      Dockerfile: "#0EA5E9",
+      Ruby: "#DC2626",
+      Solidity: "#6366F1",
+      "Objective-C": "#0284C7",
+      "Objective-C++": "#9333EA",
+      Batchfile: "#84CC16",
+      Metal: "#475569",
+      CMake: "#059669",
+      Rust: "#C2410C",
+      CUDA: "#15803D",
+      MDX: "#D97706",
+      SCSS: "#BE185D",
+    },
+    fallback: "#6E7781",
+  },
+  dark: {
+    title: "#F0F6FC",
+    muted: "#9198A1",
+    subtle: "#6E7681",
+    track: "#21262D",
+    divider: "#21262D",
+    palette: {
+      TypeScript: "#58A6FF",
+      Swift: "#FF7B54",
+      JavaScript: "#EAB308",
+      Python: "#38BDF8",
+      Kotlin: "#A78BFA",
+      "C++": "#F472B6",
+      C: "#94A3B8",
+      "Jupyter Notebook": "#FB923C",
+      HTML: "#FB7185",
+      CSS: "#2DD4BF",
+      PLpgSQL: "#818CF8",
+      Go: "#22D3EE",
+      Shell: "#4ADE80",
+      PowerShell: "#60A5FA",
+      Makefile: "#A3E635",
+      Dockerfile: "#38BDF8",
+      Ruby: "#F87171",
+      Solidity: "#A5B4FC",
+      "Objective-C": "#7DD3FC",
+      "Objective-C++": "#C084FC",
+      Batchfile: "#BEF264",
+      Metal: "#CBD5E1",
+      CMake: "#34D399",
+      Rust: "#FB923C",
+      CUDA: "#4ADE80",
+      MDX: "#FBBF24",
+      SCSS: "#F472B6",
+    },
+    fallback: "#8B949E",
+  },
 };
+
+const languageColor = (language, theme) => theme.palette?.[language] ?? theme.fallback ?? "#8B949E";
+
 export const escapeXml = (value) => String(value)
   .replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;")
   .replaceAll('"', "&quot;").replaceAll("'", "&apos;");
+
+function estimateTextWidth(text, fontSize) {
+  let units = 0;
+  for (const ch of text) {
+    if ("ilIj1.,:;|!/' ".includes(ch)) units += 0.34;
+    else if ("frt-()[]".includes(ch)) units += 0.44;
+    else if ("mwMW@#%&".includes(ch)) units += 0.84;
+    else if (/[\u4E00-\u9FFF]/.test(ch)) units += 1.02;
+    else if (/[A-Z]/.test(ch)) units += 0.68;
+    else units += 0.56;
+  }
+  return units * fontSize;
+}
 
 // Average within-repository language shares. Raw bytes remain a separate audit field.
 export function summarize(sources, updatedAt = new Date().toISOString().slice(0, 10)) {
@@ -93,91 +180,130 @@ export function summarize(sources, updatedAt = new Date().toISOString().slice(0,
 
 export function renderCard(data, theme, locale, mobile = false) {
   const width = mobile ? 420 : 760;
-  const padding = 8;
-  const cx = mobile ? 210 : 130;
-  const cy = mobile ? 70 : 100;
-  const radius = mobile ? 54 : 70;
-  const circumference = 2 * Math.PI * radius;
-  const ringWidth = 18;
-  let offset = 0;
-  const ring = data.entries.map(({ language, share }) => {
-    const length = share * circumference;
-    const gap = data.entries.length > 1 ? Math.min(5, length * 0.24) : 0;
-    const markup = '<circle cx="' + cx + '" cy="' + cy + '" r="' + radius +
-      '" fill="none" stroke="' + languageColor(language) +
-      '" stroke-width="' + ringWidth + '" stroke-dasharray="' +
-      (length - gap).toFixed(3) + " " + (circumference - length + gap).toFixed(3) +
-      '" stroke-dashoffset="' + (-offset - gap / 2).toFixed(3) +
-      '" transform="rotate(-90 ' + cx + " " + cy + ')" />';
-    offset += length;
-    return markup;
-  }).join("\n");
+  const pad = 4;
+  const innerWidth = width - pad * 2;
+  const headerY = 15;
+  const barY = 28;
+  const barHeight = 9;
+  const barRadius = 4.5;
 
-  const rowsX = mobile ? padding : 260;
-  const columnGap = mobile ? 24 : 28;
-  const rowsWidth = (width - padding - rowsX - columnGap) / 2;
-  const rowsY = mobile ? 160 : 24;
-  const rowGap = 34;
+  // Segmented full-width proportional ribbon with crisp transparent gaps on readable segments.
+  let cursor = pad;
+  const segments = data.entries.map(({ language, share, percentage }, index) => {
+    const rawW = share * innerWidth;
+    const isLast = index === data.entries.length - 1;
+    const nextRawW = isLast ? 0 : data.entries[index + 1].share * innerWidth;
+    const gap = !isLast && rawW >= 4.5 && nextRawW >= 3 ? 2 : 0;
+    const segW = Math.max(0.4, rawW - gap);
+    const label = locale.labels[language] ?? language;
+    const markup = '<rect x="' + cursor.toFixed(2) + '" y="' + barY + '" width="' +
+      segW.toFixed(2) + '" height="' + barHeight + '" fill="' +
+      languageColor(language, theme) + '"><title>' + escapeXml(label) + " " + percentage + "%</title></rect>";
+    cursor += rawW;
+    return markup;
+  }).join("\n      ");
+
   const primary = data.entries.slice(0, primaryLanguageCount);
-  const columnRows = Math.ceil(primary.length / 2);
-  const rows = primary.map(({ language, share, percentage }, index) => {
-    const x = rowsX + Math.floor(index / columnRows) * (rowsWidth + columnGap);
-    const y = rowsY + (index % columnRows) * rowGap;
-    const color = languageColor(language);
-    const label = locale.labels[language] ?? language;
-    const compactLabel = mobile && language === "Jupyter Notebook" ? "Jupyter" : label;
-    return '<g data-language="' + escapeXml(language) + '">\n' +
-      '<circle cx="' + (x + 4) + '" cy="' + (y - 5) +
-      '" r="4" fill="' + color + '" />\n' +
-      '<text x="' + (x + 16) + '" y="' + y + '" font-size="15" fill="' +
-      theme.title + '">' + escapeXml(compactLabel) + '</text>\n' +
-      '<text x="' + (x + rowsWidth) + '" y="' + y +
-      '" text-anchor="end" font-size="15" font-variant-numeric="tabular-nums" fill="' +
-      theme.muted + '">' + percentage + '%</text>\n' +
-      '<rect x="' + x + '" y="' + (y + 10) + '" width="' + rowsWidth +
-      '" height="4" rx="2" fill="' + theme.track + '" />\n' +
-      '<rect x="' + x + '" y="' + (y + 10) + '" width="' +
-      (rowsWidth * share).toFixed(3) + '" height="4" rx="2" fill="' + color + '" />\n</g>';
-  }).join("\n");
+  const maxShare = primary.length ? Math.max(...primary.map((e) => e.share)) : 1;
 
-  let contentBottom = Math.max(cy + radius + ringWidth / 2, rowsY + Math.max(0, columnRows - 1) * rowGap + 14);
-  let extraX = padding;
-  let extraY = contentBottom + 28;
-  const extraFontSize = mobile ? 14 : 13;
-  const extras = data.entries.slice(primaryLanguageCount).map(({ language, percentage }) => {
+  const cols = mobile ? 1 : 2;
+  const colGap = mobile ? 0 : 40;
+  const colWidth = (innerWidth - colGap * (cols - 1)) / cols;
+  const columnRows = Math.ceil(primary.length / cols);
+  const rowsStartY = barY + barHeight + (mobile ? 28 : 30);
+  const rowPitch = mobile ? 30 : 32;
+
+  const rows = primary.map(({ language, share, percentage }, index) => {
+    const col = Math.floor(index / columnRows);
+    const row = index % columnRows;
+    const x = pad + col * (colWidth + colGap);
+    const y = rowsStartY + row * rowPitch;
+    const color = languageColor(language, theme);
     const label = locale.labels[language] ?? language;
-    // Conservative width estimate gives the static SVG a deterministic wrapped key.
-    const labelWidth = 16 + label.length * extraFontSize * 0.64;
-    if (extraX > padding && extraX + labelWidth > width - padding) {
-      extraX = padding;
-      extraY += 24;
-    }
-    const markup = '<g data-language="' + escapeXml(language) + '">\n' +
-      '<title>' + escapeXml(label) + ' ' + percentage + '%</title>\n' +
-      '<circle cx="' + (extraX + 3) + '" cy="' + (extraY - 4) + '" r="3" fill="' + languageColor(language) + '" />\n' +
-      '<text x="' + (extraX + 14) + '" y="' + extraY + '" font-size="' + extraFontSize + '" fill="' + theme.muted + '">' + escapeXml(label) + '</text>\n</g>';
-    extraX += labelWidth + 20;
-    contentBottom = extraY + 4;
-    return markup;
-  }).join("\n");
-  const height = contentBottom + 40;
+    const isLead = index < 2;
+    const accentW = Math.max(4, colWidth * (share / maxShare));
+    const ruleY = y + (mobile ? 9.5 : 10.5);
+
+    return '<g data-language="' + escapeXml(language) + '">\n' +
+      '      <rect x="' + x.toFixed(1) + '" y="' + (y - 8.5).toFixed(1) +
+      '" width="8" height="8" rx="2.5" fill="' + color + '" />\n' +
+      '      <text x="' + (x + 16).toFixed(1) + '" y="' + y.toFixed(1) +
+      '" font-size="13.5" font-weight="' + (isLead ? "500" : "400") + '" fill="' +
+      theme.title + '">' + escapeXml(label) + '</text>\n' +
+      '      <text x="' + (x + colWidth).toFixed(1) + '" y="' + y.toFixed(1) +
+      '" text-anchor="end" font-size="13" font-weight="' + (isLead ? "500" : "400") +
+      '" font-variant-numeric="tabular-nums" fill="' + (isLead ? theme.title : theme.muted) + '">' +
+      percentage + '%</text>\n' +
+      '      <rect x="' + x.toFixed(1) + '" y="' + ruleY.toFixed(1) +
+      '" width="' + colWidth.toFixed(1) + '" height="1.5" rx="0.75" fill="' + theme.divider + '" />\n' +
+      '      <rect x="' + x.toFixed(1) + '" y="' + (ruleY - 0.25).toFixed(1) +
+      '" width="' + accentW.toFixed(2) + '" height="2" rx="1" fill="' + color + '" opacity="' +
+      (isLead ? "0.95" : "0.78") + '" />\n    </g>';
+  }).join("\n    ");
+
+  let contentBottom = primary.length
+    ? rowsStartY + (columnRows - 1) * rowPitch + 12
+    : barY + barHeight + 34;
+
+  const tailEntries = data.entries.slice(primaryLanguageCount);
+  let tailDivider = "";
+  let extras = "";
+  if (tailEntries.length) {
+    let extraX = pad;
+    let extraY = contentBottom + 22;
+    const extraFontSize = 12;
+    extras = tailEntries.map(({ language, percentage }) => {
+      const label = locale.labels[language] ?? language;
+      const itemWidth = 12 + estimateTextWidth(label, extraFontSize);
+      if (extraX > pad && extraX + itemWidth > width - pad) {
+        extraX = pad;
+        extraY += 20;
+      }
+      const markup = '<g data-language="' + escapeXml(language) + '">\n' +
+        '      <title>' + escapeXml(label) + ' ' + percentage + '%</title>\n' +
+        '      <rect x="' + extraX.toFixed(1) + '" y="' + (extraY - 6.5).toFixed(1) +
+        '" width="5.5" height="5.5" rx="1.75" fill="' + languageColor(language, theme) + '" />\n' +
+        '      <text x="' + (extraX + 10).toFixed(1) + '" y="' + extraY.toFixed(1) +
+        '" font-size="' + extraFontSize + '" fill="' + theme.muted + '">' +
+        escapeXml(label) + '</text>\n    </g>';
+      extraX += itemWidth + 14;
+      contentBottom = extraY + 6;
+      return markup;
+    }).join("\n    ");
+  }
+
+  const height = Math.ceil(contentBottom + 6);
   const description = data.entries.length
     ? data.entries.map(({ language, percentage }) => (locale.labels[language] ?? language) + " " + percentage + "%").join("; ")
     : locale.empty;
-  const footerY = height - 14;
+
+  const metaCountText = locale.suffix === "-zh-CN"
+    ? '<tspan font-weight="600" fill="' + theme.title + '">' + data.languageCount + '</tspan> ' +
+      locale.languages + ' · <tspan font-weight="600" fill="' + theme.title + '">' +
+      data.repositoryCount + '</tspan> ' + locale.repos
+    : '<tspan font-weight="600" fill="' + theme.title + '">' + data.languageCount + '</tspan> ' +
+      locale.languages + ' · <tspan font-weight="600" fill="' + theme.title + '">' +
+      data.repositoryCount + '</tspan> ' + locale.repos;
+
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img" aria-labelledby="title description">
   <title id="title">${escapeXml(locale.title)}</title>
   <desc id="description">${escapeXml(locale.subtitle)}. ${escapeXml(description)}. ${data.repositoryCount} ${locale.repos}. ${locale.updated} ${data.updatedAt}.</desc>
-  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Noto Sans CJK SC', sans-serif">
-    <circle cx="${cx}" cy="${cy}" r="${radius}" fill="none" stroke="${theme.track}" stroke-width="${ringWidth}" />
-    ${ring}
-    <text x="${cx}" y="${cy + 5}" text-anchor="middle" font-size="36" font-weight="600" fill="${theme.title}">${data.languageCount}</text>
-    <text x="${cx}" y="${cy + 28}" text-anchor="middle" font-size="14" fill="${theme.muted}">${locale.languages}</text>
+  <defs>
+    <clipPath id="ribbon-clip">
+      <rect x="${pad}" y="${barY}" width="${innerWidth}" height="${barHeight}" rx="${barRadius}" />
+    </clipPath>
+  </defs>
+  <g font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans CJK SC', sans-serif">
+    <text x="${pad}" y="${headerY}" font-size="12.5" font-variant-numeric="tabular-nums" fill="${theme.muted}">${metaCountText}</text>
+    <text x="${width - pad}" y="${headerY}" text-anchor="end" font-size="12" font-variant-numeric="tabular-nums" fill="${theme.subtle}">${locale.updated} ${data.updatedAt}</text>
+    <g clip-path="url(#ribbon-clip)">
+      <rect x="${pad}" y="${barY}" width="${innerWidth}" height="${barHeight}" fill="${theme.track}" />
+      ${segments}
+    </g>
     ${rows}
+    ${!data.entries.length ? '<text x="' + pad + '" y="' + rowsStartY + '" font-size="14" fill="' + theme.muted + '">' + locale.empty + '</text>' : ""}
+    ${tailDivider}
     ${extras}
-    ${!data.entries.length ? '<text x="' + rowsX + '" y="' + rowsY + '" font-size="16" fill="' + theme.muted + '">' + locale.empty + '</text>' : ""}
-    <text x="${padding}" y="${footerY}" font-size="13" fill="${theme.muted}">${data.repositoryCount} ${locale.repos}</text>
-    <text x="${width - padding}" y="${footerY}" text-anchor="end" font-size="13" fill="${theme.muted}">${locale.updated} ${data.updatedAt}</text>
   </g>
 </svg>
 `.replace(/[\t ]+$/gm, "");

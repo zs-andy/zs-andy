@@ -79,31 +79,25 @@ test("all eight card variants are self-contained and accessible", () => {
         assert.ok(svg.includes(mobile ? 'viewBox="0 0 420 ' : 'viewBox="0 0 760 '));
         assert.match(svg, /2026-09-21/);
         assert.doesNotMatch(svg, /<script|foreignObject|<image|NaN|Infinity|undefined/);
-        assert.doesNotMatch(svg, /rx="16"|<path/);
-        // Only thin data bars remain: no background panel, frame or duplicate visual title.
-        for (const rect of svg.matchAll(/<rect\b[^>]+>/g)) assert.match(rect[0], /height="4"/);
+        assert.doesNotMatch(svg, /rx="16"/);
+        // No duplicate visual title or outer panel card.
         assert.equal((svg.match(new RegExp(locale.title, "g")) ?? []).length, 1);
-        for (const match of svg.matchAll(/stroke-dasharray="([\d.]+) ([\d.]+)"/g)) {
-          assert.ok(Number(match[1]) > 0);
-          assert.ok(Number(match[2]) >= 0);
-        }
       }
     }
   }
 });
 
-test("ten primary bars and a wrapped key expose all languages without Other", () => {
+test("ten primary rows and a wrapped tail key expose all languages without Other", () => {
   const names = ["TypeScript", "Swift", "Python", "Go", "Kotlin", "Jupyter Notebook", "PLpgSQL", "HTML", "CSS", "JavaScript", "Shell", "PowerShell", "Makefile", "Dockerfile", "Ruby", "Solidity", "Objective-C", "C", "Batchfile"];
   const data = summarize(names.map((name) => source({ [name]: 100 })));
   for (const mobile of [true, false]) {
     const svg = renderCard(data, themes.light, locales.en, mobile);
-    assert.equal((svg.match(/<rect /g) ?? []).length, 20);
     assert.equal((svg.match(/data-language=/g) ?? []).length, names.length);
     for (const language of names) assert.ok(svg.includes('data-language="' + language + '"'));
     assert.doesNotMatch(svg, /Other|其他/);
     const height = Number(svg.match(/viewBox="0 0 \d+ (\d+)"/)[1]);
-    for (const [, y] of svg.matchAll(/\by="([\d.]+)"/g)) assert.ok(Number(y) < height - 4);
-    assert.ok(height < (mobile ? 490 : 310));
+    for (const [, y] of svg.matchAll(/\by="([\d.]+)"/g)) assert.ok(Number(y) < height - 2);
+    assert.ok(height < (mobile ? 460 : 285));
   }
 });
 
@@ -151,22 +145,24 @@ test("local icons preserve brand colors and scalable SVG geometry", async () => 
     assert.match(svg, /<path d="[^"]+"/);
     assert.doesNotMatch(svg, /#6B7280|<script|<image|<foreignObject|(?:href|clip-path)=/);
   }
+  const xSvg = await readFile(new URL("../assets/icons/x.svg", import.meta.url), "utf8");
+  assert.match(xSvg, /viewBox="0 0 24 24"/);
+  assert.match(xSvg, /<path d="[^"]+"/);
 });
 
-test("both READMEs preserve projects and link text rather than fake social buttons", async () => {
+test("both READMEs preserve compact profile structure and valid local assets", async () => {
   for (const file of ["README.md", "README.zh-CN.md"]) {
     const md = await readFile(new URL("../" + file, import.meta.url), "utf8");
-    for (const repository of repositories) assert.ok(md.includes("https://github.com/" + repository), repository);
     for (const url of [
       "https://open.spotify.com/user/31mix2lsown7l4ycqak56qbeq6yy",
       "https://www.linkedin.com/in/siyi-lyu-b496a93b9/",
+      "https://x.com/4Fe119a",
     ]) assert.ok(md.includes('href="' + url + '"'), url);
     assert.doesNotMatch(md, /4fe-andy\.github\.io|youtube\.com|YouTube|Website|个人网站|instagram\.com|Instagram/);
     assert.doesNotMatch(md, /^# 4Fe_Andy$/m);
-    assert.equal((md.match(/assets\/icons\//g) ?? []).length, 6);
+    assert.equal((md.match(/assets\/icons\//g) ?? []).length, 7);
     assert.doesNotMatch(md, /cdn\.simpleicons\.org/);
-    assert.equal((md.match(/width="14" height="14"/g) ?? []).length, 6);
-    assert.equal((md.match(/^### /gm) ?? []).length, 5);
+    assert.equal((md.match(/width="14" height="14"/g) ?? []).length, 7);
     assert.doesNotMatch(md, /social-links\.svg|shields\.io|capsule-render|<table/);
     assert.doesNotMatch(md, /^<br\s*\/>$/m);
     for (const match of md.matchAll(/(?:src|srcset)="(\.\/[^\"]+)"/g)) {
@@ -174,7 +170,7 @@ test("both READMEs preserve projects and link text rather than fake social butto
       if (match[1].includes("contribution-languages")) {
         assert.match(match[1], new RegExp("^\\./assets/" + assetPrefix.replaceAll("-", "\\-") + ""));
       } else {
-        assert.match(match[1], /^\.\/assets\/icons\/(spotify|linkedin|swift|kotlin|python|typescript)-color\.svg$/);
+        assert.match(match[1], /^\.\/assets\/icons\/((spotify|linkedin|swift|kotlin|python|typescript)-color|x)\.svg$/);
       }
     }
     for (const match of md.matchAll(/href="#([^\"]+)"/g)) {
