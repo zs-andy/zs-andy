@@ -34,13 +34,9 @@ PolyU freshman · Co-founder · Photographer · Bass player<br />Learning produc
 <details>
 <summary>Data & methodology</summary>
 
-Includes repositories where GitHub attributes a commit to **zs-andy** as author or committer—not just repositories I own. Global commit search is supplemented with current-branch checks for repositories accessible through ownership, collaboration or organization membership. Public, authorized private, archived and fork repositories are eligible; each repository is counted once. Coverage is limited by token permissions, GitHub indexing and linked commit identities; deleted or inaccessible history cannot be included.
+Counts public and authorized private repositories with commits attributed to **zs-andy** (from GitHub contribution history and accessible branches, excluding third-party clones). Each repository with GitHub Linguist data is weighted equally to average language proportions—reflecting repository composition rather than personal lines of code. Only aggregate totals and repository counts are published.
 
-The chart uses a repository-normalized language mix: each included repository with language data contributes equally after its own GitHub Linguist proportions are calculated. This keeps one unusually large repository from overwhelming the overview. It is **not the lines I personally wrote**, time spent or proficiency. All detected languages remain available in the chart; the top ribbon shows the full linear distribution, the ten largest appear in the breakdown with relative bars, and smaller languages appear in the compact key below. Notebook files retain GitHub's “Jupyter Notebook” classification. Forks are counted separately and may share code with their upstream repositories.
-
-Only aggregate language totals and repository counts are published—no repository identifiers, commit records or per-repository details. A weekly refresh is scheduled; it requires a configured access credential and otherwise preserves the last snapshot. [Refresh setup](./docs/profile-stats.md).
-
-[Current data & full language breakdown](./assets/language-data.json) · [Generator](./scripts/update-language-card.mjs) · [Update status](https://github.com/zs-andy/zs-andy/actions/workflows/update-language-card.yml)
+[Full methodology](./docs/profile-stats.md) · [Data](./assets/language-data.json) · [Generator](./scripts/update-language-card.mjs) · [Workflow](https://github.com/zs-andy/zs-andy/actions/workflows/update-language-card.yml)
 
 </details>
 

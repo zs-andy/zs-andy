@@ -111,13 +111,18 @@ test("escapes API-provided language names", () => {
 
 test("API requests use a timeout and accept the repository token", async () => {
   const result = await collectLanguages(async (url, options) => {
-    assert.ok(url.endsWith("/languages"));
+    assert.equal(url, "https://api.github.com/graphql");
+    assert.equal(options.method, "POST");
     assert.equal(options.headers.Authorization, "Bearer test-only-token");
     assert.ok(options.signal instanceof AbortSignal);
-    return { ok: true, json: async () => ({ Swift: 10 }) };
+    const data = Object.fromEntries(repositories.map((_, index) => [
+      `r${index}`,
+      { languages: { pageInfo: { hasNextPage: false, endCursor: null }, edges: [{ size: 10, node: { name: "Swift" } }] } },
+    ]));
+    return { ok: true, json: async () => ({ data }) };
   }, "test-only-token", repositories);
   assert.equal(result.length, repositories.length);
-  assert.ok(result.every((source) => !Object.hasOwn(source, "repository")));
+  assert.ok(result.every((source) => !Object.hasOwn(source, "repository") && source.languages.Swift === 10));
 });
 
 test("API failure aborts collection; no partial snapshot is returned", async () => {

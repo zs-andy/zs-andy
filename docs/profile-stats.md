@@ -17,16 +17,15 @@ The built-in `GITHUB_TOKEN` is limited to this profile repository and cannot cov
 ### Credential scope matters
 
 - A fine-grained personal access token can grant read-only Contents/Metadata access, but is limited to **one resource owner**. It cannot by itself cover all independent organizations and personal owners.
-- For read-only access spanning owners, a GitHub App **user access token** can be used when the app is installed and granted Contents/Metadata read access on all relevant owners. The script checks `/user`; an installation-only token is not interchangeable with a user token. Token expiration/refresh must be managed separately.
+- For read-only access spanning owners, a GitHub App **user access token** can be used when the app is installed and granted Contents/Metadata read access on all relevant owners. The script verifies the authenticated user via GraphQL `viewer`; an installation-only token is not interchangeable with a user token. Token expiration/refresh must be managed separately.
 - A classic personal access token with `repo` scope can cover private repositories across owners where the user already has access, subject to organization policies and SSO. That scope also grants write capabilities: it is **not read-only**. Use it only if the account owner explicitly accepts that broader permission, with a suitable expiration and revocation plan.
 
 This script cannot bypass permissions, organization restrictions, expired credentials or access that has been revoked. Granting access to only a subset produces coverage limited to that subset, not a guarantee that every historical collaboration is included.
 
 ## Discovery and accuracy
 
-- Global commit search covers default branches and finds past public contributions outside current membership. Author and committer results are unioned, with case-insensitive repository deduplication.
-- Queries exceeding GitHub's 1,000-result limit are recursively split by date. Incomplete or still-truncated results fail the update rather than being published as complete.
-- Owned, collaborator and organization-member repositories visible to the credential are enumerated with pagination. Repositories not yet matched are checked for attributed commits on their default branch and then their other current branches.
+- Authoritative GitHub contribution history (`contributionsCollection` across every calendar year since account creation, `repositoriesContributedTo` for commits, and merged pull requests) finds historical public and external contributions without pulling in unrelated third-party non-fork clones that merely mirror upstream git history.
+- Owned, collaborator and organization-member repositories visible to the credential are enumerated with pagination via GraphQL. Repositories not yet matched are checked for attributed commits on their default branch and then across their other current branches in batched GraphQL queries.
 - Newly pushed commits may take time to be indexed. Unlinked email identities, deleted branches/commits and inaccessible repositories cannot always be discovered. Commit presence proves attribution in repository history, not that every file in the repository was written by the profile owner.
 - Archived and fork repositories remain eligible. A fork and its upstream are separate repositories, so shared code can be represented twice. GitHub's language API describes the repository's default branch even when the qualifying contribution is on another branch.
 
@@ -42,4 +41,4 @@ An API failure preserves the previous snapshot. The workflow runs only on `main`
 node --test scripts/*.test.mjs
 ```
 
-Tests cover private branch-only contributions, untouched-repository exclusion, pagination, search partitioning, missing authorization, sanitized errors, aggregate-only output, equal repository weighting, empty-repository denominators, byte-size invariance and all eight borderless chart variants.
+Tests cover private branch-only contributions, untouched-repository exclusion, pagination, multi-year contribution history, early-stop multi-page branch scanning, missing authorization, sanitized errors, aggregate-only output, equal repository weighting, empty-repository denominators, byte-size invariance and all eight borderless chart variants.

@@ -34,13 +34,9 @@ PolyU 大一 · 联合创始人 · 摄影 · 贝斯手<br />在学产品、设�
 <details>
 <summary>数据与统计方法</summary>
 
-纳入 GitHub 将提交作者或提交者归属于 **zs-andy** 的仓库，不限于本人名下。先通过全站提交搜索发现，再补查本人拥有、以协作者身份访问或通过组织成员资格访问的仓库的现有分支。公开、获授权的私有、归档及 Fork 仓库均可纳入，每个仓库只计一次。覆盖范围受凭证权限、GitHub 索引和提交身份关联限制；已删除或无法访问的历史无法纳入。
+统计包含归属于 **zs-andy** 提交的公开及获授权私有仓库（基于 GitHub 贡献记录与可访问分支校验，排除第三方复制仓库）。各仓库先按 GitHub Linguist 计算语言占比，再等权取平均，反映仓库语言结构而非个人代码行数。仅公开汇总数据与仓库总数，不泄露具体仓库或提交信息。
 
-图表采用按仓库归一化的语言分布：先计算每个纳入仓库自身的 GitHub Linguist 语言比例，再让每个有语言数据的仓库等权参与汇总，避免某个超大的仓库压过整体概览。这**不是我个人编写的代码行数**，也不代表投入时间或熟练程度。所有检测到的语言都会保留；顶部比例条展示完整的线性占比，占比最高的十种在下方明细中展示相对柱条，较小语言放在底部紧凑明细中。Notebook 保留 GitHub 的「Jupyter Notebook」分类。Fork 仓库单独计入，与上游共享的代码可能重复出现。
-
-公开内容仅包含语言汇总值和仓库总数，不含仓库标识、提交记录及逐仓库明细。已安排每周更新；需要配置访问凭证，否则保留上次快照。[更新配置说明](./docs/profile-stats.md)。
-
-[当前数据与完整语言明细](./assets/language-data.json) · [生成脚本](./scripts/update-language-card.mjs) · [更新状态](https://github.com/zs-andy/zs-andy/actions/workflows/update-language-card.yml)
+[完整说明](./docs/profile-stats.md) · [数据](./assets/language-data.json) · [生成脚本](./scripts/update-language-card.mjs) · [更新状态](https://github.com/zs-andy/zs-andy/actions/workflows/update-language-card.yml)
 
 </details>
 

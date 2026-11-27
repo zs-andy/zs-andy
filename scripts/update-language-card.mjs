@@ -341,7 +341,7 @@ export async function main() {
 export function publicSnapshot(data) {
   return {
     updatedAt: data.updatedAt,
-    methodology: "Language shares are the arithmetic mean of each nonempty repository's GitHub Linguist byte proportions. Each repository with language data has equal weight; empty language responses are excluded from that denominator. Raw aggregate bytes are retained separately in languages and totalBytes. Neither metric measures personal lines of code. Repositories must have attributable author/committer records. Global commit search is supplemented with branch checks in token-visible owned, collaborator and organization-member repositories. Deleted or inaccessible repositories and unlinked commit identities cannot be included. Repository identifiers and per-repository data are omitted.",
+    methodology: "Language shares are the arithmetic mean of each nonempty repository's GitHub Linguist byte proportions. Each repository with language data has equal weight; empty language responses are excluded from that denominator. Raw aggregate bytes are retained separately in languages and totalBytes. Neither metric measures personal lines of code. Repositories are discovered from GitHub contribution history, merged pull requests and branch checks across token-visible owned, collaborator and organization-member repositories, excluding unrelated third-party clones. Deleted or inaccessible repositories and unlinked commit identities cannot be included. Repository identifiers and per-repository data are omitted.",
     repositoryCount: data.repositoryCount,
     weightedRepositoryCount: data.weightedRepositoryCount,
     languageCount: data.languageCount,

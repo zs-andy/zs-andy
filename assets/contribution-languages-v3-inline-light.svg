@@ -1,152 +1,242 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="760" height="241" viewBox="0 0 760 241" role="img" aria-labelledby="title description">
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="261" viewBox="0 0 760 261" role="img" aria-labelledby="title description">
   <title id="title">Languages</title>
-  <desc id="description">Language mix across repositories with my commits. TypeScript 42.9%; Swift 31.5%; JavaScript 6.4%; Jupyter Notebook 3.7%; HTML 3.5%; PL/pgSQL 3.0%; CSS 2.9%; Python 2.9%; Kotlin 1.9%; Go 1.0%; Shell 0.2%; PowerShell 0.1%; Makefile 0.0%; Ruby 0.0%; Dockerfile 0.0%; C 0.0%; Solidity 0.0%; Objective-C 0.0%; Batchfile 0.0%. 29 repositories. Updated 2026-09-21.</desc>
+  <desc id="description">Language mix across repositories with my commits. TypeScript 40.3%; Swift 27.0%; Python 8.8%; JavaScript 5.6%; HTML 5.1%; Jupyter Notebook 2.8%; CSS 2.4%; PL/pgSQL 2.2%; C++ 1.8%; Kotlin 1.4%; Shell 1.2%; Go 0.7%; Cuda 0.2%; C 0.1%; MDX 0.1%; Metal 0.1%; Dockerfile 0.1%; PowerShell 0.1%; Makefile 0.0%; CMake 0.0%; Ruby 0.0%; Astro 0.0%; Solidity 0.0%; Rust 0.0%; Objective-C 0.0%; Vue 0.0%; Batchfile 0.0%; Objective-C++ 0.0%; Svelte 0.0%; QML 0.0%; NSIS 0.0%; Nix 0.0%; Zig 0.0%; Lua 0.0%. 38 repositories. Updated 2026-11-27.</desc>
   <defs>
     <clipPath id="ribbon-clip">
       <rect x="4" y="28" width="752" height="9" rx="4.5" />
     </clipPath>
   </defs>
   <g font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans CJK SC', sans-serif">
-    <text x="4" y="15" font-size="12.5" font-variant-numeric="tabular-nums" fill="#59636E"><tspan font-weight="600" fill="#1F2328">19</tspan> languages · <tspan font-weight="600" fill="#1F2328">29</tspan> repositories</text>
-    <text x="756" y="15" text-anchor="end" font-size="12" font-variant-numeric="tabular-nums" fill="#818B98">Updated 2026-09-21</text>
+    <text x="4" y="15" font-size="12.5" font-variant-numeric="tabular-nums" fill="#59636E"><tspan font-weight="600" fill="#1F2328">34</tspan> languages · <tspan font-weight="600" fill="#1F2328">38</tspan> repositories</text>
+    <text x="756" y="15" text-anchor="end" font-size="12" font-variant-numeric="tabular-nums" fill="#818B98">Updated 2026-11-27</text>
     <g clip-path="url(#ribbon-clip)">
       <rect x="4" y="28" width="752" height="9" fill="#ECEFF3" />
-      <rect x="4.00" y="28" width="320.20" height="9" fill="#2563EB"><title>TypeScript 42.9%</title></rect>
-      <rect x="326.20" y="28" width="234.66" height="9" fill="#EA580C"><title>Swift 31.5%</title></rect>
-      <rect x="562.86" y="28" width="46.32" height="9" fill="#CA8A04"><title>JavaScript 6.4%</title></rect>
-      <rect x="611.18" y="28" width="25.85" height="9" fill="#D97706"><title>Jupyter Notebook 3.7%</title></rect>
-      <rect x="639.03" y="28" width="24.30" height="9" fill="#E11D48"><title>HTML 3.5%</title></rect>
-      <rect x="665.33" y="28" width="20.06" height="9" fill="#4F46E5"><title>PL/pgSQL 3.0%</title></rect>
-      <rect x="687.39" y="28" width="19.97" height="9" fill="#0D9488"><title>CSS 2.9%</title></rect>
-      <rect x="709.36" y="28" width="19.92" height="9" fill="#0284C7"><title>Python 2.9%</title></rect>
-      <rect x="731.28" y="28" width="12.43" height="9" fill="#7C3AED"><title>Kotlin 1.9%</title></rect>
-      <rect x="745.71" y="28" width="7.32" height="9" fill="#0891B2"><title>Go 1.0%</title></rect>
-      <rect x="753.02" y="28" width="1.33" height="9" fill="#16A34A"><title>Shell 0.2%</title></rect>
-      <rect x="754.36" y="28" width="0.85" height="9" fill="#3B82F6"><title>PowerShell 0.1%</title></rect>
-      <rect x="755.20" y="28" width="0.40" height="9" fill="#65A30D"><title>Makefile 0.0%</title></rect>
-      <rect x="755.41" y="28" width="0.40" height="9" fill="#DC2626"><title>Ruby 0.0%</title></rect>
-      <rect x="755.58" y="28" width="0.40" height="9" fill="#0EA5E9"><title>Dockerfile 0.0%</title></rect>
-      <rect x="755.75" y="28" width="0.40" height="9" fill="#64748B"><title>C 0.0%</title></rect>
-      <rect x="755.89" y="28" width="0.40" height="9" fill="#6366F1"><title>Solidity 0.0%</title></rect>
+      <rect x="4.00" y="28" width="300.92" height="9" fill="#2563EB"><title>TypeScript 40.3%</title></rect>
+      <rect x="306.92" y="28" width="200.89" height="9" fill="#EA580C"><title>Swift 27.0%</title></rect>
+      <rect x="509.81" y="28" width="64.50" height="9" fill="#0284C7"><title>Python 8.8%</title></rect>
+      <rect x="576.31" y="28" width="40.19" height="9" fill="#CA8A04"><title>JavaScript 5.6%</title></rect>
+      <rect x="618.49" y="28" width="35.98" height="9" fill="#E11D48"><title>HTML 5.1%</title></rect>
+      <rect x="656.48" y="28" width="18.89" height="9" fill="#D97706"><title>Jupyter Notebook 2.8%</title></rect>
+      <rect x="677.37" y="28" width="16.06" height="9" fill="#0D9488"><title>CSS 2.4%</title></rect>
+      <rect x="695.43" y="28" width="14.59" height="9" fill="#4F46E5"><title>PL/pgSQL 2.2%</title></rect>
+      <rect x="712.01" y="28" width="11.23" height="9" fill="#DB2777"><title>C++ 1.8%</title></rect>
+      <rect x="725.25" y="28" width="8.90" height="9" fill="#7C3AED"><title>Kotlin 1.4%</title></rect>
+      <rect x="736.15" y="28" width="6.80" height="9" fill="#16A34A"><title>Shell 1.2%</title></rect>
+      <rect x="744.96" y="28" width="5.49" height="9" fill="#0891B2"><title>Go 0.7%</title></rect>
+      <rect x="750.44" y="28" width="1.68" height="9" fill="#6E7781"><title>Cuda 0.2%</title></rect>
+      <rect x="752.13" y="28" width="0.79" height="9" fill="#64748B"><title>C 0.1%</title></rect>
+      <rect x="752.91" y="28" width="0.76" height="9" fill="#D97706"><title>MDX 0.1%</title></rect>
+      <rect x="753.67" y="28" width="0.62" height="9" fill="#475569"><title>Metal 0.1%</title></rect>
+      <rect x="754.29" y="28" width="0.40" height="9" fill="#0EA5E9"><title>Dockerfile 0.1%</title></rect>
+      <rect x="754.69" y="28" width="0.40" height="9" fill="#3B82F6"><title>PowerShell 0.1%</title></rect>
+      <rect x="755.08" y="28" width="0.40" height="9" fill="#65A30D"><title>Makefile 0.0%</title></rect>
+      <rect x="755.39" y="28" width="0.40" height="9" fill="#059669"><title>CMake 0.0%</title></rect>
+      <rect x="755.62" y="28" width="0.40" height="9" fill="#DC2626"><title>Ruby 0.0%</title></rect>
+      <rect x="755.75" y="28" width="0.40" height="9" fill="#6E7781"><title>Astro 0.0%</title></rect>
+      <rect x="755.88" y="28" width="0.40" height="9" fill="#6366F1"><title>Solidity 0.0%</title></rect>
+      <rect x="755.93" y="28" width="0.40" height="9" fill="#C2410C"><title>Rust 0.0%</title></rect>
       <rect x="755.96" y="28" width="0.40" height="9" fill="#0284C7"><title>Objective-C 0.0%</title></rect>
+      <rect x="755.98" y="28" width="0.40" height="9" fill="#6E7781"><title>Vue 0.0%</title></rect>
       <rect x="755.99" y="28" width="0.40" height="9" fill="#84CC16"><title>Batchfile 0.0%</title></rect>
+      <rect x="755.99" y="28" width="0.40" height="9" fill="#9333EA"><title>Objective-C++ 0.0%</title></rect>
+      <rect x="755.99" y="28" width="0.40" height="9" fill="#6E7781"><title>Svelte 0.0%</title></rect>
+      <rect x="756.00" y="28" width="0.40" height="9" fill="#6E7781"><title>QML 0.0%</title></rect>
+      <rect x="756.00" y="28" width="0.40" height="9" fill="#6E7781"><title>NSIS 0.0%</title></rect>
+      <rect x="756.00" y="28" width="0.40" height="9" fill="#6E7781"><title>Nix 0.0%</title></rect>
+      <rect x="756.00" y="28" width="0.40" height="9" fill="#6E7781"><title>Zig 0.0%</title></rect>
+      <rect x="756.00" y="28" width="0.40" height="9" fill="#6E7781"><title>Lua 0.0%</title></rect>
     </g>
     <g data-language="TypeScript">
       <rect x="4.0" y="58.5" width="8" height="8" rx="2.5" fill="#2563EB" />
       <text x="20.0" y="67.0" font-size="13.5" font-weight="500" fill="#1F2328">TypeScript</text>
-      <text x="360.0" y="67.0" text-anchor="end" font-size="13" font-weight="500" font-variant-numeric="tabular-nums" fill="#1F2328">42.9%</text>
+      <text x="360.0" y="67.0" text-anchor="end" font-size="13" font-weight="500" font-variant-numeric="tabular-nums" fill="#1F2328">40.3%</text>
       <rect x="4.0" y="77.5" width="356.0" height="1.5" rx="0.75" fill="#EAECEF" />
       <rect x="4.0" y="77.3" width="356.00" height="2" rx="1" fill="#2563EB" opacity="0.95" />
     </g>
     <g data-language="Swift">
       <rect x="4.0" y="90.5" width="8" height="8" rx="2.5" fill="#EA580C" />
       <text x="20.0" y="99.0" font-size="13.5" font-weight="500" fill="#1F2328">Swift</text>
-      <text x="360.0" y="99.0" text-anchor="end" font-size="13" font-weight="500" font-variant-numeric="tabular-nums" fill="#1F2328">31.5%</text>
+      <text x="360.0" y="99.0" text-anchor="end" font-size="13" font-weight="500" font-variant-numeric="tabular-nums" fill="#1F2328">27.0%</text>
       <rect x="4.0" y="109.5" width="356.0" height="1.5" rx="0.75" fill="#EAECEF" />
-      <rect x="4.0" y="109.3" width="261.49" height="2" rx="1" fill="#EA580C" opacity="0.95" />
+      <rect x="4.0" y="109.3" width="238.44" height="2" rx="1" fill="#EA580C" opacity="0.95" />
+    </g>
+    <g data-language="Python">
+      <rect x="4.0" y="122.5" width="8" height="8" rx="2.5" fill="#0284C7" />
+      <text x="20.0" y="131.0" font-size="13.5" font-weight="400" fill="#1F2328">Python</text>
+      <text x="360.0" y="131.0" text-anchor="end" font-size="13" font-weight="400" font-variant-numeric="tabular-nums" fill="#59636E">8.8%</text>
+      <rect x="4.0" y="141.5" width="356.0" height="1.5" rx="0.75" fill="#EAECEF" />
+      <rect x="4.0" y="141.3" width="78.15" height="2" rx="1" fill="#0284C7" opacity="0.78" />
     </g>
     <g data-language="JavaScript">
-      <rect x="4.0" y="122.5" width="8" height="8" rx="2.5" fill="#CA8A04" />
-      <text x="20.0" y="131.0" font-size="13.5" font-weight="400" fill="#1F2328">JavaScript</text>
-      <text x="360.0" y="131.0" text-anchor="end" font-size="13" font-weight="400" font-variant-numeric="tabular-nums" fill="#59636E">6.4%</text>
-      <rect x="4.0" y="141.5" width="356.0" height="1.5" rx="0.75" fill="#EAECEF" />
-      <rect x="4.0" y="141.3" width="53.39" height="2" rx="1" fill="#CA8A04" opacity="0.78" />
-    </g>
-    <g data-language="Jupyter Notebook">
-      <rect x="4.0" y="154.5" width="8" height="8" rx="2.5" fill="#D97706" />
-      <text x="20.0" y="163.0" font-size="13.5" font-weight="400" fill="#1F2328">Jupyter Notebook</text>
-      <text x="360.0" y="163.0" text-anchor="end" font-size="13" font-weight="400" font-variant-numeric="tabular-nums" fill="#59636E">3.7%</text>
+      <rect x="4.0" y="154.5" width="8" height="8" rx="2.5" fill="#CA8A04" />
+      <text x="20.0" y="163.0" font-size="13.5" font-weight="400" fill="#1F2328">JavaScript</text>
+      <text x="360.0" y="163.0" text-anchor="end" font-size="13" font-weight="400" font-variant-numeric="tabular-nums" fill="#59636E">5.6%</text>
       <rect x="4.0" y="173.5" width="356.0" height="1.5" rx="0.75" fill="#EAECEF" />
-      <rect x="4.0" y="173.3" width="30.77" height="2" rx="1" fill="#D97706" opacity="0.78" />
+      <rect x="4.0" y="173.3" width="49.58" height="2" rx="1" fill="#CA8A04" opacity="0.78" />
     </g>
     <g data-language="HTML">
       <rect x="4.0" y="186.5" width="8" height="8" rx="2.5" fill="#E11D48" />
       <text x="20.0" y="195.0" font-size="13.5" font-weight="400" fill="#1F2328">HTML</text>
-      <text x="360.0" y="195.0" text-anchor="end" font-size="13" font-weight="400" font-variant-numeric="tabular-nums" fill="#59636E">3.5%</text>
+      <text x="360.0" y="195.0" text-anchor="end" font-size="13" font-weight="400" font-variant-numeric="tabular-nums" fill="#59636E">5.1%</text>
       <rect x="4.0" y="205.5" width="356.0" height="1.5" rx="0.75" fill="#EAECEF" />
-      <rect x="4.0" y="205.3" width="29.05" height="2" rx="1" fill="#E11D48" opacity="0.78" />
+      <rect x="4.0" y="205.3" width="44.64" height="2" rx="1" fill="#E11D48" opacity="0.78" />
     </g>
-    <g data-language="PLpgSQL">
-      <rect x="400.0" y="58.5" width="8" height="8" rx="2.5" fill="#4F46E5" />
-      <text x="416.0" y="67.0" font-size="13.5" font-weight="400" fill="#1F2328">PL/pgSQL</text>
-      <text x="756.0" y="67.0" text-anchor="end" font-size="13" font-weight="400" font-variant-numeric="tabular-nums" fill="#59636E">3.0%</text>
+    <g data-language="Jupyter Notebook">
+      <rect x="400.0" y="58.5" width="8" height="8" rx="2.5" fill="#D97706" />
+      <text x="416.0" y="67.0" font-size="13.5" font-weight="400" fill="#1F2328">Jupyter Notebook</text>
+      <text x="756.0" y="67.0" text-anchor="end" font-size="13" font-weight="400" font-variant-numeric="tabular-nums" fill="#59636E">2.8%</text>
       <rect x="400.0" y="77.5" width="356.0" height="1.5" rx="0.75" fill="#EAECEF" />
-      <rect x="400.0" y="77.3" width="24.37" height="2" rx="1" fill="#4F46E5" opacity="0.78" />
+      <rect x="400.0" y="77.3" width="24.55" height="2" rx="1" fill="#D97706" opacity="0.78" />
     </g>
     <g data-language="CSS">
       <rect x="400.0" y="90.5" width="8" height="8" rx="2.5" fill="#0D9488" />
       <text x="416.0" y="99.0" font-size="13.5" font-weight="400" fill="#1F2328">CSS</text>
-      <text x="756.0" y="99.0" text-anchor="end" font-size="13" font-weight="400" font-variant-numeric="tabular-nums" fill="#59636E">2.9%</text>
+      <text x="756.0" y="99.0" text-anchor="end" font-size="13" font-weight="400" font-variant-numeric="tabular-nums" fill="#59636E">2.4%</text>
       <rect x="400.0" y="109.5" width="356.0" height="1.5" rx="0.75" fill="#EAECEF" />
-      <rect x="400.0" y="109.3" width="24.28" height="2" rx="1" fill="#0D9488" opacity="0.78" />
+      <rect x="400.0" y="109.3" width="21.23" height="2" rx="1" fill="#0D9488" opacity="0.78" />
     </g>
-    <g data-language="Python">
-      <rect x="400.0" y="122.5" width="8" height="8" rx="2.5" fill="#0284C7" />
-      <text x="416.0" y="131.0" font-size="13.5" font-weight="400" fill="#1F2328">Python</text>
-      <text x="756.0" y="131.0" text-anchor="end" font-size="13" font-weight="400" font-variant-numeric="tabular-nums" fill="#59636E">2.9%</text>
+    <g data-language="PLpgSQL">
+      <rect x="400.0" y="122.5" width="8" height="8" rx="2.5" fill="#4F46E5" />
+      <text x="416.0" y="131.0" font-size="13.5" font-weight="400" fill="#1F2328">PL/pgSQL</text>
+      <text x="756.0" y="131.0" text-anchor="end" font-size="13" font-weight="400" font-variant-numeric="tabular-nums" fill="#59636E">2.2%</text>
       <rect x="400.0" y="141.5" width="356.0" height="1.5" rx="0.75" fill="#EAECEF" />
-      <rect x="400.0" y="141.3" width="24.22" height="2" rx="1" fill="#0284C7" opacity="0.78" />
+      <rect x="400.0" y="141.3" width="19.49" height="2" rx="1" fill="#4F46E5" opacity="0.78" />
+    </g>
+    <g data-language="C++">
+      <rect x="400.0" y="154.5" width="8" height="8" rx="2.5" fill="#DB2777" />
+      <text x="416.0" y="163.0" font-size="13.5" font-weight="400" fill="#1F2328">C++</text>
+      <text x="756.0" y="163.0" text-anchor="end" font-size="13" font-weight="400" font-variant-numeric="tabular-nums" fill="#59636E">1.8%</text>
+      <rect x="400.0" y="173.5" width="356.0" height="1.5" rx="0.75" fill="#EAECEF" />
+      <rect x="400.0" y="173.3" width="15.55" height="2" rx="1" fill="#DB2777" opacity="0.78" />
     </g>
     <g data-language="Kotlin">
-      <rect x="400.0" y="154.5" width="8" height="8" rx="2.5" fill="#7C3AED" />
-      <text x="416.0" y="163.0" font-size="13.5" font-weight="400" fill="#1F2328">Kotlin</text>
-      <text x="756.0" y="163.0" text-anchor="end" font-size="13" font-weight="400" font-variant-numeric="tabular-nums" fill="#59636E">1.9%</text>
-      <rect x="400.0" y="173.5" width="356.0" height="1.5" rx="0.75" fill="#EAECEF" />
-      <rect x="400.0" y="173.3" width="15.94" height="2" rx="1" fill="#7C3AED" opacity="0.78" />
-    </g>
-    <g data-language="Go">
-      <rect x="400.0" y="186.5" width="8" height="8" rx="2.5" fill="#0891B2" />
-      <text x="416.0" y="195.0" font-size="13.5" font-weight="400" fill="#1F2328">Go</text>
-      <text x="756.0" y="195.0" text-anchor="end" font-size="13" font-weight="400" font-variant-numeric="tabular-nums" fill="#59636E">1.0%</text>
+      <rect x="400.0" y="186.5" width="8" height="8" rx="2.5" fill="#7C3AED" />
+      <text x="416.0" y="195.0" font-size="13.5" font-weight="400" fill="#1F2328">Kotlin</text>
+      <text x="756.0" y="195.0" text-anchor="end" font-size="13" font-weight="400" font-variant-numeric="tabular-nums" fill="#59636E">1.4%</text>
       <rect x="400.0" y="205.5" width="356.0" height="1.5" rx="0.75" fill="#EAECEF" />
-      <rect x="400.0" y="205.3" width="8.08" height="2" rx="1" fill="#0891B2" opacity="0.78" />
+      <rect x="400.0" y="205.3" width="12.82" height="2" rx="1" fill="#7C3AED" opacity="0.78" />
     </g>
 
 
     <g data-language="Shell">
-      <title>Shell 0.2%</title>
+      <title>Shell 1.2%</title>
       <rect x="4.0" y="222.5" width="5.5" height="5.5" rx="1.75" fill="#16A34A" />
       <text x="14.0" y="229.0" font-size="12" fill="#59636E">Shell</text>
     </g>
+    <g data-language="Go">
+      <title>Go 0.7%</title>
+      <rect x="59.8" y="222.5" width="5.5" height="5.5" rx="1.75" fill="#0891B2" />
+      <text x="69.8" y="229.0" font-size="12" fill="#59636E">Go</text>
+    </g>
+    <g data-language="Cuda">
+      <title>Cuda 0.2%</title>
+      <rect x="100.6" y="222.5" width="5.5" height="5.5" rx="1.75" fill="#6E7781" />
+      <text x="110.6" y="229.0" font-size="12" fill="#59636E">Cuda</text>
+    </g>
+    <g data-language="C">
+      <title>C 0.1%</title>
+      <rect x="155.0" y="222.5" width="5.5" height="5.5" rx="1.75" fill="#64748B" />
+      <text x="165.0" y="229.0" font-size="12" fill="#59636E">C</text>
+    </g>
+    <g data-language="MDX">
+      <title>MDX 0.1%</title>
+      <rect x="189.1" y="222.5" width="5.5" height="5.5" rx="1.75" fill="#D97706" />
+      <text x="199.1" y="229.0" font-size="12" fill="#59636E">MDX</text>
+    </g>
+    <g data-language="Metal">
+      <title>Metal 0.1%</title>
+      <rect x="241.5" y="222.5" width="5.5" height="5.5" rx="1.75" fill="#475569" />
+      <text x="251.5" y="229.0" font-size="12" fill="#59636E">Metal</text>
+    </g>
+    <g data-language="Dockerfile">
+      <title>Dockerfile 0.1%</title>
+      <rect x="300.4" y="222.5" width="5.5" height="5.5" rx="1.75" fill="#0EA5E9" />
+      <text x="310.4" y="229.0" font-size="12" fill="#59636E">Dockerfile</text>
+    </g>
     <g data-language="PowerShell">
       <title>PowerShell 0.1%</title>
-      <rect x="59.8" y="222.5" width="5.5" height="5.5" rx="1.75" fill="#3B82F6" />
-      <text x="69.8" y="229.0" font-size="12" fill="#59636E">PowerShell</text>
+      <rect x="386.9" y="222.5" width="5.5" height="5.5" rx="1.75" fill="#3B82F6" />
+      <text x="396.9" y="229.0" font-size="12" fill="#59636E">PowerShell</text>
     </g>
     <g data-language="Makefile">
       <title>Makefile 0.0%</title>
-      <rect x="152.5" y="222.5" width="5.5" height="5.5" rx="1.75" fill="#65A30D" />
-      <text x="162.5" y="229.0" font-size="12" fill="#59636E">Makefile</text>
+      <rect x="479.6" y="222.5" width="5.5" height="5.5" rx="1.75" fill="#65A30D" />
+      <text x="489.6" y="229.0" font-size="12" fill="#59636E">Makefile</text>
+    </g>
+    <g data-language="CMake">
+      <title>CMake 0.0%</title>
+      <rect x="556.0" y="222.5" width="5.5" height="5.5" rx="1.75" fill="#059669" />
+      <text x="566.0" y="229.0" font-size="12" fill="#59636E">CMake</text>
     </g>
     <g data-language="Ruby">
       <title>Ruby 0.0%</title>
-      <rect x="228.9" y="222.5" width="5.5" height="5.5" rx="1.75" fill="#DC2626" />
-      <text x="238.9" y="229.0" font-size="12" fill="#59636E">Ruby</text>
+      <rect x="620.4" y="222.5" width="5.5" height="5.5" rx="1.75" fill="#DC2626" />
+      <text x="630.4" y="229.0" font-size="12" fill="#59636E">Ruby</text>
     </g>
-    <g data-language="Dockerfile">
-      <title>Dockerfile 0.0%</title>
-      <rect x="283.2" y="222.5" width="5.5" height="5.5" rx="1.75" fill="#0EA5E9" />
-      <text x="293.2" y="229.0" font-size="12" fill="#59636E">Dockerfile</text>
-    </g>
-    <g data-language="C">
-      <title>C 0.0%</title>
-      <rect x="369.7" y="222.5" width="5.5" height="5.5" rx="1.75" fill="#64748B" />
-      <text x="379.7" y="229.0" font-size="12" fill="#59636E">C</text>
+    <g data-language="Astro">
+      <title>Astro 0.0%</title>
+      <rect x="674.7" y="222.5" width="5.5" height="5.5" rx="1.75" fill="#6E7781" />
+      <text x="684.7" y="229.0" font-size="12" fill="#59636E">Astro</text>
     </g>
     <g data-language="Solidity">
       <title>Solidity 0.0%</title>
-      <rect x="403.8" y="222.5" width="5.5" height="5.5" rx="1.75" fill="#6366F1" />
-      <text x="413.8" y="229.0" font-size="12" fill="#59636E">Solidity</text>
+      <rect x="4.0" y="242.5" width="5.5" height="5.5" rx="1.75" fill="#6366F1" />
+      <text x="14.0" y="249.0" font-size="12" fill="#59636E">Solidity</text>
+    </g>
+    <g data-language="Rust">
+      <title>Rust 0.0%</title>
+      <rect x="75.8" y="242.5" width="5.5" height="5.5" rx="1.75" fill="#C2410C" />
+      <text x="85.8" y="249.0" font-size="12" fill="#59636E">Rust</text>
     </g>
     <g data-language="Objective-C">
       <title>Objective-C 0.0%</title>
-      <rect x="475.7" y="222.5" width="5.5" height="5.5" rx="1.75" fill="#0284C7" />
-      <text x="485.7" y="229.0" font-size="12" fill="#59636E">Objective-C</text>
+      <rect x="128.7" y="242.5" width="5.5" height="5.5" rx="1.75" fill="#0284C7" />
+      <text x="138.7" y="249.0" font-size="12" fill="#59636E">Objective-C</text>
+    </g>
+    <g data-language="Vue">
+      <title>Vue 0.0%</title>
+      <rect x="223.4" y="242.5" width="5.5" height="5.5" rx="1.75" fill="#6E7781" />
+      <text x="233.4" y="249.0" font-size="12" fill="#59636E">Vue</text>
     </g>
     <g data-language="Batchfile">
       <title>Batchfile 0.0%</title>
-      <rect x="570.3" y="222.5" width="5.5" height="5.5" rx="1.75" fill="#84CC16" />
-      <text x="580.3" y="229.0" font-size="12" fill="#59636E">Batchfile</text>
+      <rect x="271.0" y="242.5" width="5.5" height="5.5" rx="1.75" fill="#84CC16" />
+      <text x="281.0" y="249.0" font-size="12" fill="#59636E">Batchfile</text>
+    </g>
+    <g data-language="Objective-C++">
+      <title>Objective-C++ 0.0%</title>
+      <rect x="350.7" y="242.5" width="5.5" height="5.5" rx="1.75" fill="#9333EA" />
+      <text x="360.7" y="249.0" font-size="12" fill="#59636E">Objective-C++</text>
+    </g>
+    <g data-language="Svelte">
+      <title>Svelte 0.0%</title>
+      <rect x="458.8" y="242.5" width="5.5" height="5.5" rx="1.75" fill="#6E7781" />
+      <text x="468.8" y="249.0" font-size="12" fill="#59636E">Svelte</text>
+    </g>
+    <g data-language="QML">
+      <title>QML 0.0%</title>
+      <rect x="522.5" y="242.5" width="5.5" height="5.5" rx="1.75" fill="#6E7781" />
+      <text x="532.5" y="249.0" font-size="12" fill="#59636E">QML</text>
+    </g>
+    <g data-language="NSIS">
+      <title>NSIS 0.0%</title>
+      <rect x="574.9" y="242.5" width="5.5" height="5.5" rx="1.75" fill="#6E7781" />
+      <text x="584.9" y="249.0" font-size="12" fill="#59636E">NSIS</text>
+    </g>
+    <g data-language="Nix">
+      <title>Nix 0.0%</title>
+      <rect x="629.4" y="242.5" width="5.5" height="5.5" rx="1.75" fill="#6E7781" />
+      <text x="639.4" y="249.0" font-size="12" fill="#59636E">Nix</text>
+    </g>
+    <g data-language="Zig">
+      <title>Zig 0.0%</title>
+      <rect x="674.4" y="242.5" width="5.5" height="5.5" rx="1.75" fill="#6E7781" />
+      <text x="684.4" y="249.0" font-size="12" fill="#59636E">Zig</text>
+    </g>
+    <g data-language="Lua">
+      <title>Lua 0.0%</title>
+      <rect x="719.4" y="242.5" width="5.5" height="5.5" rx="1.75" fill="#6E7781" />
+      <text x="729.4" y="249.0" font-size="12" fill="#59636E">Lua</text>
     </g>
   </g>
 </svg>
